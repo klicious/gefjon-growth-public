@@ -1,0 +1,37 @@
+# ---  data hygiene  ---
+data/private/**
+artifacts/private/**
+
+# large public assets → handled by LFS or DVC placeholders
+*.zip
+*.tar.gz
+*.csv        # override with !data/public/*.csv if small
+*.parquet
+
+# editor noise, system files, secrets
+.env*
+*.DS_Store
+
+# Python
+.Python
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
