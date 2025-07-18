@@ -1,0 +1,14 @@
+# context/onboarding.yaml
+# 30-60-90 day onboarding checkpoints.
+
+plan:
+  30_days:
+    - "Complete initial company-wide training."
+    - "Meet with key team members."
+    - "Understand the core product and architecture."
+  60_days:
+    - "Contribute to the first small project."
+    - "Gain a deeper understanding of the team's roadmap."
+  90_days:
+    - "Take ownership of a significant feature or project."
+    - "Provide feedback on the onboarding process."

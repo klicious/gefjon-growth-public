@@ -1,0 +1,50 @@
+# context/sop_implementation_guide.yaml
+# Guide to Implement the SOPs and Change Your Team’s DNA
+
+overview: "You want to embed three core processes into your software engineering team: Product Planning SOP, Agile Work Management SOP, and Culture-Building SOP. Although these SOPs can be introduced incrementally, they interact synergistically."
+
+product_planning_sop:
+  key_purpose:
+    - "Ensure that all new software products or features meet a genuine customer need (or solve a pressing customer problem)."
+    - "Thoroughly validate feasibility before committing resources."
+  core_methods:
+    - "Ideation using “Customer Centricity” Frameworks: Identify the gap between the ideal customer experience and the current state; Focus on “complete problem resolution”; Adopt a “future-back” mindset."
+    - "Validate via PR/FAQ (Press Release / Frequently Asked Questions): Draft a hypothetical Press Release; Prepare FAQs (External and Internal)."
+    - "Iterative Review: Circulate the PR/FAQ document among relevant stakeholders; Allow 20–30 minutes for them to read, then spend 30–60 minutes discussing ambiguities and potential pitfalls; Require multiple review rounds (5–6 is typical)."
+    - "Writing with Clarity: Use narrative/essay-style documents with complete sentences to force precise thinking; Emphasize logic, evidence, and objective language; Expect multiple revisions."
+  outcome:
+    - "Avoids building the wrong products or features."
+    - "Instills a habit of always thinking “customer-first” at the earliest stages of planning."
+
+agile_work_management_sop:
+  key_purpose:
+    - "Provide a systematic method to plan work, track progress, collaborate effectively, and resolve bottlenecks quickly."
+    - "Keep the entire team aligned on priorities and deadlines."
+  core_methods:
+    - "Backward Planning Template: Create a table for each project or sprint; Begin planning from the final goal and work backward; Ensure each subtask is SMART; Assign owners."
+    - "Weekly Meetings for Proactive Problem-Solving: Hold a recurring weekly meeting; Before the meeting, each owner updates the Status/Bottlenecks/Proposed Solution columns; Use a “traffic light” system; Promptly address any “Yellow” or “Red” items."
+    - "Leadership Support: The team leader should attend or review each weekly progress meeting; If team members need resources or escalations to unblock tasks, leaders step in quickly."
+    - "No Punitive Measures for Delays: The point is to discover and fix bottlenecks early, not to punish; Encourage honest reporting of task status."
+  outcome:
+    - "Everyone knows exactly who is doing what and by when."
+    - "Transparency shortens feedback loops, ensuring small problems don’t become major risks."
+    - "Execution speed and predictability improve as a result of well-structured collaboration."
+
+culture_building_sop:
+  key_purpose:
+    - "Align the team around a unifying mission: “We exist to serve customers better.”"
+    - "Recruit and develop talent that thrives on ownership, initiative, and teamwork."
+  core_methods:
+    - "Define Core Values / Leadership Principles: Identify behavioral traits you want to reinforce; Share these definitions openly."
+    - "Behavioral Event Interview (BEI) for New Hires (and Promotions): Formulate interview questions that probe real past behavior; Evaluate whether the candidate’s values and behavior match your organization’s culture; Train interviewers to use the STAR method."
+    - "Internalize “Customer-Centricity”: Regularly reiterate how every line of code or architecture decision serves a customer outcome; Ensure everyone references the “customer problem” at hand."
+    - "Fair & Continuous Evaluation: Consider splitting “performance reviews” from “career coaching”; Ensure your single review format includes not just “results” but also “how” the person worked."
+  outcome:
+    - "Over time, your team identifies itself as a group of “owners” driven by the same mission."
+    - "When market or organizational changes occur, the team’s sense of unity and shared mission helps them adapt swiftly and effectively."
+
+lead_by_example_and_sustain:
+  - "Leadership Participation: Attend weekly check-ins or read the agile/backward planning documents diligently; Ensure that you, too, use the PR/FAQ process for new initiatives."
+  - "Pilot > Iterate > Scale: Start with one or two key products/features; Gather feedback, refine your SOP documents, then apply them more broadly."
+  - "Provide Ongoing Training: Offer “writing workshops”; Hold mock Behavioral Event Interviews; Conduct sessions on backward planning."
+  - "Monitor and Measure: Track lead times, defect rates, and customer satisfaction; Provide recognition to those who exemplify the new culture."

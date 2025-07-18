@@ -1,0 +1,12 @@
+# context/hiring.yaml
+# Stage definitions for the hiring process.
+
+stages:
+  - name: "Sourcing"
+    description: "Identifying and attracting potential candidates."
+  - name: "Screening"
+    description: "Initial review of applications and résumés."
+  - name: "Interviewing"
+    description: "Conducting technical and behavioral interviews."
+  - name: "Offer"
+    description: "Extending a job offer to the selected candidate."

@@ -1,0 +1,27 @@
+# context/org.yaml
+id: org-core
+type: knowledge_base
+domain: HR
+last_updated: 2025-07-10
+tags: [mission, vision, values]
+visibility: public
+body: |
+  ## Mission
+  Engineer cross-region, self-healing fintech platforms that move capital instantly for liquidity and strategically for future value—while guaranteeing systemic safety and investor trust.
+
+  ## Vision
+  Set the global benchmark for internal fintech engineering, known for real-time observability, < 5 min MTTR, and an innovation cadence that compounds investor advantage.
+
+  ## Core Values — Deep Dive
+  | # | Value | “What Good Looks Like” | Anti‑Pattern to Avoid |
+  |---|---|---|---|
+  | 1 | **Technical Excellence & Scalable Elegance** | • Service meets p95 table.• CodeClimate ≥ A.• Design docs show horizontal scale path. | Premature optimization that ignores readability or horizontal growth. |
+  | 2 | **Customer‑Centric Craftsmanship** | • User story captures trader pain (#JIRA‑123).• Usability test with 3 real users pre‑GA. | Feature built “because it’s cool” with zero investor validation. |
+  | 3 | **Ownership & Proactivity** | • Engineer pages themselves during incident.• RCA published within 24 h and follow‑ups merged. | “Throw over wall” to SRE; blaming infra without fix. |
+  | 4 | **Observability & Guardrails** | • 3 SLOs + burn‑rate alerts.• Kill‑switch toggled in staging weekly. | Shipping code with no metric or alert path. |
+  | 5 | **Data‑Informed Iteration** | • A/B leads to > +5 % KPI before 100 % rollout.• Dashboards updated daily. | HIPPO decisions (“highest‑paid person’s opinion”) with zero telemetry. |
+  | 6 | **Integrity & Reliability** | • Immutable audit log (AWS QLDB) tied to every trade.• Zero Sev‑0 per quarter. | Silent failure of audit pipeline; post‑incident blame game. |
+  | 7 | **Security & Compliance First** | • Secrets in AWS SM, rotated 90 d.• Static‑analysis gate green every PR. | Hard‑coding credentials; manual policy overrides. |
+  | 8 | **Collaboration & Knowledge‑Sharing** | • ≥ 2 peer reviews; constructive RFC comments.• Tech talks recorded + wiki’ed. | Lone‑wolf merges to main; tribal knowledge silos. |
+  | 9 | **Continuous Learning & Mentorship** | • New hire gains +1 Dreyfus level in 2 skills.• Buddy logs weekly feedback. | “Sink‑or‑swim” onboarding; zero growth plan. |
+  | 10 | **Innovative Spirit** | • Quarterly hack‑day POC demo; best ideas enter backlog.• Budget for 1 conf / eng / yr. | Innovation theatre—hack‑day code never revisited. |

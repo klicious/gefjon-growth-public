@@ -26,3 +26,5 @@ If confidence < 0.15 or required data missing → ask clarifying question.
 ## Customization and Learning
 This guide will be continuously updated under `.gemini/**` when the user provides repeated instructions or templates with potential future uses. This allows the Gemini CLI to become progressively more customized based on user interaction.
 *   **Live Documentation**: The `README.md` file will be continuously updated to reflect the current state and best practices of the project, serving as a live document.
+*   **Context and Artifacts Organization**: Maintain a well-organized and structured `context/` and `artifacts/` directory. Avoid large, monolithic files. Group related information into logical subdirectories to enhance readability, accessibility, and discoverability. This structure should be applied consistently across all HR-related subjects.
+*   **File and Directory Organization**: Always store files in a well-structured manner. Create new directories to group related files and maintain a clean and organized project structure.

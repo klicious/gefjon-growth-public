@@ -1,0 +1,88 @@
+# context/evaluation_process.yaml
+# 2025-H2 Evaluation Process - Self & 360 Peer Reviews
+
+objective: "Run the full H2 performance-review cycle - from rubric distribution all the way through calibrated feedback - so every engineer understands expectations, documents evidence, and receives actionable growth guidance that maps to our OKRs and 11 Core Values."
+
+timeline:
+  - phase: "Rubrics Published"
+    dates: "2025-06-02"
+    owner: "PM / Eng Mgr"
+  - phase: "Kick-off Walkthrough"
+    dates: "2025-06-05"
+    owner: "Eng Mgr"
+  - phase: "Intern Mid-Term Review Window"
+    dates: "2025-06-09 -> 2025-06-16"
+    owner: "Intern Mentors"
+  - phase: "Intern Final / Conversion Review"
+    dates: "2025-09-09 -> 2025-09-16"
+    owner: "Intern Mentors"
+  - phase: "Engineer Self-Reviews Open"
+    dates: "2025-09-30"
+    owner: "All Engineers"
+  - phase: "Peer-Review Period"
+    dates: "2025-10-01 -> 2025-10-15"
+    owner: "Assigned Peers"
+  - phase: "Calibration Week"
+    dates: "2025-10-16 -> 2025-11-08"
+    owner: "Eng Mgr + Tech Leads"
+  - phase: "1-on-1 Feedback Delivery"
+    dates: "2025-11-11 -> 2025-11-22"
+    owner: "Direct Managers"
+  - phase: "Year-End Engineer Review Window"
+    dates: "2026-01-05 -> 2026-01-12"
+    owner: "All Engineers"
+
+core_values_refresher: # Embedded in every rubric
+  - id: 1
+    value: "Technical Excellence"
+    evidence: "p99 latency graph, Chaos pass log"
+  - id: 2
+    value: "Customer-Centric Craftsmanship"
+    evidence: "Pre-build trader interview notes"
+  - id: 3
+    value: "Ownership & Proactivity"
+    evidence: "You opened the RCA and merged the fix"
+  - id: 4
+    value: "Observability & Guardrails"
+    evidence: "3 SLOs + burn-rate alert link"
+  - id: 5
+    value: "Scalable Elegance"
+    evidence: "ADR showing horizontal shard plan"
+  - id: 6
+    value: "Data-Informed Iteration"
+    evidence: "A/B test chart with +6 % KPI"
+  - id: 7
+    value: "Integrity & Reliability"
+    evidence: "Immutable QLDB log entry"
+  - id: 8
+    value: "Security First"
+    evidence: "Secrets Manager rotation proof"
+  - id: 9
+    value: "Collaboration & Knowledge-Share"
+    evidence: "RFC link, tech-talk recording"
+  - id: 10
+    value: "Continuous Learning & Mentorship"
+    evidence: "Mentee Dreyfus +1, pulse 4.5/5"
+  - id: 11
+    value: "Innovative Spirit"
+    evidence: "Hack-Day POC merged & roadmap tag"
+
+success_metrics:
+  - metric: "Self-review completion"
+    target: "100 % by Dec 15 2025"
+    source: "Dooray Task tracker"
+  - metric: "Peer-review completion"
+    target: "100 % by Dec 31 2025"
+    source: "Dooray Task & Sheets"
+  - metric: "Calibration variance"
+    target: "<= +/- 10 pts between reviewers"
+    source: "Aggregated score sheet"
+  - metric: "On-time 1-on-1s"
+    target: "100 % by Jan 12 2026"
+    source: "Calendar analytics"
+  - metric: "Intern conversion decision"
+    target: "Offer / Release letters sent 9-16 Jun 2025, 9-16 Sep 2025"
+    source: "HR dashboard"
+  - metric: "CultureAmp comment quality"
+    target: ">= 4 avg words / comment"
+    source: "CultureAmp export"
