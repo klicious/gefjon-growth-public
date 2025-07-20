@@ -12,6 +12,7 @@
 | **Personalized Interview Plan Generation** | Creates tailored interview guides with specific BEI questions, technical problems, and assessment strategies | Provides structured, candidate-specific interview roadmaps for interviewers |
 | **Full Interview Scripting** | Generates complete, verbatim scripts including introductions, transitions, and closing statements | Ensures professional, consistent interview experience across all candidates |
 | **Live Documentation** | Automatically updates project documentation to reflect current capabilities and focus | Maintains accurate, up-to-date project information as the system evolves |
+| **Take-Home Assignment Evaluation** | Automates the evaluation of take-home assignments against a predefined rubric | Provides objective and consistent evaluation of take-home assignments |
 
 ---
 
@@ -98,16 +99,18 @@ For a candidate like Park Ji-Hyuk, the system automatically:
 
 ## Current Focus & Next Steps
 
-**Current State**: The system is actively being used to generate interview materials for specific candidates (Park Ji-Hyuk, Lee Im-Hyung, Seo Chae-Eun) as part of ongoing hiring processes. The focus has shifted from generic HR automation to specialized interview kit generation with deep personalization capabilities.
+**Current State**: The system is actively being used to generate interview materials for specific candidates (Park Ji-Hyuk, Lee Im-Hyung, Seo Chae-Eun) as part of ongoing hiring processes. The focus has shifted from generic HR automation to specialized interview kit generation with deep personalization capabilities. The system now also includes the ability to evaluate take-home assignments.
 
 **Active Development Areas**:
 - Refining interview script generation for better interviewer experience
 - Expanding technical problem bank with role-specific challenges
 - Enhancing core value alignment detection and evidence mapping
 - Streamlining the candidate-to-interview-kit pipeline for faster turnaround
+- Improving the take-home assignment evaluation process
 
 **Integration Points**: The system integrates company mission, values, and hiring processes directly into the interview generation workflow, ensuring every interview reflects organizational culture and assessment standards.
 
 ---
 
-<!-- README.md last updated from commit: 4f9dcb4d4632c891b7e0e0745d15dc4fc2bae0af -->
+<!-- Updated sections: [Key Features & Capabilities, Current Focus & Next Steps] based on commits 4f9dcb4d4632c891b7e0e0745d15dc4fc2bae0af..adcdbe5a250448688c214e0b08d4a524ff66014f -->
+<!-- README.md last updated from commit: adcdbe5a250448688c214e0b08d4a524ff66014f -->
