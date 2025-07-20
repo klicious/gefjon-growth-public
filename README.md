@@ -113,4 +113,4 @@ For a candidate like Park Ji-Hyuk, the system automatically:
 ---
 
 <!-- Updated sections: [Key Features & Capabilities, Current Focus & Next Steps] based on commits 4f9dcb4d4632c891b7e0e0745d15dc4fc2bae0af..adcdbe5a250448688c214e0b08d4a524ff66014f -->
-<!-- README.md last updated from commit: adcdbe5a250448688c214e0b08d4a524ff66014f -->
+<!-- README.md last updated from commit: 20f4b7c7e02529c3b5a09742be7aafd43b286c3f -->
