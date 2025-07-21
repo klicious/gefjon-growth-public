@@ -99,7 +99,7 @@ For a candidate like Park Ji-Hyuk, the system automatically:
 
 ## Current Focus & Next Steps
 
-**Current State**: The system is actively being used to generate interview materials for specific candidates (Park Ji-Hyuk, Lee Im-Hyung, Seo Chae-Eun) as part of ongoing hiring processes. The focus has shifted from generic HR automation to specialized interview kit generation with deep personalization capabilities. The system now also includes the ability to evaluate take-home assignments.
+**Current State**: The system is actively being used to generate interview materials for specific candidates (Park Ji-Hyuk, Lee Im-Hyung, Seo Chae-Eun) as part of ongoing hiring processes. The focus has shifted from generic HR automation to specialized interview kit generation with deep personalization capabilities. The system now includes the ability to evaluate take-home assignments.
 
 **Active Development Areas**:
 - Refining interview script generation for better interviewer experience
@@ -112,5 +112,4 @@ For a candidate like Park Ji-Hyuk, the system automatically:
 
 ---
 
-<!-- Updated sections: [Key Features & Capabilities, Current Focus & Next Steps] based on commits 4f9dcb4d4632c891b7e0e0745d15dc4fc2bae0af..adcdbe5a250448688c214e0b08d4a524ff66014f -->
-<!-- README.md last updated from commit: 20f4b7c7e02529c3b5a09742be7aafd43b286c3f -->
+<!-- README.md last updated from commit: 4df17db2a6e858e604214487be53401b9f68412a -->
