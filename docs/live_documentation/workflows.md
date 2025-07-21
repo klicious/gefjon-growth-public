@@ -1,17 +1,46 @@
-# Workflows
+# Gefjon Growth: Operational Workflows
 
-The primary workflow of the `gefjon-growth` system is the generation of interview kits.
+## Setup Guide
 
-1.  **Candidate Data Ingestion**: A JSON file containing the candidate's information is placed in the `data/public/hiring/resume/` directory.
-2.  **Interview Kit Generation**: The `gemini run` command is executed with the appropriate prompt and context file.
-3.  **Artifact Generation**: The system generates the following artifacts in the `artifacts/public/hiring/interview_materials/upcoming/{candidate_id}/` directory:
-    - `candidate_context.md`: An executive briefing with core value alignment.
-    - `interview_guide.md`: A detailed interview plan with personalized questions.
-    - `interview_script.md`: A complete verbatim script for interviewers.
+1.  **Clone the repository**:
+    ```bash
+    git clone <repository-url>
+    cd gefjon-growth
+    ```
+2.  **Install dependencies**:
+    ```bash
+    pip install -e .
+    ```
+    *Note: Project requires Python >=3.12*
 
-## Guard-rails
+## Primary Workflows
 
-- **ReAct Methodology**: Follows Reason → Act → Observe → Repeat loops as defined in `.gemini/GEMINI.md` for consistent AI-powered analysis
-- **Structured Context Engineering**: Leverages organized `context/` directory with company values, hiring processes, and team information for accurate candidate alignment
-- **Live Documentation Principle**: README.md and project documentation automatically evolve to reflect current capabilities and focus areas
-- **Organized Artifact Management**: Clean separation between public (shareable) and private (sensitive) interview materials with logical subdirectory structure
+### Generate Interview Kit for Candidates
+
+The primary workflow demonstrates the system's core capability: transforming candidate data into complete interview materials.
+
+```bash
+gemini run \
+  --prompt "ai_docs/prompts/hiring/generate_interview_kit_prompt.md" \
+  --context "data/public/hiring/resume/20250714_candidate.json"
+```
+
+**Result:** For each candidate in the JSON file, the system creates:
+
+*   `artifacts/public/hiring/interview_materials/upcoming/{candidate_id}/candidate_context.md` - Executive briefing with core value alignment
+*   `artifacts/public/hiring/interview_materials/upcoming/{candidate_id}/interview_guide.md` - Detailed interview plan with personalized questions
+*   `artifacts/public/hiring/interview_materials/upcoming/{candidate_id}/interview_script.md` - Complete verbatim script for interviewers
+
+## Development Workflows
+
+### Example Generated Output
+
+For a candidate like Park Ji-Hyuk, the system automatically:
+
+*   Analyzes their background (AI competition winner, Django/AWS experience)
+*   Maps their achievements to company core values (Innovation, Ownership, Versatility)
+*   Generates specific BEI questions referencing their projects
+*   Selects appropriate technical problems based on their skill level
+*   Creates red flag clarification points (e.g., depth of AWS knowledge)
+
+<!-- workflows.md last updated from commit: 64fb3086b3a467d041068352872f75484f2d2a47 -->

@@ -1,15 +1,23 @@
-# Interfaces
+# Gefjon Growth: API & External Interfaces
 
-The primary interface to the `gefjon-growth` system is through the Gemini CLI.
+## API Endpoints
 
-## CLI Commands
+Gefjon Growth primarily interacts with internal components and the Gemini AI API. There are no external API endpoints exposed by Gefjon Growth itself.
 
-To generate an interview kit for a candidate, run the following command:
+## Data Formats
 
-```bash
-gemini run \
-  --prompt "ai_docs/prompts/hiring/generate_interview_kit_prompt.md" \
-  --context "data/public/hiring/resume/20250714_candidate.json"
-```
+*   **Input Data**: Candidate profiles are provided as JSON files, containing structured information about the candidate's background, experience, and skills.
+*   **Output Data**: Generated interview materials are in Markdown format, including:
+    *   `candidate_context.md`: Markdown file with executive briefing.
+    *   `interview_guide.md`: Markdown file with detailed interview plan.
+    *   `interview_script.md`: Markdown file with complete verbatim script.
 
-This command will generate a complete interview kit for the specified candidate, including a candidate context, interview guide, and interview script.
+## Integration Points
+
+Gefjon Growth integrates with the following key components:
+
+*   **Gemini AI**: The core AI engine for natural language understanding and generation. Interaction is via the Gemini CLI, which abstracts the underlying API calls.
+*   **Internal Context Management**: Leverages structured data within the `context/` directory (company values, HR processes, team information) to enrich AI processing.
+*   **File System**: Reads input candidate data from `data/` and writes generated interview materials to `artifacts/`.
+
+<!-- interfaces.md last updated from commit: 64fb3086b3a467d041068352872f75484f2d2a47 -->
