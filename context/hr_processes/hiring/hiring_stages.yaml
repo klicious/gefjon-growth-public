@@ -1,12 +1,262 @@
-# context/hiring.yaml
-# Stage definitions for the hiring process.
+# context/hiring_stages.yaml
+# Comprehensive hiring process stages for the firm Platform Development Team
+# Updated to reflect current automation capabilities and 2025 H2 OKR alignment
 
-stages:
-  - name: "Sourcing"
-    description: "Identifying and attracting potential candidates."
-  - name: "Screening"
-    description: "Initial review of applications and résumés."
-  - name: "Interviewing"
-    description: "Conducting technical and behavioral interviews."
-  - name: "Offer"
-    description: "Extending a job offer to the selected candidate."
+metadata:
+  version: "2.0"
+  last_updated: "2025-01-08T00:00:00Z"
+  purpose: "Define structured hiring stages supporting 32-day time-to-hire target"
+  domain: "hr_processes"
+  visibility: "public"
+  dependencies: ["mission_vision_values.yaml", "platform_development_team.yaml"]
+  schema_version: "1.0"
+
+hiring_stages:
+  - stage_id: "sourcing"
+    name: "Candidate Sourcing & Attraction"
+    description: "Identifying and attracting potential candidates through multiple channels"
+    duration_days: "1-7"
+    automation_level: "manual"
+    key_activities:
+      - "Job posting on relevant platforms"
+      - "Network referrals and recommendations"
+      - "University partnerships and recruiting events"
+      - "Technical community engagement"
+    success_criteria:
+      - "Qualified candidate pipeline of 6+ candidates"
+      - "Diverse candidate pool representation"
+      - "Clear role requirements communication"
+    
+  - stage_id: "intake"
+    name: "Candidate Intake & Profile Processing"
+    description: "Automated processing of candidate submissions into structured profiles"
+    duration_days: "1-2"
+    automation_level: "fully_automated"
+    key_activities:
+      - "JSON candidate profile creation"
+      - "Resume parsing and data extraction"
+      - "Initial qualification screening"
+      - "Dooray Task creation for tracking"
+    success_criteria:
+      - "Complete candidate profile generated"
+      - "All required information captured"
+      - "Tracking task created in Dooray"
+    ai_agents_involved: ["intake_agent", "profile_processor"]
+    
+  - stage_id: "screening"
+    name: "Core Values Alignment Screening"
+    description: "Automated evaluation against 10 platform development team core values"
+    duration_days: "2-3"
+    automation_level: "ai_assisted"
+    key_activities:
+      - "Core values alignment assessment"
+      - "Evidence-based scoring against criteria"
+      - "Red flag identification and analysis"
+      - "Screening report generation"
+    success_criteria:
+      - "Comprehensive screening report completed"
+      - "Clear pass/fail/needs_review recommendation"
+      - "Evidence mapping for each core value"
+      - "Platform Lead approval obtained"
+    ai_agents_involved: ["screening_agent", "values_evaluator"]
+    manual_approval_required: true
+    approval_authority: "Platform Lead"
+    
+  - stage_id: "assessment"
+    name: "Take-Home Technical Assessment"
+    description: "Personalized technical assessment based on candidate profile and role requirements"
+    duration_days: "5-7"
+    automation_level: "ai_assisted"
+    key_activities:
+      - "Personalized assessment generation"
+      - "Assessment delivery to candidate"
+      - "Submission evaluation and scoring"
+      - "Technical competency analysis"
+    success_criteria:
+      - "Assessment appropriate to candidate level"
+      - "Clear evaluation rubric applied"
+      - "Comprehensive feedback generated"
+      - "Technical competency validated"
+    ai_agents_involved: ["assessment_generator", "code_evaluator"]
+    manual_approval_required: true
+    approval_authority: "Platform Lead"
+    
+  - stage_id: "interview_preparation"
+    name: "Interview Kit Generation"
+    description: "AI-powered creation of comprehensive interview materials"
+    duration_days: "1-2"
+    automation_level: "fully_automated"
+    key_activities:
+      - "Candidate context document creation"
+      - "Personalized interview guide generation"
+      - "BEI question selection and customization"
+      - "Interview script preparation"
+    success_criteria:
+      - "Complete interview kit generated (<4 hours)"
+      - "BEI questions tied to specific core values"
+      - "Personalized content based on candidate profile"
+      - "Interview materials approved for use"
+    ai_agents_involved: ["interview_generator", "bei_specialist"]
+    manual_approval_required: true
+    approval_authority: "Platform Lead"
+    
+  - stage_id: "interviewing"
+    name: "Structured Interview Process"
+    description: "Comprehensive behavioral and technical interview sessions"
+    duration_days: "3-5"
+    automation_level: "manual"
+    key_activities:
+      - "Behavioral Event Interview (BEI) session"
+      - "Technical deep-dive interview"
+      - "Pair programming session"
+      - "System design discussion"
+      - "Team culture fit assessment"
+    success_criteria:
+      - "All interview sessions completed"
+      - "Structured evaluation forms completed"
+      - "Consistent scoring across interviewers"
+      - "Clear hire/no-hire recommendation"
+    interview_structure:
+      - session: "BEI Session"
+        duration: "60 minutes"
+        focus: "Core values alignment validation"
+      - session: "Technical Deep-Dive"
+        duration: "60 minutes"
+        focus: "Technical competency assessment"
+      - session: "Pair Programming"
+        duration: "60 minutes"
+        focus: "Collaborative problem-solving"
+      - session: "System Design"
+        duration: "45 minutes"
+        focus: "Architecture and scalability thinking"
+      - session: "Culture Fit"
+        duration: "30 minutes"
+        focus: "Team dynamics and communication"
+    
+  - stage_id: "evaluation"
+    name: "Comprehensive Candidate Evaluation"
+    description: "Aggregated evaluation and final hiring recommendation"
+    duration_days: "2-3"
+    automation_level: "ai_assisted"
+    key_activities:
+      - "Multi-stage evaluation aggregation"
+      - "Scoring consistency validation"
+      - "Final recommendation generation"
+      - "Risk assessment and mitigation"
+    success_criteria:
+      - "Comprehensive evaluation report completed"
+      - "Clear hire/no-hire recommendation"
+      - "Risk factors identified and assessed"
+      - "Salary band recommendation provided"
+    ai_agents_involved: ["evaluation_aggregator", "decision_synthesizer"]
+    manual_approval_required: true
+    approval_authority: "Platform Lead"
+    
+  - stage_id: "decision"
+    name: "Final Hiring Decision"
+    description: "Executive decision and offer preparation"
+    duration_days: "2-3"
+    automation_level: "manual"
+    key_activities:
+      - "Final decision review and approval"
+      - "Offer package preparation"
+      - "Reference checks (if required)"
+      - "Background verification initiation"
+    success_criteria:
+      - "Final hiring decision documented"
+      - "Offer terms approved and prepared"
+      - "All compliance requirements met"
+    decision_authority: "Platform Lead"
+    escalation_path: "Engineering Manager"
+    
+  - stage_id: "offer"
+    name: "Offer Extension & Negotiation"
+    description: "Formal offer presentation and negotiation process"
+    duration_days: "5-10"
+    automation_level: "manual"
+    key_activities:
+      - "Offer presentation to candidate"
+      - "Negotiation and terms adjustment"
+      - "Contract preparation and review"
+      - "Onboarding preparation"
+    success_criteria:
+      - "Offer accepted by candidate"
+      - "Contract signed and executed"
+      - "Start date confirmed"
+      - "Onboarding plan activated"
+
+# Process Performance Metrics
+performance_metrics:
+  current_baseline:
+    time_to_hire_days: 32
+    candidates_per_month: 40
+    peak_capacity_per_week: 15
+    interview_kit_generation_hours: 4
+    
+  target_improvements:
+    automation_coverage: "90%"
+    manual_intervention_time: "<20 minutes per candidate"
+    interview_consistency: ">90%"
+    quality_satisfaction: "≥4.0/5.0"
+    
+  success_kpis:
+    - metric: "Time to Interview Kit"
+      target: "<4 hours"
+      current: "manual baseline"
+    - metric: "Interview Consistency"
+      target: "≥90%"
+      measurement: "structured question coverage"
+    - metric: "Quality Score"
+      target: "≥4.0/5.0"
+      measurement: "interviewer satisfaction"
+    - metric: "Cost per Hire"
+      target: "<$75"
+      measurement: "automation cost per candidate"
+
+# Integration Points
+integration_points:
+  dooray_task:
+    purpose: "Task creation and workflow management"
+    automation: "PyDooray API integration"
+    templates: ["backend_task", "frontend_task", "devops_task"]
+    
+  ai_agents:
+    primary_llm: "Gemini 2.5 Pro"
+    fallback_models: ["Claude 3.5 Sonnet", "GPT-4o", "ChatGPT-4o", "Amazon Q Developer"]
+    cost_optimization: "batch processing, smart caching, quality-optimal token usage"
+    enhanced_capabilities: "improved reasoning, multimodal processing, quality-optimized context delivery"
+    
+  monitoring:
+    platform: "Grafana Cloud + Prometheus"
+    golden_signals: ["latency", "error_rate", "availability"]
+    alerting: "Notion API → Zapier → Slack"
+
+# Quality Assurance Framework
+quality_framework:
+  validation_stages:
+    - "Schema validation"
+    - "Consistency check"
+    - "AI content review"
+    - "Cross-domain validation"
+    - "Quality scoring"
+    - "Final approval"
+    
+  approval_gates:
+    - stage: "screening"
+      approver: "Platform Lead"
+      criteria: "Core values alignment validation"
+    - stage: "assessment"
+      approver: "Platform Lead"
+      criteria: "Technical assessment appropriateness"
+    - stage: "interview_preparation"
+      approver: "Platform Lead"
+      criteria: "Interview material quality and relevance"
+    - stage: "evaluation"
+      approver: "Platform Lead"
+      criteria: "Final hiring recommendation validation"
+
+# AI Agent Instructions
+ai_agent_instructions:
+  context_usage: "Use this hiring stages framework to guide candidate processing workflows and ensure consistent evaluation standards"
+  update_triggers: ["process_improvements", "okr_changes", "team_structure_updates"]
+  quality_standards: "Maintain alignment with 10 core values and 2025 H2 OKR targets"
