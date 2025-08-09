@@ -112,4 +112,7 @@ For a candidate like Park Ji-Hyuk, the system automatically:
 
 ---
 
+## Live Documentation
+For the latest features, overview, and workflows, see docs/live_documentation/.
+
 <!-- README.md last updated from commit: 4df17db2a6e858e604214487be53401b9f68412a -->

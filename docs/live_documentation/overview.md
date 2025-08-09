@@ -2,7 +2,7 @@
 
 ## Project Summary
 
-Gefjon Growth is a specialized **interview automation system** that transforms raw candidate data into comprehensive, personalized interview kits. Leveraging Gemini AI and structured workflows, the system generates complete interview materials, including candidate contexts, detailed interview guides, and full verbatim scripts. This ensures consistent, thorough, and personalized candidate evaluation, streamlining the hiring process and enhancing the quality of interviews.
+Gefjon Growth is a specialized **interview automation system** that transforms raw candidate data into comprehensive, personalized interview kits. Leveraging Gemini AI and structured workflows, the system generates complete interview materials, including candidate contexts, detailed interview guides, and full verbatim scripts. It also automates the evaluation of take-home assignments using predefined rubrics. This ensures consistent, thorough, and personalized candidate evaluation, streamlining the hiring process and enhancing the quality of interviews.
 
 ## Vision & Goals
 
@@ -11,6 +11,7 @@ Gefjon Growth's vision is to revolutionize the hiring process by providing an in
 *   **Enhance Interview Consistency**: Ensure all candidates receive a standardized yet personalized interview experience.
 *   **Improve Interviewer Efficiency**: Reduce the manual effort involved in preparing for interviews.
 *   **Deepen Candidate Insights**: Provide interviewers with comprehensive context and tailored questions for each candidate.
+*   **Extend Objective Assessment**: Automate take-home assignment evaluation with predefined rubrics.
 *   **Accelerate Hiring Cycles**: Streamline the preparation phase to expedite the overall hiring process.
 *   **Maintain High Quality**: Continuously refine the AI models and workflows to generate top-tier interview materials.
 
