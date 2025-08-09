@@ -1,0 +1,93 @@
+{
+    "mcpServers": {
+        "fetch": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "mcp/fetch"
+            ],
+            "disabled": false,
+            "autoApprove": [
+                "fetch",
+                "fetch"
+            ]
+        },
+        "openapi-schema": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "mcp/openapi-schema:latest"
+            ],
+            "disabled": false,
+            "autoApprove": []
+        },
+        "notionMCP": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "mcp-remote",
+                "https://mcp.notion.com/mcp"
+            ],
+            "disabled": false,
+            "autoApprove": []
+        },
+        "time-mcp": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@smithery/cli@latest",
+                "run",
+                "@yokingma/time-mcp",
+                "--key",
+                "<SMITHERY-API-KEY-REDACTED>",
+                "--profile",
+                "<SMITHERY-PROFILE-REDACTED>"
+            ],
+            "disabled": false,
+            "autoApprove": [
+                "current_time"
+            ]
+        },
+        "exa": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "mcp-remote",
+                "https://mcp.exa.ai/mcp?exaApiKey=your-exa-api-key"
+            ]
+        },
+        "Context7": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@upstash/context7-mcp"
+            ],
+            "env": {},
+            "disabled": false,
+            "autoApprove": []
+        },
+        "google-search": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "-e",
+                "GOOGLE_API_KEY=<GOOGLE-API-KEY-REDACTED>",
+                "-e",
+                "GOOGLE_SEARCH_ENGINE_ID=<SEARCH-ENGINE-ID-REDACTED>",
+                "mcp/google-custom-search:latest",
+                "stdio"
+            ],
+            "disabled": false,
+            "autoApprove": [
+                "search",
+                "read_webpage"
+            ]
+        }
+    }
+}

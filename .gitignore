@@ -35,7 +35,3 @@ env/
 *.tmp
 *.swp
 *.swo
-
-# Local tooling/config (untracked)
-.kiro/
-.mcp.json
