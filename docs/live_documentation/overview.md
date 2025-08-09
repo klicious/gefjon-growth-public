@@ -25,3 +25,7 @@ Gefjon Growth primarily benefits:
 *   **HR Professionals**: By automating repetitive tasks and maintaining a high standard of interview quality.
 
 <!-- overview.md last updated from commit: 64fb3086b3a467d041068352872f75484f2d2a47 -->
+
+## Updates — 2025-08-10
+- Added Context-Centric Multi-Agent HR Blueprint (see ai_docs\context_centric_multi_agent_hr_blueprint\README.md) covering market, architecture, execution roadmap, and agent context.
+- Expanded MCP Integration to include Exa, Sequential Thinking, Playwright, and Fetch to support research, structured reasoning, browser automation, and URL fetching.

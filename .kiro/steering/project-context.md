@@ -10,9 +10,14 @@ inclusion: always
 ## Core Architecture & Workflow
 
 ### MCP Integration
-This project utilizes **Context7** and **Exa** MCP servers to enhance AI capabilities. All agents MUST leverage these servers for their tasks.
-- **Context7**: Used for retrieving up-to-date documentation and library information.
-- **Exa**: Used for real-time web searches, company research, and content crawling.
+| Capability                           | MCP Server            | Typical Trigger Words                                      |
+| ------------------------------------ | --------------------- | ---------------------------------------------------------- |
+| AI-powered Research                  | `exa`                 | "research", "find info on", "deep dive on", "crawl site" |
+| Sequential reasoning and planning    | `sequential-thinking` | "think step-by-step", "plan steps", "break down", "reason" |
+| Browser automation & web interactions| `playwright`          | "open page", "click", "fill", "screenshot", "scrape"       |
+| URL fetching & scraping              | `fetch`               | "fetch", "download", "HTTP GET", "scrape"                  |
+
+Note: Ensure MCP servers are properly configured before use. `exa` requires a valid API key in the remote URL (exaApiKey).
 
 ### Primary AI Workflow
 The system operates using a **ReAct methodology** (Reason → Act → Observe → Repeat). The current implementation focuses on the complete hiring pipeline: candidate screening → take-home assignment allocation → assignment evaluation → interview kit generation → candidate evaluation. Future expansion will automate performance reviews, OKR management, talent development tracking, and team evaluation processes.

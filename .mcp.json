@@ -56,9 +56,18 @@
             "command": "npx",
             "args": [
                 "-y",
-                "mcp-remote",
-                "https://mcp.exa.ai/mcp?exaApiKey=your-exa-api-key"
-            ]
+                "mcp-remote@latest",
+                "https://mcp.exa.ai/mcp?exaApiKey=<EXA-API-KEY-REDACTED>"
+            ],
+            "disabled": false,
+            "autoApprove": [
+                "search",
+                "get_contents"
+            ],
+            "env": {
+                "NODE_OPTIONS": "--max-old-space-size=4096",
+                "FASTMCP_LOG_LEVEL": "ERROR"
+            }
         },
         "Context7": {
             "command": "npx",

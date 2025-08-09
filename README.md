@@ -97,6 +97,19 @@ For a candidate like Park Ji-Hyuk, the system automatically:
 
 ---
 
+## MCP Integration
+
+| Capability                           | MCP Server            | Typical Trigger Words                                      |
+| ------------------------------------ | --------------------- | ---------------------------------------------------------- |
+| AI-powered Research                  | `exa`                 | "research", "find info on", "deep dive on", "crawl site" |
+| Sequential reasoning and planning    | `sequential-thinking` | "think step-by-step", "plan steps", "break down", "reason" |
+| Browser automation & web interactions| `playwright`          | "open page", "click", "fill", "screenshot", "scrape"       |
+| URL fetching & scraping              | `fetch`               | "fetch", "download", "HTTP GET", "scrape"                  |
+
+Notes:
+- Ensure MCP servers are properly configured before use.
+- `exa` requires a valid API key passed in the remote URL (exaApiKey).
+
 ## Current Focus & Next Steps
 
 **Current State**: The system is actively being used to generate interview materials for specific candidates (Park Ji-Hyuk, Lee Im-Hyung, Seo Chae-Eun) as part of ongoing hiring processes. The focus has shifted from generic HR automation to specialized interview kit generation with deep personalization capabilities. The system now includes the ability to evaluate take-home assignments.
@@ -112,7 +125,11 @@ For a candidate like Park Ji-Hyuk, the system automatically:
 
 ---
 
+## Latest Updates (2025-08-10)
+- Added Context-Centric Multi-Agent HR Blueprint (see ai_docs\context_centric_multi_agent_hr_blueprint\README.md) covering market, architecture, execution roadmap, and agent context.
+- Expanded MCP Integration to include Exa, Sequential Thinking, Playwright, and Fetch; see the table above. Manage keys/secrets via environment variables/CI, not in repo.
+
 ## Live Documentation
-For the latest features, overview, and workflows, see docs/live_documentation/.
+For the latest features, overview, and workflows, see docs\live_documentation\.
 
 <!-- README.md last updated from commit: 4df17db2a6e858e604214487be53401b9f68412a -->

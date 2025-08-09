@@ -28,3 +28,22 @@
 
 - Added previously unversioned files and directories to Git tracking: CLAUDE.md, ai_docs/aws_bedrock_agents, artifacts/public/hiring/evaluation, data/public/aws_materials, data/public/evaluation, data/public/new, scripts.
 - Added .gitignore rules to ignore local tooling (.kiro/, .mcp.json).
+
+
+## 2025-08-10
+
+### Documentation
+- README.md: Added "Latest Updates (2025-08-10)" section with links to Context-Centric Multi-Agent HR Blueprint and MCP integration notes.
+- Live Docs: Updated overview.md with 2025-08-10 updates referencing MCP servers and new blueprint docs.
+
+### MCP Integration & Steering
+- Expanded MCP server usage across docs to include Exa, Sequential Thinking, Playwright, and Fetch.
+- Updated steering docs (.kiro/steering/context-engineering.md, .kiro/steering/project-context.md) and .junie/guidelines.md to reflect required MCP usage patterns.
+- Refreshed .gemini/GEMINI.md and CLAUDE.md sections for MCP alignment.
+
+### Version Control Hygiene
+- Added previously unversioned documentation under ai_docs\context_centric_multi_agent_hr_blueprint\ (market, product, architecture, execution roadmap, agent context, research, open questions, presentation).
+- Committed editor settings (.vscode/settings.json) as part of this change set per current staging.
+
+### Notes
+- .mcp.json updated to use mcp-remote@latest and include additional servers. For production, externalize API keys/secrets to environment/CI.

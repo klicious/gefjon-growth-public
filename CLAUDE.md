@@ -65,9 +65,11 @@ Located in `context/company_info/mission_vision_values.yaml`:
 ## Development Environment
 
 ### MCP Integration
-This project utilizes **Context7** and **Exa** MCP servers to enhance AI capabilities. All agents MUST leverage these servers for their tasks.
-- **Context7**: Used for retrieving up-to-date documentation and library information.
-- **Exa**: Used for real-time web searches, company research, and content crawling.
+This project utilizes the following MCP servers. All agents MUST leverage them as appropriate:
+- **Exa (`exa`)**: Real-time web searches, company research, and content discovery/crawling. Requires API key via remote URL (exaApiKey).
+- **Sequential Thinking (`sequential-thinking`)**: Structured step-by-step reasoning and planning for complex tasks.
+- **Playwright (`playwright`)**: Browser automation and scripted web interactions (open page, click, fill, screenshot, scrape flows).
+- **Fetch (`fetch`)**: Direct URL fetching/HTTP downloads and simple scraping. Ensure proper configuration before use.
 
 ### Technology Stack
 - **Language:** Python ≥3.12 (specified in pyproject.toml)

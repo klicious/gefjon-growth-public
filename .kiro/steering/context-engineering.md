@@ -8,9 +8,11 @@ inclusion: always
 **Context Engineering** is a fundamental methodology in Gefjon Growth where all AI agents must operate with complete information awareness before executing any task.
 
 ## MCP Integration
-This project utilizes **Context7** and **Exa** MCP servers to enhance AI capabilities. All agents MUST leverage these servers for their tasks.
-- **Context7**: Used for retrieving up-to-date documentation and library information.
-- **Exa**: Used for real-time web searches, company research, and content crawling.
+This project utilizes the following MCP servers. All agents MUST leverage these appropriately during tasks:
+- **Exa (`exa`)**: Real-time web research, company research, content discovery/crawling. Requires API key in remote URL (exaApiKey).
+- **Sequential Thinking (`sequential-thinking`)**: Structured, step-by-step reasoning and planning for complex tasks.
+- **Playwright (`playwright`)**: Browser automation for opening pages, clicking, filling forms, screenshots, and scripted web interactions.
+- **Fetch (`fetch`)**: Direct URL fetching/HTTP download and simple scraping. Ensure proper configuration before use.
 
 ## Mandatory Agent Behavior
 

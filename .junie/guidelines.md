@@ -98,31 +98,48 @@ You must integrate these values into all HR decisions and recommendations:
 
 ## MCP Integration Requirements
 
-### **Required MCP Servers**
+### **Available MCP Servers**
 You MUST leverage these MCP servers for enhanced capabilities:
 
-**Context7 MCP Server**
-- Use for retrieving up-to-date documentation and library information
-- Essential for technical skill assessment and validation
-- Required for staying current with industry standards
-
-**Exa MCP Server** 
-- Use for real-time web searches and company research
+**Exa (`exa`)**
+- Real-time web searches and company research
 - Essential for competitive analysis and market insights
 - Required for candidate background verification
+- Requires API key via remote URL parameter (exaApiKey)
+
+**Sequential Thinking (`sequential-thinking`)**
+- Structured, step-by-step reasoning and planning for complex or multi-stage HR tasks
+- Useful for decomposing interview workflows, performance review cycles, and automation plans
+
+**Playwright (`playwright`)**
+- Browser automation and scripted web interactions
+- Useful for opening pages, clicking, filling forms, screenshots, and scraping flows when needed
+
+**Fetch (`fetch`)**
+- Direct URL fetching/HTTP download and simple scraping
+- Ensure proper configuration before use
 
 ### **Integration Pattern**
 ```python
 # Example MCP integration pattern
 async def enhanced_candidate_analysis(candidate_data):
-    # Use Context7 for technical standards
-    tech_standards = await context7_mcp.get_latest_standards(candidate_data.skills)
-    
-    # Use Exa for company research  
+    # Use Exa for company/candidate research
     company_insights = await exa_mcp.research_company(candidate_data.current_company)
-    
-    # Integrate findings into analysis
-    return comprehensive_assessment(candidate_data, tech_standards, company_insights)
+
+    # Use Sequential Thinking to plan evaluation steps
+    plan = await sequential_thinking_mcp.plan_steps(
+        goal="Complete candidate evaluation end-to-end",
+        context={"role": candidate_data.role, "experience": candidate_data.experience}
+    )
+
+    # Optionally use Playwright for web-based validation tasks (e.g., portfolio review)
+    # page = await playwright_mcp.open_page(candidate_data.portfolio_url)
+    # screenshot = await playwright_mcp.screenshot()
+
+    # Optionally use Fetch to retrieve raw assets or JSON endpoints
+    # resume_pdf = await fetch_mcp.get(url=candidate_data.resume_url)
+
+    return comprehensive_assessment(candidate_data, plan, company_insights)
 ```
 
 ---
