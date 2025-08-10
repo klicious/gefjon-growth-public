@@ -150,8 +150,7 @@ The README.md file serves as a "live document" that automatically evolves to ref
 
 ### Context File Structure
 All context files follow YAML format with metadata headers including `id`, `type`, `domain`, `last_updated`, `tags`, and `visibility` fields.
-## Futur
-e HR Automation Scope
+## Future HR Automation Scope
 
 ### Planned Expansion Areas
 - **Performance Management:** Automated performance reviews, feedback cycles, and improvement tracking
