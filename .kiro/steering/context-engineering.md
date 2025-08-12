@@ -9,10 +9,17 @@ inclusion: always
 
 ## MCP Integration
 This project utilizes the following MCP servers. All agents MUST leverage these appropriately during tasks:
-- **Exa (`exa`)**: Real-time web research, company research, content discovery/crawling. Requires API key in remote URL (exaApiKey).
+- **Research (Primary → Fallback)**: `exa` → `google-search` for web research, company research, and content discovery/crawling
+  - **Exa (`exa`)**: AI-powered research with advanced content discovery. Requires API key in remote URL (exaApiKey).
+  - **Google Search (`google-search`)**: Reliable fallback for web search and content extraction when `exa` is unavailable.
 - **Sequential Thinking (`sequential-thinking`)**: Structured, step-by-step reasoning and planning for complex tasks.
 - **Playwright (`playwright`)**: Browser automation for opening pages, clicking, filling forms, screenshots, and scripted web interactions.
 - **Fetch (`fetch`)**: Direct URL fetching/HTTP download and simple scraping. Ensure proper configuration before use.
+
+### Research Fallback Protocol
+1. **Attempt `exa`** for comprehensive AI-powered research first
+2. **Fall back to `google-search`** if `exa` fails, is unavailable, or budget constraints exist
+3. **Both tools support** similar research workflows with different underlying implementations
 
 ## Mandatory Agent Behavior
 

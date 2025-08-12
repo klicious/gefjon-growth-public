@@ -5,7 +5,7 @@ This directory contains the complete, production-ready hiring workflow for Gefjo
 
 ## Current Workflow Version
 **Version**: 2.0 (Single Candidate Directory Approach)  
-**Last Updated**: 2025-08-11  
+**Last Updated**: 2025-08-12  
 **Status**: Production Ready
 
 ## Quick Start
@@ -46,6 +46,8 @@ python scripts/generate_overall_summary.py
 - **scripts/generate_overall_summary.py** - Summary generation
 
 ## Output Structure
+
+### Public Deliverables
 ```
 artifacts/public/hiring/candidates/{date}_consolidated/
 ├── {candidate_id}_{name}/
@@ -56,6 +58,17 @@ artifacts/public/hiring/candidates/{date}_consolidated/
 │   └── candidate_summary.md
 ├── HIRING_SUMMARY_COMPLETE.md
 └── QUICK_REFERENCE_GUIDE.md
+```
+
+### Private Working Files (Debug/Logs)
+```
+data/private/hiring/working/{run_id}/
+├── run_config.json
+├── context_validation_report.json
+├── candidates_normalized.json
+├── jd_mapping_{candidate_id}.md
+├── screening_summary.json
+└── FINAL_WORKFLOW_SUMMARY.json
 ```
 
 ## Key Features

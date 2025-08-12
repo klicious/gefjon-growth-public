@@ -66,10 +66,17 @@ Located in `context/company_info/mission_vision_values.yaml`:
 
 ### MCP Integration
 This project utilizes the following MCP servers. All agents MUST leverage them as appropriate:
-- **Exa (`exa`)**: Real-time web searches, company research, and content discovery/crawling. Requires API key via remote URL (exaApiKey).
+- **Research (Primary → Fallback)**: `exa` → `google-search` for web research, company research, and content discovery/crawling
+  - **Exa (`exa`)**: AI-powered research with advanced content discovery. Requires API key via remote URL (exaApiKey).
+  - **Google Search (`google-search`)**: Reliable fallback for web search and content extraction when `exa` is unavailable or budget-constrained.
 - **Sequential Thinking (`sequential-thinking`)**: Structured step-by-step reasoning and planning for complex tasks.
 - **Playwright (`playwright`)**: Browser automation and scripted web interactions (open page, click, fill, screenshot, scrape flows).
 - **Fetch (`fetch`)**: Direct URL fetching/HTTP downloads and simple scraping. Ensure proper configuration before use.
+
+### Research Fallback Protocol
+1. **Attempt `exa`** for comprehensive AI-powered research first
+2. **Fall back to `google-search`** if `exa` fails, is unavailable, or budget constraints exist
+3. **Both tools support** similar research workflows with different underlying implementations
 
 ### Technology Stack
 - **Language:** Python ≥3.12 (specified in pyproject.toml)

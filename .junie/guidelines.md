@@ -101,11 +101,15 @@ You must integrate these values into all HR decisions and recommendations:
 ### **Available MCP Servers**
 You MUST leverage these MCP servers for enhanced capabilities:
 
-**Exa (`exa`)**
-- Real-time web searches and company research
-- Essential for competitive analysis and market insights
-- Required for candidate background verification
-- Requires API key via remote URL parameter (exaApiKey)
+**Research (Primary → Fallback): `exa` → `google-search`**
+- **Exa (`exa`)**: AI-powered web searches, company research, and competitive analysis
+  - Essential for comprehensive candidate background verification
+  - Advanced content discovery and market insights
+  - Requires API key via remote URL parameter (exaApiKey)
+- **Google Search (`google-search`)**: Reliable fallback for web research
+  - Web search with content extraction capabilities
+  - Use when `exa` is unavailable or budget-constrained
+  - Supports similar research workflows as `exa`
 
 **Sequential Thinking (`sequential-thinking`)**
 - Structured, step-by-step reasoning and planning for complex or multi-stage HR tasks
@@ -119,12 +123,22 @@ You MUST leverage these MCP servers for enhanced capabilities:
 - Direct URL fetching/HTTP download and simple scraping
 - Ensure proper configuration before use
 
+### **Research Fallback Protocol**
+1. **Primary**: Attempt `exa` for comprehensive AI-powered research
+2. **Fallback**: Use `google-search` if `exa` fails or is unavailable
+3. **Seamless Integration**: Both tools support similar research patterns
+
 ### **Integration Pattern**
 ```python
-# Example MCP integration pattern
+# Example MCP integration pattern with research fallback
 async def enhanced_candidate_analysis(candidate_data):
-    # Use Exa for company/candidate research
-    company_insights = await exa_mcp.research_company(candidate_data.current_company)
+    # Research with fallback: Try Exa first, then Google Search
+    try:
+        # Primary: Use Exa for comprehensive AI-powered research
+        company_insights = await exa_mcp.research_company(candidate_data.current_company)
+    except (APIError, BudgetExceeded, ServiceUnavailable):
+        # Fallback: Use Google Search for reliable web research
+        company_insights = await google_search_mcp.search_company(candidate_data.current_company)
 
     # Use Sequential Thinking to plan evaluation steps
     plan = await sequential_thinking_mcp.plan_steps(

@@ -12,10 +12,16 @@ inclusion: always
 ### MCP Integration
 | Capability                           | MCP Server            | Typical Trigger Words                                      |
 | ------------------------------------ | --------------------- | ---------------------------------------------------------- |
-| AI-powered Research                  | `exa`                 | "research", "find info on", "deep dive on", "crawl site" |
+| AI-powered Research                  | `exa` → `google-search` | "research", "find info on", "deep dive on", "crawl site" |
 | Sequential reasoning and planning    | `sequential-thinking` | "think step-by-step", "plan steps", "break down", "reason" |
 | Browser automation & web interactions| `playwright`          | "open page", "click", "fill", "screenshot", "scrape"       |
 | URL fetching & scraping              | `fetch`               | "fetch", "download", "HTTP GET", "scrape"                  |
+
+### Research Fallback Protocol
+**Primary**: Use `exa` for comprehensive AI-powered research and content discovery
+**Fallback**: If `exa` fails or budget constraints exist, automatically fall back to `google-search`
+- `google-search`: Web search with content extraction capabilities
+- Both tools support similar research workflows with different underlying implementations
 
 Note: Ensure MCP servers are properly configured before use. `exa` requires a valid API key in the remote URL (exaApiKey).
 

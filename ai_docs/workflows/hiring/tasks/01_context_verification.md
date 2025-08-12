@@ -66,7 +66,7 @@ ls -la artifacts/public/hiring/interview_process.md
 
 ### 3. Environment Setup
 - Generate unique run ID: `{YYYYMMDD}_{HHMMSS}_{random}`
-- Create working directory: `data/public/hiring/working/{run_id}/`
+- Create working directory: `data/private/hiring/working/{run_id}/`
 - Initialize execution log
 
 ### 4. Context Engineering Checklist
@@ -80,9 +80,9 @@ ls -la artifacts/public/hiring/interview_process.md
 ## Outputs
 
 ### Success
-- **Execution Log**: `data/public/hiring/working/{run_id}/execution.log`
-- **Validated Data**: `data/public/hiring/working/{run_id}/candidates.validated.json`
-- **Context Summary**: `data/public/hiring/working/{run_id}/context_summary.md`
+- **Execution Log**: `data/private/hiring/working/{run_id}/execution.log`
+- **Validated Data**: `data/private/hiring/working/{run_id}/candidates.validated.json`
+- **Context Summary**: `data/private/hiring/working/{run_id}/context_summary.md`
 
 ### Failure Conditions
 - Missing required context files

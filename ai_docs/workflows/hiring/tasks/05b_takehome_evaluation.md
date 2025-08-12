@@ -150,7 +150,7 @@ Total Score = (Code Quality × 0.25) + (Reliability × 0.25) +
 ```
 
 ### Evaluation Summary
-**Location**: `data/public/hiring/working/{run_id}/takehome_evaluations.json`
+**Location**: `data/private/hiring/working/{run_id}/takehome_evaluations.json`
 
 ## Quality Gates
 - **Evaluation Completeness**: All assessment criteria scored
@@ -195,7 +195,7 @@ gemini run \
 ```bash
 gemini run \
   --prompt "ai_docs/workflows/hiring/tasks/05b_takehome_evaluation.md" \
-  --context "data/public/hiring/working/{run_id}/takehome_assignments.json"
+  --context "data/private/hiring/working/{run_id}/takehome_assignments.json"
 ```
 
 ## Validation Checklist

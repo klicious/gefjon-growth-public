@@ -17,7 +17,7 @@ version: 1.0
 
 ## Prerequisites
 - **Task 2 Completed**: Intake & normalization successful
-- **Input**: `data/public/hiring/working/{run_id}/candidates.normalized.json`
+- **Input**: `data/private/hiring/working/{run_id}/candidates.normalized.json`
 - **Job Description**: `artifacts/public/hiring/job_descriptions/backend_mid_level.md`
 
 ## Objectives
@@ -82,7 +82,7 @@ version: 1.0
 ## Output Structure
 
 ### JD Mapping Report
-**Location**: `data/public/hiring/working/{run_id}/jd_mapping/{candidate_id}.json`
+**Location**: `data/private/hiring/working/{run_id}/jd_mapping/{candidate_id}.json`
 
 ```json
 {
@@ -138,7 +138,7 @@ version: 1.0
 ```
 
 ### Competency Summary
-**Location**: `data/public/hiring/working/{run_id}/competency_summary.json`
+**Location**: `data/private/hiring/working/{run_id}/competency_summary.json`
 
 ```json
 {
@@ -190,7 +190,7 @@ Upon successful completion, proceed to **Task 4: Automated Screening & Recommend
 ```bash
 gemini run \
   --prompt "ai_docs/workflows/hiring/tasks/03_jd_mapping.md" \
-  --context "data/public/hiring/working/{run_id}/candidates.normalized.json" \
+  --context "data/private/hiring/working/{run_id}/candidates.normalized.json" \
   --context "artifacts/public/hiring/job_descriptions/backend_mid_level.md"
 ```
 

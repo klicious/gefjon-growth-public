@@ -17,8 +17,8 @@ version: 1.0
 
 ## Prerequisites
 - **Task 1 Completed**: Context verification successful
-- **Input**: `data/public/hiring/working/{run_id}/candidates.validated.json`
-- **Working Directory**: `data/public/hiring/working/{run_id}/`
+- **Input**: `data/private/hiring/working/{run_id}/candidates.validated.json`
+- **Working Directory**: `data/private/hiring/working/{run_id}/`
 
 ## Objectives
 - Normalize candidate fields to standard schema
@@ -99,12 +99,12 @@ version: 1.0
 
 ### Primary Output
 - **Production Mode**: `data/private/hiring/working/{run_id}/candidates.normalized.json` (full data)
-- **Demo Mode**: `data/public/hiring/working/{run_id}/candidates.normalized.json` (masked data)
+- **Demo Mode**: `data/private/hiring/working/{run_id}/candidates.normalized.json` (masked data)
 
 ### Supporting Files
-- **ID Registry**: `data/public/hiring/working/{run_id}/candidate_ids.json`
-- **Normalization Log**: `data/public/hiring/working/{run_id}/normalization.log`
-- **Processing Mode Log**: `data/public/hiring/working/{run_id}/processing_mode.log`
+- **ID Registry**: `data/private/hiring/working/{run_id}/candidate_ids.json`
+- **Normalization Log**: `data/private/hiring/working/{run_id}/normalization.log`
+- **Processing Mode Log**: `data/private/hiring/working/{run_id}/processing_mode.log`
 
 ### Sample Normalized Output
 

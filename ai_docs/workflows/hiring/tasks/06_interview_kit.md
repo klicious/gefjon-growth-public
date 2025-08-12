@@ -18,7 +18,7 @@ version: 2.0
 
 ## Prerequisites
 - **Tasks 1-5 Completed**: All previous stages successful
-- **Input**: `data/public/hiring/working/{run_id}/candidates.normalized.json`
+- **Input**: `data/private/hiring/working/{run_id}/candidates.normalized.json`
 - **Context**: Company values, job requirements, candidate profiles, screening reports, take-home evaluations
 - **Approval**: Platform Lead approval for take-home evaluations
 
@@ -333,7 +333,7 @@ Upon successful completion and approval, proceed to **Task 7: Structured Intervi
 ```bash
 gemini run \
   --prompt "ai_docs/workflows/hiring/tasks/06_interview_kit.md" \
-  --context "data/public/hiring/working/{run_id}/candidates.normalized.json" \
+  --context "data/private/hiring/working/{run_id}/candidates.normalized.json" \
   --context "context/company_info/mission_vision_values.yaml" \
   --filter "candidate_id=atlas_001" \
   --mode "bei_comprehensive"
@@ -343,7 +343,7 @@ gemini run \
 ```bash
 gemini run \
   --prompt "ai_docs/workflows/hiring/tasks/06_interview_kit.md" \
-  --context "data/public/hiring/working/{run_id}/candidates.normalized.json" \
+  --context "data/private/hiring/working/{run_id}/candidates.normalized.json" \
   --context "context/company_info/mission_vision_values.yaml" \
   --mode "bei_batch"
 ```
@@ -352,8 +352,8 @@ gemini run \
 ```bash
 gemini run \
   --prompt "ai_docs/workflows/hiring/tasks/06_interview_kit.md" \
-  --context "data/public/hiring/working/{run_id}/candidates.normalized.json" \
-  --context "data/public/hiring/working/{run_id}/screening_summary_complete.json" \
+  --context "data/private/hiring/working/{run_id}/candidates.normalized.json" \
+  --context "data/private/hiring/working/{run_id}/screening_summary_complete.json" \
   --context "context/company_info/mission_vision_values.yaml"
 ```
 

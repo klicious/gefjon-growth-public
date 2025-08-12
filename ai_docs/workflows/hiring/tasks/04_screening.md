@@ -17,7 +17,7 @@ version: 1.0
 
 ## Prerequisites
 - **Task 3 Completed**: JD mapping and competency alignment
-- **Input**: `data/public/hiring/working/{run_id}/jd_mapping.json` per candidate
+- **Input**: `data/private/hiring/working/{run_id}/jd_mapping.json` per candidate
 - **Plan**: `ai_docs/plans/candidate_screening_plan.md`
 
 ## Objectives
@@ -97,7 +97,7 @@ version: 1.0
 - **Next Steps**: Suggested interview focus areas or concerns to address
 
 ### Screening Summary
-**Location**: `data/public/hiring/working/{run_id}/screening_summary.json`
+**Location**: `data/private/hiring/working/{run_id}/screening_summary.json`
 
 **Contents**:
 ```json
@@ -182,7 +182,7 @@ Upon successful completion and Platform Lead approval, proceed to **Task 5: Pers
 ```bash
 gemini run \
   --prompt "ai_docs/workflows/hiring/tasks/04_screening.md" \
-  --context "data/public/hiring/working/{run_id}/jd_mapping.json" \
+  --context "data/private/hiring/working/{run_id}/jd_mapping.json" \
   --filter "candidate_id=atlas_001"
 ```
 
@@ -190,7 +190,7 @@ gemini run \
 ```bash
 gemini run \
   --prompt "ai_docs/workflows/hiring/tasks/04_screening.md" \
-  --context "data/public/hiring/working/{run_id}/" \
+  --context "data/private/hiring/working/{run_id}/" \
   --plan "ai_docs/plans/candidate_screening_plan.md"
 ```
 

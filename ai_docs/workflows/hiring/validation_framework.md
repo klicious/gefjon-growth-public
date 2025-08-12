@@ -74,7 +74,7 @@ candidate_data_validation:
 ```yaml
 environment_validation:
   working_directory:
-    base_path: "data/public/hiring/working/"
+    base_path: "data/private/hiring/working/"
     run_directory: "{run_id}/"
     required_subdirs:
       - "candidates/"

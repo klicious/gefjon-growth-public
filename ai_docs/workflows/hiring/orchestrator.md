@@ -120,8 +120,8 @@ mcp_servers:
 
 3. **Environment Setup**
    ```bash
-   # Create working directory structure
-   mkdir -p data/public/hiring/working/{run_id}/
+   # Create working directory structure (private for debugging/logs)
+   mkdir -p data/private/hiring/working/{run_id}/
    mkdir -p artifacts/public/hiring/evaluation_sheets/upcoming/
    mkdir -p artifacts/public/hiring/takehome_assignment/upcoming/
    mkdir -p artifacts/public/hiring/interview_materials/upcoming/
@@ -433,7 +433,7 @@ gemini run \
 # Individual stage execution
 gemini run \
   --prompt "ai_docs/workflows/hiring/tasks/04_screening.md" \
-  --context "data/public/hiring/working/{run_id}/candidates.normalized.json" \
+  --context "data/private/hiring/working/{run_id}/candidates.normalized.json" \
   --plan "ai_docs/workflows/hiring/plans/candidate_screening_plan.md"
 ```
 
