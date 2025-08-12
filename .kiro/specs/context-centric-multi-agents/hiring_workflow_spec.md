@@ -25,7 +25,7 @@ Primary workflow reference:
 - Analysis Agent — JD mapping, competency and values alignment.
 - Screening Agent — Apply candidate_screening_plan, generate recommendations.
 - Assessment Generator — Personalize assignment and rubric.
-- Assessment Evaluator — Evaluate take-home submissions using evaluate_take_home_assignment_prompt.md; compute proceed/no-proceed.
+- Assessment Evaluator — Evaluate take-home submissions using Top-Tier Industry Standards (evaluate_take_home_assignment_prompt.md); compute Strong Hire/Hire/Lean Hire/No Hire.
 - Interview Kit Generator — Produce candidate_context.md, interview_guide.md, interview_script.md.
 - Orchestrator Agent — Enforce approval gates, schedule interview loop, route handoffs.
 - Scoring & Consolidation Agent — Aggregate rubrics/notes, bias check, summary.
@@ -38,7 +38,7 @@ Refer to stages in ai_docs\workflows\hiring_end_to_end.yaml:
 3. jd_mapping → Analysis Agent
 4. screening → Screening Agent (approval: Platform Lead)
 5. assessment → Assessment Generator (approval: Platform Lead)
-6. assessment_evaluation → Assessment Evaluator (decision gate at ≥60% weighted score)
+6. assessment_evaluation → Assessment Evaluator (Top-Tier Industry Standards: Strong Hire ≥4.5, Hire ≥3.8, Lean Hire ≥3.0, No Hire <3.0)
 7. interview_preparation → Interview Kit Generator (approval: Platform Lead)
 8. interviewing → Human-led, Orchestrator support
 9. consolidation → Scoring & Consolidation Agent
@@ -59,7 +59,7 @@ Refer to stages in ai_docs\workflows\hiring_end_to_end.yaml:
 ## Acceptance Criteria
 - For each candidate in input JSON, the system produces:
   - Screening report with justification and next steps.
-  - Take-home assignment + evaluation sheet, and a take-home evaluation at `artifacts\public\hiring\evaluation_sheets\upcoming\{candidate_id}\takehome_evaluation.md`. Proceed only if weighted score ≥ 60% (≥ 3.0/5).
+  - Take-home assignment + evaluation sheet using Top-Tier Industry Standards at `artifacts\public\hiring\evaluation_sheets\upcoming\{candidate_id}\takehome_evaluation.md`. Decision thresholds: Strong Hire (≥4.5), Hire (≥3.8), Lean Hire (≥3.0), No Hire (<3.0).
   - Interview kit (context, guide, script) before loop.
   - Consolidated evaluation summary after loop.
   - Decision record and audit log on completion.

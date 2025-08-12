@@ -1,95 +1,178 @@
-# Take-Home Assignment Evaluation Sheet – Entry-Level Software Engineer
-Candidate: __________________  Evaluator: __________________  Date: ___________
+# Take-Home Assignment Evaluation Prompt: Top-Tier Industry Standards
 
-## 0. Quick Reference
-* **Time-box assumption:** Candidate spent ≤ 8 h on this task. Do **not** deduct for polish beyond scope. [oai_citation:7‡GoodTime](https://goodtime.io/blog/recruiting/why-candidates-are-dropping-out-of-your-hiring-process/)  
-* **Gate criteria:** Functional Correctness, Code Quality, Testing must each score ≥ 2/5 or overall result ≤ “Lean Hire”.  
-* **Pass guideline:** Weighted score ≥ 60 % (3.0 / 5) → Proceed; 60–74 % = Lean Hire, ≥ 75 % = Hire+. Professional pass-mark precedent: TOGAF Foundation 60 %. [oai_citation:8‡certification.opengroup.org](https://certification.opengroup.org/docs/datasheets/togaf-exams.pdf?utm_source=chatgpt.com)  
-* **Bias check:** If you are down-scoring for missing observability, DI, or micro-services patterns, pause and verify that the rubric explicitly asks for it; otherwise strike that deduction. [oai_citation:9‡csed.acm.org](https://csed.acm.org/wp-content/uploads/2023/03/Version-Beta-v2.pdf?utm_source=chatgpt.com)  
+## OBJECTIVE
+Evaluate a candidate's take-home assignment using Top-Tier Industry Standards. The goal is to identify well-qualified engineering talent capable of building and operating production systems with strong reliability, scalability, and maintainability—not just producing working code.
 
-## 1. Overall Recommendation  
-- [ ] **Strong Hire** (≥ 4.5) - [ ] **Hire** (3.5–4.4) - [ ] **Lean Hire** (3.0–3.4) - [ ] **No Hire** (< 3.0)
+## EVALUATION PHILOSOPHY
+- Excellence over adequacy: Prefer robust, production-ready engineering over bare functionality.
+- Production readiness: Assess durability under real-world conditions and failures.
+- Systems thinking: Favor sound architecture, clean abstractions, and scalable design.
+- Operational excellence: Expect sensible observability, testing, and reliability practices.
+- Pragmatic innovation: Reward thoughtful optimizations and novel, appropriate solutions.
 
----
+## SCORING STANDARDS (1-5 Scale)
 
-## 2. Evaluation Criteria (behavioural anchors)
+### 5 — Exceptional
+- Production-ready code with comprehensive observability and resilience patterns
+- ~90%+ test coverage including integration/performance/load/chaos where applicable
+- Enterprise-aware architecture; clean modularization and scalability considerations
+- Thorough documentation: API contracts, runbooks, ADRs, operational guidance
+- Evidence of innovative, well-justified approaches and strong CS fundamentals
 
-| # | Criterion | Weight | 5 (Excellent) | 3 (Meets) | 1 (Poor) |
-|---|-----------|-------:|---------------|-----------|----------|
-| 1 | **Functional Correctness & Completeness** | 25 % | All required flows work; graceful error paths & edge cases covered | Core flows work; minor bugs | Major feature missing or crashes |
-| 2 | **Code Quality & Best Practices** | 20 % | Idiomatic, modular, PEP 8 compliant; secrets via env; clear separation | Readable; small functions; minor style issues | Tangled, hard-coded creds |
-| 3 | **Testing Approach & Coverage** | 15 % | Unit + 1 integration; ≥ 60 % lines; mocks isolate APIs (LambdaTest norm) [oai_citation:10‡LambdaTest](https://www.lambdatest.com/learning-hub/test-coverage?utm_source=chatgpt.com) | Basic unit tests on main paths | Few or no tests |
-| 4 | **Documentation** | 10 % | README + setup + usage + run instructions; diagram or flowchart | README covers install & run | Sparse or missing docs |
-| 5 | **Ownership / Above & Beyond** | 10 % | Adds logging, metrics, config, or thoughtful TODOs; explains trade-offs | Minor extras or TODO list | No initiative shown |
-| 6 | **Scalability & Design Patterns** | 5 % | Clear abstraction layer; Strategy/Factory used; easy extensibility | Basic interfaces; some duplication | Rigid, copy-paste across exchanges |
-| 7 | **Quantitative & Logical Reasoning** | 5 % | Optimised logic; explains complexity; neat math where needed | Straightforward correct logic | Flawed reasoning |
-| 8 | **Agentic Thinking & Future Potential** | 10 % | Proactively identifies automation opportunities; code is structured for future agentic integration. | Shows awareness of how the solution could be extended or automated. | Code is functional but rigid; no consideration for future automation. |
+### 4 — Strong
+- Near-production quality with meaningful observability and some resilience patterns
+- ~80%+ test coverage with multiple test types including integration
+- Solid architecture with scalability considerations and appropriate patterns
+- Good documentation including operational notes
+- Clear optimization and advanced problem-solving evidence
 
-> **Scoring tip:** Use the table plus comments prompts below; cite file : line numbers for evidence (Swimm & Karat recommend code-anchored feedback). [oai_citation:11‡Medium](https://medium.com/swlh/take-home-coding-assignments-are-a-waste-of-time-8da74085749e?utm_source=chatgpt.com) [oai_citation:12‡Karat](https://karat.com/interview-engineering-how-to-create-a-structured-rubric-for-technical-interviews/?utm_source=chatgpt.com)  
+### 3 — Competent
+- Functional code with basic error handling and some production considerations
+- ~60%+ test coverage primarily unit tests, some integration
+- Clean architecture with appropriate abstractions; limited enterprise patterns
+- Adequate documentation for setup and usage
+- Standard problem-solving; limited innovation
 
-### 2.1 Functional Correctness Prompts
-* All API features implemented for both BitMEX & Binance?  
-* SPOT, USD-M, USD-C supported?  
-* Handles BTC/ETH/SOL, test vs prod envs, invalid inputs, API errors?
+### 2 — Below Expectations
+- Working code but minimal production readiness
+- ~40%+ test coverage; mostly unit tests only
+- Basic architecture and patterns; notable gaps
+- Minimal documentation
+- Simple solutions; little to no optimization
 
-### 2.2 Code Quality Prompts
-* Readability, modularity, PEP 8 compliance, secure key handling?
+### 1 — Inadequate
+- Critical bugs or production-breaking issues
+- <40% coverage or missing key test types
+- Weak architecture and poor code quality
+- Insufficient or missing documentation
+- Basic programming competence only
 
-### 2.3 Testing Prompts
-* Unit tests quality, coverage %, mocking of external calls?
+## EVALUATION CRITERIA & WEIGHTS
 
-### 2.4 Documentation Prompts
-* Clear README (setup, usage, key config), diagrams useful?
+1. Functional Correctness & Completeness (25%)
+   - No critical bugs that would crash or corrupt in realistic operation
+   - Graceful error handling and input validation
+   - Completeness: features and edge cases in scope
+   - Performance considerations for expected throughput
+   - Red flags: unhandled failures, missing validation, incomplete core flows
 
-### 2.5 Ownership Prompts
-* Extra logging/metrics, config robustness, proactive improvements?
+2. Code Quality & Best Practices (20%)
+   - Readable, maintainable, idiomatic code; appropriate patterns
+   - Observability: logging, basic metrics/tracing where applicable
+   - Type safety and validation (static and/or runtime where it adds value)
+   - Sensible performance/caching where appropriate
+   - Quality gates: linting, formatting, pre-commit hooks (if repo-scoped)
 
-### 2.6 Scalability Prompts
-* Abstractions for new exchanges, symbol mapping, pluggable order types?
+3. Testing Approach & Coverage (15%)
+   - Coverage breadth and depth aligned to risk
+   - Test types: unit, integration, and where relevant contract/performance/load/chaos
+   - Edge cases and error-paths tested
+   - CI/CD readiness or instructions for running tests locally
 
-### 2.7 Quant & Logic Prompts
-* Evidence of quantitative reasoning, algorithmic soundness?
+4. Documentation Quality (10%)
+   - Clear setup, configuration, and usage
+   - API contracts/specs or request/response examples
+   - Operational guidance: troubleshooting, runbooks, known limitations
+   - Design rationale (ADRs/trade-offs) where decisions matter
 
-### 2.8 Agentic Thinking Prompts
-* Does the documentation or code mention future automation possibilities?
-* Is the code structured in a way that would make it easy to be called by an orchestrator agent?
+5. Ownership & Proactivity (15%)
+   - Anticipation of integration issues; validation and normalization where needed
+   - Production readiness signals: health checks, graceful shutdown, alerting hooks
+   - Thoughtful improvements beyond bare minimum
+   - Security/compliance awareness appropriate to scope
 
----
+6. Scalability & Design Patterns (15%)
+   - Appropriate modularization and separation of concerns
+   - Resilience patterns (timeouts, retries, circuit breakers) when relevant
+   - Horizontal scaling considerations; caching strategy when justified
+   - Configuration management beyond hard-coded values
 
-## 3. Calculation
-```
-overall_score = Σ(weight × raw_score) / 100
-```
-List scores in the box below and compute the average to one decimal.
+7. Quantitative & Logical Problem Solving (10%)
+   - Algorithmic choices and complexity awareness
+   - Data/precision handling correctness (e.g., decimals for financials)
+   - Performance modeling or measurement where appropriate
+   - Clear, logical decomposition of problems
 
-| Criterion | Weight | Raw (1-5) | Weighted |
-|-----------|-------:|----------:|---------:|
-| Functional Correctness | 25 | | |
-| Code Quality | 20 | | |
-| Testing | 15 | | |
-| Documentation | 10 | | |
-| Ownership | 10 | | |
-| Scalability | 5 | | |
-| Quant Reasoning | 5 | | |
-| Agentic Thinking | 10 | | |
-| **Total** | 100 | — | **/5** |
+## RECOMMENDATION THRESHOLDS
+- Strong Hire: Overall 4.5+ — Ready for senior-level responsibilities with high autonomy
+- Hire: 3.8+ — Strong engineer; minor gaps addressable with light mentorship
+- Lean Hire: 3.0+ — Competent with potential; notable gaps requiring mentorship
+- No Hire: <3.0 — Significant gaps relative to Top-Tier Industry Standards
 
----
+Note: These thresholds reflect expectations for well-qualified talent. Adjust expectations to the candidate's level and assignment scope (e.g., entry-level candidates may be evaluated with calibrated expectations, while still emphasizing correctness and ownership).
 
-## 4. Detailed Feedback
+## EVALUATION PROCESS
+1. Comprehensive Code Review — prioritize production risks over surface polish
+2. Architecture Analysis — review abstractions, boundaries, and extensibility
+3. Testing Evaluation — assess coverage vs. risk and the presence of integration tests
+4. Production Readiness — logging/metrics, error handling, resilience, operability
+5. Innovation & Rationale — identify thoughtful improvements and trade-offs
+6. Documentation Review — verify completeness for users and operators
 
-### Strengths  
-* …
+## OUTPUT FORMAT (Report Template)
+Provide a markdown report using the following structure:
 
-### Areas for Improvement  
-* …
+- Title: Take-Home Assignment Evaluation Report: [Role/Level] (Top-Tier Industry Standards)
+- Candidate Name: [Name]
+- Evaluator Name: [Name]
+- Date of Evaluation: YYYY-MM-DD
 
-### Alignment with Values  
-Briefly map observed behaviours to relevant core values (e.g., Ownership, Scalable Elegance).
+### Overall Recommendation
+- [ ] Strong Hire
+- [ ] Hire
+- [ ] Lean Hire
+- [ ] No Hire
 
----
+### Evaluation Criteria
+1. Functional Correctness & Completeness (Weight: 25%)
+   - Score: x/5
+   - Comments: bullet points with concrete evidence and file/line references
+2. Code Quality & Best Practices (20%)
+   - Score: x/5
+   - Comments: …
+3. Testing Approach & Coverage (15%)
+   - Score: x/5
+   - Comments: …
+4. Documentation Quality (10%)
+   - Score: x/5
+   - Comments: …
+5. Ownership & Proactivity (15%)
+   - Score: x/5
+   - Comments: …
+6. Scalability & Design Patterns (15%)
+   - Score: x/5
+   - Comments: …
+7. Quantitative & Logical Problem Solving (10%)
+   - Score: x/5
+   - Comments: …
 
-## 5. Next Steps
-- [ ] Proceed to interview (justify)  
-- [ ] Keep in pipeline for other role  
-- [ ] Do not proceed (justify)
+### Overall Score: x.x/5
+
+### Limited Strengths
+- …
+
+### Critical Deficiencies
+- … (call out any production-breaking risks explicitly)
+
+### Alignment with Job Description & Engineering Values (Top-Tier Industry Standards)
+- Technical Requirements Alignment: x/5 — summary
+- Values Alignment: x/5 — summary by value (e.g., Ownership, Observability, Security)
+
+### Next Steps
+- [ ] Proceed to Interview
+- [ ] Consider for another role
+- [ ] Do not proceed (Justification: …)
+
+### Critical Issues Preventing Hire (if applicable)
+1. …
+2. …
+
+### Overall Assessment
+Succinct paragraph summarizing why the recommendation was made, grounded in evidence.
+
+## USAGE NOTES FOR AGENTS
+- Calibrate expectations to the candidate's seniority and the assignment scope/timebox.
+- Always tie comments to concrete evidence (files/lines/examples).
+- When identifying a critical risk (e.g., response normalization gap), propose a minimal viable remedy.
+- Prefer precise, respectful, and actionable language.
+- Use the thresholds to determine the final recommendation; include justification.

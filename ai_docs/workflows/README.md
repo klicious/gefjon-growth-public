@@ -1,45 +1,45 @@
----
-id: workflows_index
-type: documentation
-domain: hr_workflows
-created_date: 2025-08-10
-last_updated: 2025-08-10
-author: Junie
-quality_score: 9.1/10
-tags: [workflows, hiring, orchestration]
-visibility: public
-version: 1.0
----
-
 # Gefjon Growth Workflows
 
-Purpose: Centralize well-defined, executable workflows for HR automation. This directory contains the canonical end-to-end hiring workflow specification consumed by AI agents and humans.
+## Active Workflows
 
-## Contents
-- hiring_end_to_end.yaml — canonical, executable workflow spec for hiring
-- hiring_end_to_end.md — narrative guide for humans (overview, roles, governance)
+### Hiring Workflow
+**Location**: `hiring/`  
+**Status**: Production Ready  
+**Version**: 2.0 (Single Candidate Directory Approach)  
+**Last Updated**: 2025-08-11
 
-## Conventions
-- Inputs are passed as Windows paths (e.g., `data\public\hiring\resume\candidates.json`).
-- Outputs are written under `artifacts\public\hiring\...` unless noted as private.
-- All generated files include YAML metadata headers per JUNIE.md.
-- Agents should honor approvals, guardrails, and bias checks defined in the spec.
-- Take-home assessments: candidates must add the evaluator as a GitHub collaborator. Configure the handle via `inputs.evaluator_github_handle` in `ai_docs\workflows\hiring_end_to_end.yaml`. 
+Complete end-to-end hiring workflow with automated material generation, single-candidate directory structure, and comprehensive decision support tools.
 
-## Execution Pattern (example)
-- Generate Interview Kits (per candidate JSON):
-  gemini run \
-    --prompt "ai_docs\prompts\hiring\generate_interview_kit_prompt.md" \
-    --context "data\public\hiring\resume\candidates.json"
+**Quick Start**: `python scripts/complete_workflow_integration.py`
 
-## Related Context
-- context\hr_processes\hiring\hiring_stages.yaml
-- artifacts\public\hiring\interview_process.md
-- ai_docs\prompts\hiring\
-- ai_docs\prompts\hiring\evaluate_take_home_assignment_prompt.md (standard single-assignment evaluation sample)
-- ai_docs\plans\candidate_screening_plan.md
+## Workflow Architecture
 
-## Governance & Quality Gates
-- Manual approvals: Platform Lead for screening, assessment, interview kits.
-- Quality threshold: All generated materials must score ≥ 8.5/10.
-- Compliance: EEO-safe prompts, PII redaction, GDPR-aware retention in artifacts.
+### Core Principles
+- **Context Engineering**: All workflows follow context-first approach
+- **Single Source of Truth**: No duplicate files or conflicting versions
+- **Automated Generation**: Complete materials auto-generated based on candidate data
+- **Production Ready**: All outputs ready for immediate use by hiring teams
+
+### Integration Points
+- **MCP Servers**: Exa, Sequential Thinking, Playwright, Fetch
+- **Data Sources**: Candidate profiles, company context, job descriptions
+- **Output Formats**: Markdown documents, JSON summaries, evaluation frameworks
+
+## Development Guidelines
+
+### Adding New Workflows
+1. Follow context engineering principles
+2. Implement single-version approach
+3. Generate complete materials
+4. Include validation frameworks
+5. Provide clear documentation
+
+### Updating Existing Workflows
+1. Archive old versions with timestamps
+2. Update primary files in place
+3. Maintain backward compatibility where possible
+4. Update integration scripts
+5. Test complete workflow execution
+
+---
+*All workflows are designed for autonomous AI agent execution with human oversight.*

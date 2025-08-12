@@ -5,7 +5,7 @@ This document describes the key workflows for the Gefjon-Growth project.
 
 ## Centralized Workflow Specs
 - See ai_docs\workflows for canonical, executable specs.
-- Hiring E2E workflow: ai_docs\workflows\hiring_end_to_end.yaml (runbook in ai_docs\workflows\hiring_end_to_end.md)
+- Hiring Workflow: ai_docs\workflows\hiring\orchestrator.md (config: ai_docs\workflows\hiring\config\workflow_config.yaml)
 
 ## Project Initialization
 

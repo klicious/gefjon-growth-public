@@ -4,12 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Gefjon Growth** is a comprehensive AI-powered HR automation platform designed to automate entire HR processes from hiring to talent development. While the current implementation focuses on the complete hiring pipeline (screening → take-home assignments → evaluation → interview kits → candidate assessment), the ultimate goal is to fully automate all HR workflows including performance evaluation, OKR management, talent development, and team assessment, integrated with external tools like email, messaging platforms, and Dooray Task Management Tool.
+**Gefjon Growth** is a comprehensive AI-powered HR automation platform designed to automate entire HR processes from hiring to talent development. While the current implementation focuses on the complete hiring pipeline (screening → take-home assignments → Top-Tier Industry Standards evaluation → interview kits → candidate assessment), the ultimate goal is to fully automate all HR workflows including performance evaluation, OKR management, talent development, and team assessment, integrated with external tools like email, messaging platforms, and Dooray Task Management Tool.
 
 ## Core Architecture & Workflow
 
 ### Primary AI Workflow
-The system operates using a **ReAct methodology** (Reason → Act → Observe → Repeat) as defined in `.gemini/GEMINI.md`. The current workflow encompasses the complete hiring pipeline: candidate screening, take-home assignment allocation and evaluation, interview kit generation, and candidate assessment. Future expansion will automate performance reviews, OKR tracking, talent development, and comprehensive team evaluation processes.
+The system operates using a **ReAct methodology** (Reason → Act → Observe → Repeat) as defined in `.gemini/GEMINI.md`. The current workflow encompasses the complete hiring pipeline: candidate screening, take-home assignment allocation and Top-Tier Industry Standards evaluation, interview kit generation, and candidate assessment. Future expansion will automate performance reviews, OKR tracking, talent development, and comprehensive team evaluation processes.
 
 **Key Command:**
 ```bash

@@ -20,7 +20,7 @@ inclusion: always
 Note: Ensure MCP servers are properly configured before use. `exa` requires a valid API key in the remote URL (exaApiKey).
 
 ### Primary AI Workflow
-The system operates using a **ReAct methodology** (Reason → Act → Observe → Repeat). The current implementation focuses on the complete hiring pipeline: candidate screening → take-home assignment allocation → assignment evaluation → interview kit generation → candidate evaluation. Future expansion will automate performance reviews, OKR management, talent development tracking, and team evaluation processes.
+The system operates using a **ReAct methodology** (Reason → Act → Observe → Repeat). The current implementation focuses on the complete hiring pipeline: candidate screening → take-home assignment allocation → Top-Tier Industry Standards evaluation → interview kit generation → candidate evaluation. Future expansion will automate performance reviews, OKR management, talent development tracking, and team evaluation processes.
 
 **Current Key Command (Hiring Focus):**
 ```bash
