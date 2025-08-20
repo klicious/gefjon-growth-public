@@ -55,9 +55,13 @@ stages:
     output_directory: "takehome"
     required_files:
       - "takehome_assignment.md"
+      - "takehome_evaluation.md"
     optional_files:
       - "assignment.md"          # Legacy from consolidation
       - "evaluation_sheet.md"    # Assignment evaluation template
+      - "agent_evaluation.json"  # AI agent-provided machine-readable evaluation (aggregated by script)
+    notes:
+      - "Agent evaluation template (Markdown) is scaffolded under artifacts/public/hiring/evaluation_sheets/upcoming/{candidate_id}/agent_evaluation_template.md"
     applies_to: "qualified_candidates"  # take_home_assignment, senior_level_assessment
     
   3_interview:

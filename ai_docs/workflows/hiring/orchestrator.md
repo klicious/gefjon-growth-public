@@ -298,25 +298,52 @@ mcp_servers:
 
 #### AI Agent Instructions
 ```markdown
+0. Agent‑First Protocol (MANDATORY)
+   - Use AI agent(s) to perform the evaluation. Python scripts are support-only (clone, scaffold templates, optional aggregate). Heuristic auto-evaluation is disabled by default.
+
+0a. Repository cloning & meta capture (MANDATORY)
+   - Clone repo to: data/private/hiring/repositories/{candidate_id}/repo
+   - Record default branch and HEAD short SHA in repo_meta.json and META.md
+   - Command:
+     python scripts/execute_05b_takehome_evaluation.py \
+       --candidate-id {candidate_id} \
+       --candidate-name "{candidate_name}" \
+       --github-url "{github_url}" \
+       --batch "{batch}"
+   - This scaffolds:
+     - artifacts/public/hiring/evaluation_sheets/upcoming/{candidate_id}/agent_evaluation_template.md
+     - artifacts/public/hiring/candidates/{batch}/{candidate_id}/takehome/agent_evaluation.json (stub)
+     - artifacts/public/hiring/candidates/{batch}/{candidate_id}/takehome/takehome_evaluation.md (Pending status)
+
 1. Collect inputs
    - Locate candidate repo URL from assignment package or candidate record
    - Identify default branch and recent commit SHA (short)
-2. Evidence gathering
+
+2. Evidence gathering (by agent)
    - README and setup instructions (reproducibility)
    - Code structure and key modules (architecture)
    - Tests and CI configs (correctness/quality)
    - Error handling and input validation (security/compliance)
    - Logging/metrics/health checks/timeouts (observability)
    - Note specific files and line ranges; capture commit SHA for references
+
 3. Scoring per rubric criterion (1–10, 0.5 granularity)
-   - For each criterion, include: Score, Evidence (path:lineStart-lineEnd @ commit), and brief commentary
+   - For each criterion, include: Score, Evidence (path:lineStart-lineEnd @ commit), brief commentary
+   - Fill agent_evaluation_template.md and/or write agent_evaluation.json conforming to ai_docs/workflows/hiring/schemas/takehome_evaluation.schema.json
+
 4. Artifact generation
-   - Update: artifacts/public/hiring/candidates/{batch}/{candidate_id}/takehome/takehome_evaluation.md (filled with scores + evidence)
-   - Update: artifacts/public/hiring/evaluation_sheets/upcoming/{candidate_id}/evaluation_sheet.md (summary + totals)
-   - Create: artifacts/public/hiring/candidates/{batch}/{candidate_id}/takehome/evaluation_summary.json
+   - Preferred: agent writes agent_evaluation.json and then run aggregator:
+     python scripts/aggregate_takehome_from_agent.py \
+       --candidate-id {candidate_id} \
+       --candidate-name "{candidate_name}" \
+       --github-url "{github_url}" \
+       --batch "{batch}"
+   - Aggregator computes totals and renders final takehome_evaluation.md and evaluation_sheet.md
+
 5. Decision & gating
    - Map overall score to decision: Strong Hire ≥9.0, Hire ≥8.0, Lean Hire 6.5–7.9, No Hire <6.5
    - Only candidates with ≥8.0 proceed to Stage 6 by default (or Platform Lead override)
+
 6. Quality and bias checks
    - Ensure neutral language, evidence-backed statements only
    - Complete Security & Compliance and Observability checklists
@@ -622,3 +649,14 @@ Solution: Prepare comprehensive materials, schedule review sessions
 **AI Agent Compatibility**: Optimized for autonomous execution  
 **Quality Assurance**: Comprehensive validation and error handling  
 **Last Updated**: 2025-08-11T13:45:00Z
+
+### Agent Prompt Reference & Code-First Policy (Stage 5.5)
+- Prompt to use: ai_docs/prompts/hiring/takehome_evaluation_prompt.md
+- Code-First Evidence Policy:
+  - Primary evidence MUST come from code/tests; README mainly for Documentation & DX and reproducibility.
+  - Forbidden as sole evidence for engineering criteria: README excerpts, package manager/tool choice alone (e.g., uv/poetry/Gradle), architecture docs without code references.
+  - Penalty caps if only non-code evidence is present:
+    - Code Quality, Functional Correctness, Testing, Ownership: max 2/5
+    - Scalability & Design Patterns: max 2.5/5
+    - Quantitative & Logical Problem Solving: max 2/5
+- Every score must include at least one code reference in the format: path:lineStart-lineEnd @ commitShort — note.

@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://gefjon-growth/schemas/takehome_evaluation.schema.json",
+  "title": "Take-Home Agent Evaluation",
+  "type": "object",
+  "required": ["candidate_id", "candidate_name", "github_url", "criteria"],
+  "properties": {
+    "candidate_id": {"type": "string"},
+    "candidate_name": {"type": "string"},
+    "github_url": {"type": "string"},
+    "commit_short": {"type": ["string", "null"]},
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "score", "comments", "evidence"],
+        "properties": {
+          "name": {"type": "string"},
+          "score": {"type": ["number", "null"], "minimum": 0, "maximum": 10},
+          "comments": {"type": "array", "items": {"type": "string"}},
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["path"],
+              "properties": {
+                "path": {"type": "string"},
+                "line_start": {"type": ["integer", "null"], "minimum": 1},
+                "line_end": {"type": ["integer", "null"], "minimum": 1},
+                "commit_short": {"type": ["string", "null"]},
+                "note": {"type": ["string", "null"]}
+              }
+            }
+          }
+        }
+      }
+    },
+    "overall_recommendation": {
+      "type": ["string", "null"],
+      "enum": ["Strong Hire", "Hire", "Lean Hire", "No Hire", null]
+    },
+    "security_checklist": {
+      "type": "object",
+      "properties": {
+        "secrets_not_committed": {"type": ["boolean", "null"]},
+        "dependency_risks_reviewed": {"type": ["boolean", "null"]},
+        "input_validation_present": {"type": ["boolean", "null"]},
+        "error_handling_robust": {"type": ["boolean", "null"]},
+        "licenses_compliant": {"type": ["boolean", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "observability_checklist": {
+      "type": "object",
+      "properties": {
+        "structured_logging": {"type": ["boolean", "null"]},
+        "metrics_health": {"type": ["boolean", "null"]},
+        "timeouts_retries": {"type": ["boolean", "null"]},
+        "alerting_diagnostics": {"type": ["boolean", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
