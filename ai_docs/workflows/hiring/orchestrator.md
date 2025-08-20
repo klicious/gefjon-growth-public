@@ -283,6 +283,58 @@ mcp_servers:
 - Identified strengths and growth areas
 - Company value alignment opportunities
 
+### Stage 5.5: Take-Home Assignment Evaluation (NEW)
+**Task**: `ai_docs/workflows/hiring/tasks/05b_takehome_evaluation.md`  
+**Duration**: 45-90 minutes  
+**Purpose**: Evaluate submitted take-home assignments with comprehensive, verifiable evidence for every score.
+
+#### Enhanced Features
+- Mandatory evidence per criterion: file paths, line ranges, and commit SHAs
+- Reproducibility: commands and steps to run the project locally
+- Security & Compliance checklist enforcement
+- Observability review (logging/metrics/timeouts/retries)
+- Bias mitigation and language neutrality checks
+- Automated eligibility gating for Stage 6
+
+#### AI Agent Instructions
+```markdown
+1. Collect inputs
+   - Locate candidate repo URL from assignment package or candidate record
+   - Identify default branch and recent commit SHA (short)
+2. Evidence gathering
+   - README and setup instructions (reproducibility)
+   - Code structure and key modules (architecture)
+   - Tests and CI configs (correctness/quality)
+   - Error handling and input validation (security/compliance)
+   - Logging/metrics/health checks/timeouts (observability)
+   - Note specific files and line ranges; capture commit SHA for references
+3. Scoring per rubric criterion (1–10, 0.5 granularity)
+   - For each criterion, include: Score, Evidence (path:lineStart-lineEnd @ commit), and brief commentary
+4. Artifact generation
+   - Update: artifacts/public/hiring/candidates/{batch}/{candidate_id}/takehome/takehome_evaluation.md (filled with scores + evidence)
+   - Update: artifacts/public/hiring/evaluation_sheets/upcoming/{candidate_id}/evaluation_sheet.md (summary + totals)
+   - Create: artifacts/public/hiring/candidates/{batch}/{candidate_id}/takehome/evaluation_summary.json
+5. Decision & gating
+   - Map overall score to decision: Strong Hire ≥9.0, Hire ≥8.0, Lean Hire 6.5–7.9, No Hire <6.5
+   - Only candidates with ≥8.0 proceed to Stage 6 by default (or Platform Lead override)
+6. Quality and bias checks
+   - Ensure neutral language, evidence-backed statements only
+   - Complete Security & Compliance and Observability checklists
+```
+
+#### Quality Gates
+- ✅ Evidence present for EACH rubric criterion (path, lines, commit SHA)
+- ✅ Reproducibility steps validated (README or provided commands)
+- ✅ Security & Compliance checklist completed
+- ✅ Observability items assessed
+- ✅ Scores ↔ Decision consistent with thresholds
+- ✅ Platform Lead approval recorded for decisions ≥ Hire
+
+#### Outputs
+- Completed takehome_evaluation.md per candidate with evidence
+- Updated evaluation_sheet.md summaries with final scores
+- evaluation_summary.json with per-criterion breakdown and decision
+
 ### Stage 6: Interview Kit Generation (ENHANCED) - BEI-Focused
 **Task**: `ai_docs/workflows/hiring/tasks/06_interview_kit.md`  
 **Duration**: 60-75 minutes (extended for comprehensive BEI analysis)  

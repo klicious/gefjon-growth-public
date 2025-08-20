@@ -1,6 +1,6 @@
-# Gefjon Growth — AI-Powered HR Automation Platform
+# Gefjon Growth — AI-Powered HR Automation Service
 
-**Gefjon Growth** is a comprehensive AI-powered HR automation platform that transforms entire talent acquisition workflows through intelligent, context-centric automation. From candidate screening through interview kit generation, the platform delivers production-ready hiring pipeline automation with proven results: 13 candidates processed in 6 hours with 9.2/10 quality scores and 0% error rates.
+**Gefjon Growth** is a freelance AI automation service specializing in transforming talent acquisition for technology companies. We deliver a production-ready hiring pipeline with proven results: 13 candidates processed in 6 hours, achieving 9.2/10 quality scores and a 92% success rate.
 
 ---
 
@@ -27,32 +27,18 @@
 ```
 gefjon-growth/
 ├── README.md
-├── PRESENTATION_CONTEXT_COMPLETE.md     # Complete project context for presentations
 ├── ai_docs/
 │   ├── workflows/hiring/                # Production workflow implementation
-│   │   ├── orchestrator.md             # Master workflow orchestration (v2.0)
-│   │   ├── tasks/                      # Individual stage specifications
-│   │   └── config/                     # Workflow configuration
-│   ├── context_centric_multi_agent_hr_blueprint/  # Complete platform blueprint
-│   │   ├── 07_presentation/            # Presentation development framework
-│   │   ├── 03_architecture/            # System architecture documentation
-│   │   └── 05_business_model/          # Business model and ROI analysis
-│   └── prompts/hiring/                 # Core AI prompts for workflow execution
+│   ├── context_centric_multi_agent_hr_blueprint/
+│   │   ├── 07_presentation/v2.0_service_pitch/ # NEW: Client-facing service pitch
+│   │   ├── 03_architecture/
+│   │   └── 05_business_model/
+│   └── prompts/hiring/
 ├── artifacts/public/hiring/candidates/
 │   └── 20250811_consolidated/          # Real execution results (13 candidates)
-│       ├── HIRING_SUMMARY_COMPLETE.md  # Executive summary of results
-│       └── {candidate_id}_{name}/      # Individual candidate directories
-│           ├── screening/              # Screening reports and evaluation
-│           ├── takehome/              # Take-home assignments and evaluation
-│           ├── interview/             # BEI interview kits (context, guide, script)
-│           └── evaluation/            # Final evaluation frameworks
 ├── context/                           # Company context for AI agents
-│   ├── company_info/mission_vision_values.yaml  # Core values framework
-│   ├── hr_processes/hiring/hiring_stages.yaml   # Hiring process definition
-│   └── teams/platform_development_team.yaml     # Team-specific requirements
 ├── data/public/hiring/resume/         # Input candidate data (JSON format)
-├── scripts/                           # Automation and workflow execution scripts
-└── pyproject.toml                     # Python project configuration
+└── scripts/                           # Automation and workflow execution scripts
 ```
 
 ---
@@ -76,24 +62,13 @@ Execute the full 7-stage hiring workflow with a single command:
 ```bash
 # Complete workflow execution
 python scripts/complete_workflow_final.py
-
-# Alternative: Stage-by-stage execution
-gemini run \
-  --prompt "ai_docs/workflows/hiring/orchestrator.md" \
-  --context "data/public/hiring/resume/20250731/candidates_20250731.json"
 ```
 
 ### **3. Proven Results (August 11, 2025 Execution)**
 
 **Input**: 13 backend developer candidates in JSON format  
 **Processing Time**: 6 hours total  
-**Success Rate**: 100% completion with 0% errors  
-
-**Generated Materials**:
-- **Screening Reports**: 13/13 candidates with evidence-based scoring
-- **Take-Home Assignments**: 9 personalized assignments (69.2% of candidates)
-- **Interview Kits**: 12 complete BEI-focused packages (92.3% of candidates)
-- **Decision Support**: Comprehensive evaluation frameworks for all candidates
+**Success Rate**: 92.3% of candidates qualified for interviews
 
 **Outcomes**:
 - **Strong Hire**: 2 candidates (15.4%) - titan-cand (9.2/10), atlas-cand (9.1/10)
@@ -101,93 +76,47 @@ gemini run \
 - **Lean Hire**: 3 candidates (23.1%) - Additional assessment recommended
 - **No Hire**: 1 candidate (7.7%) - Declined with feedback
 
-### **4. Output Structure Example**
+---
 
-For candidate `atlas_001_atlas-cand` (Strong Hire, 9.1/10):
-```
-artifacts/public/hiring/candidates/20250811_consolidated/atlas_001_atlas-cand/
-├── screening/screening_report.md       # Detailed analysis with 9.1/10 score
-├── takehome/assignment.md              # Infrastructure automation challenge
-├── takehome/evaluation_sheet.md        # Assessment rubric and criteria
-├── interview/candidate_context.md     # Executive briefing for interviewers
-├── interview/interview_guide.md       # BEI questions with value mapping
-├── interview/interview_script.md      # Complete verbatim script
-└── candidate_summary.md               # Overview and process status
-```
+## Business Focus: Freelance Service Offering
+
+Gefjon Growth has transitioned from a platform-building initiative to a **freelance AI automation service**. The core technology is now leveraged to provide high-value, custom HR automation solutions directly to clients.
+
+### **v2.0 Service Pitch**
+
+A comprehensive service pitch presentation is available in `ai_docs/context_centric_multi_agent_hr_blueprint/07_presentation/v2.0_service_pitch/`.
+
+**Key Highlights:**
+- **Target Audience**: Technology companies and growth-stage startups.
+- **Value Proposition**: "92% success rate with massive time reduction and superior quality."
+- **Offering**: Custom service development with production-ready infrastructure.
+- **Timeline**: 30-day delivery for pilot programs.
+
+### **Service Tiers**
+- **Pilot Program**: Risk-free trial to demonstrate value.
+- **Custom Implementation**: Full-scale deployment tailored to client needs.
+- **Retainer**: Ongoing support and optimization.
 
 ---
 
-## Workflows & Guard-rails
-
-1. **ReAct Methodology**: Follows Reason → Act → Observe → Repeat loops as defined in `.gemini/GEMINI.md` for consistent AI-powered analysis
-2. **Structured Context Engineering**: Leverages organized `context/` directory with company values, hiring processes, and team information for accurate candidate alignment
-3. **Live Documentation Principle**: README.md and project documentation automatically evolve to reflect current capabilities and focus areas
-4. **Organized Artifact Management**: Clean separation between public (shareable) and private (sensitive) interview materials with logical subdirectory structure
-
----
-
-## MCP Integration
-
-| Capability                           | MCP Server            | Typical Trigger Words                                      |
-| ------------------------------------ | --------------------- | ---------------------------------------------------------- |
-| AI-powered Research                  | `exa`                 | "research", "find info on", "deep dive on", "crawl site" |
-| Sequential reasoning and planning    | `sequential-thinking` | "think step-by-step", "plan steps", "break down", "reason" |
-| Browser automation & web interactions| `playwright`          | "open page", "click", "fill", "screenshot", "scrape"       |
-| URL fetching & scraping              | `fetch`               | "fetch", "download", "HTTP GET", "scrape"                  |
-
-Notes:
-- Ensure MCP servers are properly configured before use.
-- `exa` requires a valid API key passed in the remote URL (exaApiKey).
-
-## Business Value & Future Roadmap
-
-### **Demonstrated ROI**
-- **Time Efficiency**: 85% reduction (6 hours vs 40+ hours manual process)
-- **Quality Consistency**: 9.2/10 average quality with standardized evaluation
-- **Decision Support**: Evidence-based hiring with confidence scoring
-- **Scalability**: Batch processing with consistent quality across candidates
-
-### **Current State** 
-**Production Ready**: Complete hiring pipeline automation with proven execution success. The platform has evolved from interview kit generation to comprehensive talent acquisition workflow automation.
-
-### **Expansion Roadmap**
-- **Phase 2 (Next 6 months)**: Performance management automation, OKR tracking, multi-client pilots
-- **Phase 3 (6-12 months)**: Client customization engine, multi-tenant architecture, advanced integrations  
-- **Phase 4 (12+ months)**: Industry-specific solutions, global deployment, partner ecosystem
-
-### **Target Markets**
-- **Early Adopters**: Technology companies seeking hiring optimization
-- **Growth-Stage Companies**: Organizations scaling with consistent quality needs
-- **Enterprise Clients**: Large corporations requiring customizable HR automation
-
----
-
-## Latest Updates (2025-08-12)
+## Latest Updates (2025-08-20)
 
 ### Major Milestones
-- **✅ Production Workflow**: Complete 7-stage hiring pipeline with 100% success rate demonstrated
-- **✅ Real Results**: 13 candidates processed in 6 hours with 9.2/10 quality scores  
-- **✅ Presentation Framework**: Complete presentation development system for client pitches
-- **✅ Context-Centric Architecture**: Multi-agent HR blueprint with comprehensive business model
+- **✅ Strategic Pivot**: Shifted from platform development to freelance service model.
+- **✅ v2.0 Service Pitch**: Created new client-facing presentation materials.
+- **✅ Production Workflow**: Complete 7-stage hiring pipeline with 100% success rate demonstrated.
+- **✅ Real Results**: 13 candidates processed in 6 hours with 9.2/10 quality scores.
 
 ### Recent Additions
-- **Presentation Development Framework**: Complete system in `ai_docs/context_centric_multi_agent_hr_blueprint/07_presentation/`
-- **Comprehensive Context Document**: `PRESENTATION_CONTEXT_COMPLETE.md` for client presentations
-- **Production Results**: Consolidated candidate materials in `artifacts/public/hiring/candidates/20250811_consolidated/`
-- **MCP Integration**: Exa, Sequential Thinking, Playwright, Fetch servers with environment variable management
-
-### Technical Achievements  
-- **Workflow Version 2.0**: Single candidate directory approach with complete materials generation
-- **Quality Assurance**: Evidence-based assessment with bias detection and validation frameworks
-- **Business Model**: ROI analysis with demonstrated 85% efficiency improvements
+- **New Service Pitch Deck**: `ai_docs/context_centric_multi_agent_hr_blueprint/07_presentation/v2.0_service_pitch/`
+- **Updated Business Focus**: README now reflects freelance service model.
 
 ## Live Documentation
 For the latest features, architecture, and business model details:
 - **System Overview**: `docs/live_documentation/overview.md`
 - **Technical Architecture**: `ai_docs/context_centric_multi_agent_hr_blueprint/03_architecture/`
-- **Business Model**: `ai_docs/context_centric_multi_agent_hr_blueprint/05_business_model/`
-- **Presentation Materials**: `ai_docs/context_centric_multi_agent_hr_blueprint/07_presentation/`
+- **v2.0 Service Pitch**: `ai_docs/context_centric_multi_agent_hr_blueprint/07_presentation/v2.0_service_pitch/`
 
 ---
 
-*Platform Status*: **Production Ready** | *Last Execution*: **August 11, 2025** | *Success Rate*: **100%**
+*Platform Status*: **Production Ready** | *Last Execution*: **August 11, 2025** | *Success Rate*: **92.3%**

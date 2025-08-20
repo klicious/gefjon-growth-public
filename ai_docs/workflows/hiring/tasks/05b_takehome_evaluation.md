@@ -2,207 +2,102 @@
 id: takehome_evaluation_task
 type: task
 domain: hiring
-stage: 5b
-created_date: 2025-08-11
-author: Kiro
-quality_score: 9.0/10
-tags: [takehome, evaluation, assessment, top-tier-standards]
+stage: 5.5
+created_date: 2025-08-20
+author: Junie
+quality_score: 9.5/10
+tags: [takehome, evaluation, evidence, rubric, github]
 visibility: public
 version: 1.0
 ---
 
-# Task 5b: Take-Home Assignment Evaluation (Top-Tier Industry Standards)
+# Task 5b: Take-Home Assignment Evaluation (Evidence-Required)
 
-**Purpose**: Evaluate candidate take-home assignments using Top-Tier Industry Standards focusing on production-ready code quality, reliability, scalability, and maintainability.
+Purpose: Evaluate submitted take-home assignments with comprehensive, verifiable evidence for every score. Outputs determine eligibility for Stage 6 (Interview Kit Generation).
 
 ## Prerequisites
-- **Task 5 Completed**: Take-home assignments distributed and submitted
-- **GitHub Access**: Evaluator added as collaborator to candidate repositories
-- **Prompt**: `ai_docs/prompts/hiring/evaluate_take_home_assignment_prompt.md`
+- Task 5 (Personalized Take-Home Assessment) completed and assignment submitted by candidate
+- Candidate GitHub repository URL available
+- Platform Lead availability for approval gate
 
 ## Objectives
-- Apply Top-Tier Industry Standards for code evaluation
-- Assess production-readiness and enterprise-quality standards
-- Generate comprehensive evaluation reports with scoring
-- Make data-driven hiring recommendations
+- Perform rubric-based evaluation with strict evidence backing
+- Ensure reproducibility and compliance (security, licenses)
+- Assess observability and operational guardrails
+- Produce decision and gating status for Stage 6
 
-## Top-Tier Industry Standards Framework
+## Rubric (1–10 per criterion, 0.5 granularity)
+1. Requirements Coverage
+2. Code Quality
+3. Architecture & Scalability
+4. Correctness & Testing
+5. Performance & Efficiency
+6. Security & Compliance
+7. Documentation & DX
+8. Observability
 
-### 1. Code Quality & Architecture (25%)
-- **Clean Code Principles**: Readability, maintainability, SOLID principles
-- **Architecture Patterns**: Appropriate design patterns, separation of concerns
-- **Code Organization**: Logical structure, modularity, reusability
-- **Documentation**: Code comments, README quality, API documentation
+Decision thresholds: Strong Hire ≥ 9.0, Hire ≥ 8.0, Lean Hire 6.5–7.9, No Hire < 6.5
 
-### 2. Reliability & Robustness (25%)
-- **Error Handling**: Comprehensive exception handling, graceful degradation
-- **Input Validation**: Security-conscious validation, edge case handling
-- **Testing Coverage**: Unit tests, integration tests, test quality
-- **Logging & Monitoring**: Appropriate logging levels, observability
+## Mandatory Evidence Standard
+For each scored criterion, include:
+- Evidence: file_path:lineStart-lineEnd @ commitShortSHA
+- Summary: 1–2 sentences explaining why the evidence supports the score
+- Links: GitHub URL(s) to referenced file or commit (when available)
 
-### 3. Scalability & Performance (20%)
-- **Performance Optimization**: Efficient algorithms, resource utilization
-- **Database Design**: Proper indexing, query optimization, data modeling
-- **Caching Strategy**: Appropriate caching mechanisms
-- **Concurrency Handling**: Thread safety, async patterns where applicable
+If line ranges are not applicable (e.g., README), indicate section header and line range within the file.
 
-### 4. Security & Best Practices (15%)
-- **Security Measures**: Input sanitization, authentication, authorization
-- **Dependency Management**: Secure dependencies, vulnerability scanning
-- **Configuration Management**: Environment variables, secrets handling
-- **Compliance**: Industry standards adherence (OWASP, etc.)
+## Processing Steps (AI Agent Instructions)
+1. Collect Inputs
+   - Identify default branch and recent commit SHA (short)
+   - Gather repository structure (key directories and files)
+   - Read README/setup instructions for reproducibility
+2. Analyze & Gather Evidence
+   - Architecture: modules, layering, separation of concerns
+   - Correctness: tests, CI configs, edge case handling
+   - Security: secrets, input validation, error handling, license
+   - Observability: logging, metrics, health endpoints, timeouts/retries
+3. Score per Criterion
+   - For each rubric item: Score, Evidence (path:lines @ SHA), Commentary
+4. Generate Artifacts
+   - Update takehome_evaluation.md (filled with scores + evidence)
+   - Update evaluation_sheet.md (summary + totals)
+   - Create evaluation_summary.json (per-criterion breakdown + decision)
+5. Decision & Gating
+   - Apply thresholds; default: proceed to Stage 6 if Overall ≥ 8.0
+   - Record Platform Lead approval for Hire/Strong Hire
+6. Quality & Bias Checks
+   - Neutral, evidence-based language only
+   - Complete Security & Compliance and Observability checklists
 
-### 5. DevOps & Production Readiness (15%)
-- **Containerization**: Docker setup, multi-stage builds
-- **CI/CD Integration**: Build scripts, deployment readiness
-- **Environment Configuration**: Development, staging, production configs
-- **Monitoring & Health Checks**: Application health endpoints
-
-## Evaluation Process
-
-### 1. Repository Access Verification
-- Confirm evaluator has collaborator access
-- Clone repository for local evaluation
-- Verify submission completeness
-- Check for any access restrictions
-
-### 2. Code Review & Analysis
-- **Static Analysis**: Code quality metrics, complexity analysis
-- **Manual Review**: Architecture assessment, design pattern usage
-- **Security Scan**: Vulnerability assessment, security best practices
-- **Performance Analysis**: Bottleneck identification, optimization opportunities
-
-### 3. Functional Testing
-- **Requirements Compliance**: Feature completeness, specification adherence
-- **Edge Case Testing**: Boundary conditions, error scenarios
-- **Integration Testing**: Component interaction, data flow validation
-- **User Experience**: Interface usability, error messaging
-
-### 4. Production Readiness Assessment
-- **Deployment Readiness**: Configuration management, environment setup
-- **Monitoring Capability**: Logging, metrics, health checks
-- **Scalability Potential**: Architecture scalability, performance under load
-- **Maintenance Considerations**: Code maintainability, documentation quality
-
-## Scoring Methodology
-
-### Scoring Scale (1-5 points per criterion)
-- **5 - Exceptional**: Exceeds industry standards, production-ready excellence
-- **4 - Strong**: Meets high industry standards, minor improvements needed
-- **3 - Adequate**: Meets basic standards, moderate improvements required
-- **2 - Below Standard**: Significant gaps, major improvements needed
-- **1 - Poor**: Does not meet basic standards, extensive rework required
-
-### Overall Score Calculation
-```
-Total Score = (Code Quality × 0.25) + (Reliability × 0.25) + 
-              (Scalability × 0.20) + (Security × 0.15) + 
-              (DevOps × 0.15)
-```
-
-### Decision Thresholds
-- **Strong Hire**: ≥4.5 (90%+) - Exceptional candidate, immediate hire
-- **Hire**: ≥3.8 (76%+) - Strong candidate, proceed to interviews
-- **Lean Hire**: ≥3.0 (60%+) - Adequate candidate, interview with focus areas
-- **No Hire**: <3.0 (<60%) - Does not meet standards, do not proceed
-
-## Output Generation
-
-### Evaluation Report
-**Location**: `artifacts/public/hiring/evaluation_sheets/upcoming/{candidate_id}/takehome_evaluation.md`
-
-**Structure**:
-```markdown
-# Take-Home Assignment Evaluation: {candidate_id}
-
-## Executive Summary
-- Overall Score: X.X/5.0 (XX%)
-- Recommendation: [Strong Hire/Hire/Lean Hire/No Hire]
-- Key Strengths: [Top 3 strengths]
-- Areas for Improvement: [Top 3 areas]
-
-## Detailed Assessment
-
-### Code Quality & Architecture (X.X/5.0)
-- [Detailed analysis with specific examples]
-- [Strengths and weaknesses]
-- [Recommendations]
-
-### Reliability & Robustness (X.X/5.0)
-- [Error handling assessment]
-- [Testing coverage analysis]
-- [Specific examples]
-
-### [Additional sections...]
-
-## Production Readiness Analysis
-- [Deployment readiness assessment]
-- [Scalability considerations]
-- [Maintenance implications]
-
-## Interview Focus Areas
-- [Specific topics to explore in interviews]
-- [Technical deep-dive suggestions]
-- [Areas requiring clarification]
-
-## Final Recommendation
-[Detailed reasoning for hire/no-hire decision]
-```
-
-### Evaluation Summary
-**Location**: `data/private/hiring/working/{run_id}/takehome_evaluations.json`
+## Output Structure
+- artifacts/public/hiring/candidates/{batch}/{candidate_id}/takehome/takehome_evaluation.md
+- artifacts/public/hiring/evaluation_sheets/upcoming/{candidate_id}/evaluation_sheet.md
+- artifacts/public/hiring/candidates/{batch}/{candidate_id}/takehome/evaluation_summary.json
 
 ## Quality Gates
-- **Evaluation Completeness**: All assessment criteria scored
-- **Evidence-Based**: Specific code examples provided for all scores
-- **Consistency**: Scores align with written analysis
-- **Actionability**: Clear next steps and focus areas identified
-
-## Error Handling
-- **Access Issues**: Contact candidate for repository access
-- **Incomplete Submissions**: Document gaps and adjust scoring
-- **Technical Issues**: Use alternative evaluation methods
-- **Quality Concerns**: Request peer review of evaluation
-
-## Success Metrics
-- **Evaluation Accuracy**: ≥90% correlation with interview outcomes
-- **Quality Score**: ≥8.5/10 for evaluation reports
-- **Processing Time**: <2 hours per assignment
-- **Decision Confidence**: ≥85% evaluator confidence in recommendations
-
-## Next Stage
-Based on evaluation results:
-- **Strong Hire/Hire**: Proceed to **Task 6: Interview Kit Generation**
-- **Lean Hire**: Proceed with focused interview preparation
-- **No Hire**: Provide constructive feedback and close process
+- Evidence included for every criterion (path, lines, commit SHA) ✓
+- Reproducibility validated or steps provided ✓
+- Security & Compliance checklist completed ✓
+- Observability assessment completed ✓
+- Scores consistent with decision thresholds ✓
+- Platform Lead approval recorded for decisions ≥ Hire ✓
 
 ## MCP Integration
-- **sequential-thinking**: Structure comprehensive evaluation process
-- **playwright**: Automated testing of web applications (if applicable)
-- **fetch**: Retrieve additional documentation or resources
+- exa (primary): crawl repository pages and commits
+- fetch (fallback): direct URL fetch for README and raw files
 
-## Execution Commands
-
-### Single Assignment Evaluation
+## Execution Example
 ```bash
 gemini run \
   --prompt "ai_docs/workflows/hiring/tasks/05b_takehome_evaluation.md" \
-  --context "artifacts/public/hiring/takehome_assignment/upcoming/{candidate_id}/" \
-  --github-repo "{candidate_repo_url}"
-```
-
-### Batch Evaluation
-```bash
-gemini run \
-  --prompt "ai_docs/workflows/hiring/tasks/05b_takehome_evaluation.md" \
-  --context "data/private/hiring/working/{run_id}/takehome_assignments.json"
+  --context "artifacts/public/hiring/candidates/{batch}/{candidate_id}/takehome/" \
+  --mode "production"
 ```
 
 ## Validation Checklist
-- [ ] Repository access confirmed
-- [ ] All evaluation criteria assessed
-- [ ] Scores supported by specific examples
-- [ ] Production readiness analyzed
-- [ ] Interview focus areas identified
-- [ ] Final recommendation clearly stated
-- [ ] Quality score ≥8.5/10 achieved
+- [ ] Repo URL and latest commit SHA captured
+- [ ] Evidence provided for each rubric criterion
+- [ ] Reproducibility confirmed or steps included
+- [ ] Security & Observability checklists completed
+- [ ] Overall score and decision recorded
+- [ ] Gating and approvals documented
