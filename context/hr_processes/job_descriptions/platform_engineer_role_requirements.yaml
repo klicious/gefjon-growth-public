@@ -1,0 +1,315 @@
+# Platform Engineer Role Requirements
+# Comprehensive job requirements and descriptions for AI-assisted platform engineering roles
+
+metadata:
+  version: "1.0"
+  last_updated: "2025-09-02T08:00:00Z"
+  purpose: "Define platform engineering role requirements aligned with AI-assisted development"
+  domain: "hr_processes"
+  visibility: "public"
+  replaces: "traditional software engineer job descriptions"
+  schema_version: "1.0"
+
+# Role Definitions
+role_definitions:
+  
+  platform_engineering_team_mission:
+    description: "Build and maintain the foundational platform systems that enable 4x-25x performance improvements through AI-assisted development workflows"
+    core_purpose: "Design, implement, and operate scalable platform infrastructure that empowers engineering teams to achieve exceptional productivity through AI orchestration"
+    strategic_focus: "Platform reliability, AI-assisted development enablement, and production system excellence"
+    
+  key_differentiators_from_software_engineering:
+    platform_focus: "Infrastructure and platform systems that enable application development rather than direct application creation"
+    ai_collaboration: "Heavy emphasis on AI tool orchestration and AI-assisted development workflows"
+    systems_thinking: "Comprehensive understanding of distributed systems, scalability, and production operations"
+    production_first: "Design with operational excellence, observability, and reliability as primary concerns"
+
+# Role Levels and Requirements
+role_levels:
+  
+  junior_platform_engineer:
+    level: "L2"
+    salary_range: "$90k-120k"
+    experience_requirement: "1-3 years relevant experience"
+    
+    core_responsibilities:
+      - "Collaborate with AI tools to develop and maintain platform infrastructure components"
+      - "Implement monitoring, logging, and observability solutions for platform services"
+      - "Support CI/CD pipelines and deployment automation with AI-assisted development"
+      - "Participate in incident response and platform reliability improvements"
+      - "Learn and apply platform engineering patterns under senior guidance"
+      
+    technical_requirements:
+      ai_orchestration_collaboration:
+        minimum_competency: 65%
+        key_capabilities:
+          - "Effectively use AI coding assistants (GitHub Copilot, Claude, ChatGPT) for platform development tasks"
+          - "Provide clear, context-rich instructions to AI tools for infrastructure automation"
+          - "Critically evaluate and improve AI-generated platform code and configurations"
+          - "Iterate on solutions through AI collaboration to achieve production-ready quality"
+          
+      systems_thinking_architecture:
+        minimum_competency: 55%
+        key_capabilities:
+          - "Understand basic distributed systems concepts and platform architecture patterns"
+          - "Implement basic service discovery, load balancing, and communication patterns"
+          - "Work with containerization (Docker) and orchestration (Kubernetes) technologies"
+          - "Apply basic security and compliance practices to platform infrastructure"
+          
+      critical_thinking_problem_solving:
+        minimum_competency: 50%
+        key_capabilities:
+          - "Break down platform problems into manageable components"
+          - "Make basic technical decisions with guidance from senior engineers"
+          - "Identify and address basic reliability and performance issues"
+          - "Learn from incidents and apply lessons to prevent future occurrences"
+          
+      continuous_learning_adaptability:
+        minimum_competency: 65%
+        key_capabilities:
+          - "Rapidly learn new platform technologies and AI tools"
+          - "Adapt to changing requirements and evolving best practices"
+          - "Integrate feedback from code reviews and operational incidents"
+          - "Stay current with platform engineering trends and AI-assisted development"
+          
+    technical_skills:
+      programming_languages:
+        primary: ["Python", "Go"]
+        familiarity: ["JavaScript/TypeScript", "Bash/Shell scripting"]
+      platform_technologies:
+        required: ["Docker", "Kubernetes", "AWS/GCP/Azure", "Git"]
+        preferred: ["Terraform", "Helm", "Prometheus", "Grafana"]
+      ai_tools:
+        required: ["GitHub Copilot or equivalent AI coding assistant"]
+        preferred: ["Claude", "ChatGPT", "Multiple AI model experience"]
+      operational_skills:
+        required: ["CI/CD pipelines", "Basic monitoring and logging"]
+        preferred: ["Infrastructure as Code", "Incident response"]
+        
+    soft_skills_requirements:
+      - "Strong communication skills for technical documentation and team collaboration"
+      - "Curiosity and willingness to learn new technologies rapidly"
+      - "Attention to detail for production system reliability"
+      - "Collaborative mindset for cross-functional platform support"
+      
+    performance_expectations:
+      productivity_multiplier: "2x-4x through AI-assisted development"
+      learning_velocity: "Achieve proficiency in 2-3 new platform technologies per quarter"
+      reliability_contribution: "Support 99.5%+ platform uptime"
+      collaboration_effectiveness: "Enable 10%+ productivity improvement for supported development teams"
+
+  mid_platform_engineer:
+    level: "L3"
+    salary_range: "$120k-160k"  
+    experience_requirement: "3-6 years platform/infrastructure experience"
+    
+    core_responsibilities:
+      - "Design and implement scalable platform infrastructure using AI-assisted development"
+      - "Lead technical implementation of platform reliability and observability systems"
+      - "Mentor junior engineers in AI orchestration and platform engineering practices"
+      - "Drive platform automation and self-healing system implementations"
+      - "Collaborate with product teams to define platform requirements and SLAs"
+      
+    technical_requirements:
+      ai_orchestration_collaboration:
+        minimum_competency: 75%
+        key_capabilities:
+          - "Expert use of multiple AI tools for complex platform engineering tasks"
+          - "Design effective prompting strategies for infrastructure automation"
+          - "Train and guide junior engineers in AI-assisted development practices"
+          - "Optimize AI collaboration workflows for maximum platform development productivity"
+          
+      systems_thinking_architecture:
+        minimum_competency: 70%
+        key_capabilities:
+          - "Design scalable platform architectures supporting 10x growth"
+          - "Implement comprehensive service mesh, API gateway, and communication patterns"
+          - "Architect multi-region, high-availability platform infrastructure"
+          - "Design security-first platform solutions with compliance integration"
+          
+      critical_thinking_problem_solving:
+        minimum_competency: 65%
+        key_capabilities:
+          - "Lead complex problem decomposition and solution architecture"
+          - "Make independent technical decisions with business impact consideration"
+          - "Design and implement effective risk mitigation strategies"
+          - "Lead incident response and post-mortem improvement processes"
+          
+      continuous_learning_adaptability:
+        minimum_competency: 70%
+        key_capabilities:
+          - "Rapidly evaluate and adopt new platform technologies"
+          - "Synthesize knowledge across multiple domains for innovative solutions"
+          - "Lead team learning initiatives and knowledge sharing"
+          - "Adapt platform strategies based on performance data and feedback"
+          
+    performance_expectations:
+      productivity_multiplier: "4x-8x through advanced AI orchestration"
+      technical_leadership: "Lead 2-3 major platform initiatives per year"
+      reliability_ownership: "Own 99.9%+ uptime for critical platform services"
+      team_impact: "Enable 20%+ productivity improvement for supported teams"
+
+  senior_platform_engineer:
+    level: "L4"
+    salary_range: "$160k-220k"
+    experience_requirement: "6+ years platform/infrastructure experience with leadership"
+    
+    core_responsibilities:
+      - "Architect enterprise-scale platform solutions using cutting-edge AI collaboration"
+      - "Define platform engineering strategy and technical roadmap"
+      - "Lead cross-functional initiatives for platform reliability and performance"
+      - "Establish platform engineering best practices and AI-assisted development standards"
+      - "Drive organizational adoption of advanced platform and AI development practices"
+      
+    technical_requirements:
+      ai_orchestration_collaboration:
+        minimum_competency: 85%
+        key_capabilities:
+          - "Innovate new AI collaboration patterns for platform engineering"
+          - "Design AI-assisted development workflows that scale across organization"
+          - "Lead evaluation and adoption of emerging AI tools and platforms"
+          - "Establish AI governance and best practices for platform development"
+          
+      systems_thinking_architecture:
+        minimum_competency: 80%
+        key_capabilities:
+          - "Architect platform systems supporting 100x+ scale and global distribution"
+          - "Design platform abstractions that enable developer productivity at scale"
+          - "Lead technical decision-making for critical platform infrastructure"
+          - "Establish platform reliability, security, and compliance frameworks"
+          
+      performance_expectations:
+        productivity_multiplier: "8x-15x through expert AI orchestration and system design"
+        strategic_impact: "Drive platform decisions affecting entire engineering organization"
+        reliability_leadership: "Own 99.99%+ uptime for mission-critical platform services"
+        organizational_impact: "Enable 30%+ productivity improvement across engineering teams"
+
+# Assessment Alignment
+assessment_requirements:
+  
+  interview_process:
+    duration: "150 minutes total"
+    structure:
+      tier_1_ai_simulation: "45 minutes - AI-assisted platform development challenge"
+      tier_2_architecture_design: "60 minutes - Platform architecture and systems design"
+      tier_3_production_scenarios: "30 minutes - Operational excellence and incident response"
+      tier_4_learning_adaptation: "15 minutes - Technology adoption and continuous learning"
+      
+  minimum_thresholds:
+    junior_level:
+      overall_score: "≥60%"
+      ai_orchestration: "≥65%"
+      no_category_below: "40%"
+    mid_level:
+      overall_score: "≥70%"
+      ai_orchestration: "≥75%"
+      no_category_below: "50%"
+    senior_level:
+      overall_score: "≥80%"
+      ai_orchestration: "≥85%"
+      no_category_below: "65%"
+
+# Job Posting Templates
+job_posting_templates:
+  
+  junior_platform_engineer_posting:
+    title: "Junior Platform Engineer - AI-Assisted Development Focus"
+    
+    company_overview: |
+      Join Gefjon Growth's Platform Engineering team and help build the foundational systems that enable 4x-25x developer productivity through AI-assisted workflows. We're transforming how engineering teams work by creating platform infrastructure that seamlessly integrates with modern AI development tools.
+      
+    role_summary: |
+      We're seeking a Junior Platform Engineer who excels at AI-assisted development and has a passion for building reliable, scalable platform infrastructure. You'll work with cutting-edge AI tools to develop, deploy, and maintain the systems that power our engineering organization.
+      
+    key_responsibilities:
+      - "Develop platform infrastructure using AI-assisted development workflows (GitHub Copilot, Claude, etc.)"
+      - "Implement monitoring, logging, and observability solutions for production systems"
+      - "Support CI/CD pipelines and deployment automation with focus on reliability"
+      - "Participate in incident response and continuously improve platform reliability"
+      - "Collaborate with development teams to understand and address platform needs"
+      
+    required_qualifications:
+      - "1-3 years of software development or platform engineering experience"
+      - "Demonstrated proficiency with AI coding assistants (GitHub Copilot, Claude, ChatGPT, etc.)"
+      - "Experience with containerization (Docker) and cloud platforms (AWS, GCP, or Azure)"
+      - "Strong foundation in at least one programming language (Python, Go, or equivalent)"
+      - "Understanding of CI/CD pipelines and version control (Git)"
+      - "Excellent problem-solving skills and ability to learn new technologies quickly"
+      
+    preferred_qualifications:
+      - "Experience with Kubernetes, Terraform, or infrastructure as code tools"
+      - "Background in monitoring and observability (Prometheus, Grafana, ELK stack)"
+      - "Understanding of distributed systems and microservices architecture"
+      - "Experience with incident response and post-mortem processes"
+      
+    what_we_offer:
+      - "Work with cutting-edge AI development tools and methodologies"
+      - "Opportunity to achieve 4x-25x productivity improvements through AI collaboration"
+      - "Mentorship from senior platform engineers and AI development experts"
+      - "Comprehensive learning budget for AI tools, platform technologies, and conferences"
+      - "Flexible remote work with focus on results and continuous learning"
+      
+    interview_process:
+      - "Initial screening focusing on AI tool usage and platform engineering interest"
+      - "AI-assisted development simulation - collaborate with AI tools to solve platform challenges"
+      - "System architecture design discussion - platform thinking and scalability"
+      - "Technical scenarios - production system reliability and incident response"
+      - "Cultural fit and learning agility assessment"
+
+  transformation_messaging:
+    from_traditional_software_roles: |
+      This is not a traditional software engineering role. We're looking for engineers who excel at:
+      • AI orchestration and collaboration rather than independent coding
+      • Platform and infrastructure thinking rather than application development
+      • Production system reliability rather than feature development
+      • Systems architecture rather than algorithm implementation
+      
+    ai_assisted_development_focus: |
+      Our platform engineers spend 70%+ of their development time collaborating with AI tools. We evaluate candidates based on their ability to:
+      • Instruct and guide AI tools effectively for complex platform tasks
+      • Critically evaluate and improve AI-generated infrastructure code
+      • Iterate rapidly through AI collaboration to achieve production-ready solutions
+      • Stay current with evolving AI development tools and best practices
+      
+    performance_expectations: |
+      Through effective AI collaboration and platform engineering practices, our team members regularly achieve:
+      • 4x-25x productivity improvements in infrastructure development
+      • Faster time-to-market for platform features and reliability improvements  
+      • Higher quality infrastructure with fewer bugs and production issues
+      • Greater job satisfaction through focus on strategic platform work
+
+# Implementation Guidelines
+implementation_guidelines:
+  
+  hiring_team_preparation:
+    - "All interviewers must complete platform engineering competency training"
+    - "Interview team should include at least one senior platform engineer"
+    - "Assessment environment must provide access to AI coding tools"
+    - "Evaluation rubrics must focus on AI collaboration effectiveness"
+    
+  candidate_communication:
+    - "Clearly communicate AI-assisted development focus in all recruiting materials"
+    - "Provide preparation guidance for AI collaboration assessment"
+    - "Set expectations for platform engineering vs. software engineering role differences"
+    - "Emphasize learning agility and continuous adaptation requirements"
+    
+  onboarding_alignment:
+    - "New hire onboarding must include AI tool setup and training"
+    - "Pair programming with senior engineers using AI-assisted workflows"
+    - "Platform engineering best practices and production thinking training"
+    - "90-day competency assessment and development plan creation"
+
+# Success Metrics
+success_metrics:
+  
+  hiring_effectiveness:
+    - "90-day performance review alignment with assessment predictions"
+    - "Time to productivity for new platform engineers"
+    - "Retention rates and career progression within platform engineering"
+    - "Team productivity improvements enabled by new hires"
+    
+  role_evolution:
+    - "Continuous refinement based on actual platform engineering needs"
+    - "Regular review and update of competency requirements"
+    - "Feedback integration from hiring managers and team members"
+    - "Market competitiveness and candidate pipeline health"

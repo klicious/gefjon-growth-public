@@ -48,7 +48,13 @@ This project implements **context engineering** methodology. All agents must fol
 4. If context is incomplete, request specific missing information before proceeding.
 
 ## Project Scope Context
-**Gefjon Growth** is a comprehensive HR automation platform. Current implementation covers the complete hiring pipeline (screening → assignments → evaluation → interviews → assessment). Future expansion targets full HR process automation including performance management, OKR tracking, talent development, team evaluation, and external tool integration (email, messaging, Dooray Task Management).
+**Gefjon Growth** is a comprehensive HR automation platform with enhanced hybrid assessment methodology. Current implementation covers the complete hiring pipeline with **Hybrid BEI + Enhanced Technical Assessment** approach:
+
+- **BEI Core Values Assessment (60% weight)**: Traditional Behavioral Event Interviewing preserving all 10 organizational core values with PROVEN/SUGGESTED/MISSING framework
+- **Enhanced Technical Assessment (40% weight)**: AI-assisted development evaluation and platform engineering scenarios
+- **Total Assessment**: 90-95 minutes combining behavioral excellence with platform engineering capability
+
+Future expansion targets full HR process automation including performance management, OKR tracking, talent development, team evaluation, and external tool integration (email, messaging, Dooray Task Management).
 
 ## Output Policies
 * ALWAYS return markdown unless `format: html` specified.

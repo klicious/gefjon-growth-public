@@ -1,0 +1,447 @@
+# Platform Engineering Scoring Framework
+# Comprehensive evaluation criteria and scoring system for AI-assisted platform engineering roles
+
+metadata:
+  version: "1.0"
+  last_updated: "2025-09-02T08:00:00Z"
+  purpose: "Define scoring framework for platform engineering competency assessment"
+  domain: "hr_processes"
+  visibility: "public"
+  replaces: "traditional BEI and core values scoring"
+  schema_version: "1.0"
+
+# Platform Engineering Competency Scoring Framework
+competency_scoring_framework:
+  
+  # Category 1: AI Orchestration & Collaboration (35% Weight)
+  ai_orchestration_collaboration:
+    weight: 35%
+    description: "Ability to effectively instruct, guide, and validate AI agents to produce high-quality platform solutions"
+    
+    ai_instruction_capability:
+      weight: 12%
+      scoring_criteria:
+        level_5_expert:
+          score: 90-100%
+          description: "Provides rich context and constraints to AI, asks clarifying questions, guides AI through complex processes"
+          indicators:
+            - "Crafts prompts with comprehensive context and specific requirements"
+            - "Asks strategic questions to refine AI understanding of complex problems"
+            - "Guides AI through multi-step platform engineering processes effectively"
+            - "Maintains architectural vision throughout AI collaboration"
+          
+        level_4_advanced:
+          score: 75-89%
+          description: "Generally clear and specific in AI instructions, provides relevant context, effectively guides AI"
+          indicators:
+            - "Provides clear instructions with appropriate context most of the time"
+            - "Generally effective at guiding AI toward desired platform solutions"
+            - "Occasionally needs to clarify or redirect AI collaboration"
+            
+        level_3_proficient:
+          score: 60-74%
+          description: "Basic competency in AI instruction, can achieve acceptable results with AI assistance"
+          indicators:
+            - "Basic ability to instruct AI for platform engineering tasks"
+            - "Sometimes lacks context or specificity in AI collaboration"
+            - "May require multiple attempts to achieve desired outcomes"
+            
+        level_2_developing:
+          score: 40-59%
+          description: "Vague or unclear instructions to AI, limited understanding of effective AI guidance"
+          indicators:
+            - "Provides insufficient context or unclear instructions to AI"
+            - "Results often require significant manual correction"
+            - "Struggles with complex AI collaboration workflows"
+            
+        level_1_novice:
+          score: 0-39%
+          description: "Cannot effectively instruct AI for meaningful platform engineering results"
+          indicators:
+            - "Unable to provide effective instructions to AI tools"
+            - "Lacks understanding of AI capabilities and limitations"
+            - "Cannot achieve acceptable outcomes through AI collaboration"
+    
+    ai_output_validation:
+      weight: 13%
+      scoring_criteria:
+        level_5_expert:
+          score: 90-100%
+          description: "Immediately identifies logical flaws, security issues, and scalability concerns in AI outputs"
+          indicators:
+            - "Quickly identifies logical flaws and edge cases in AI-generated solutions"
+            - "Recognizes security vulnerabilities and performance implications"
+            - "Evaluates solutions for maintainability and platform scalability"
+            - "Suggests improvements aligned with architectural principles"
+            
+        level_4_advanced:
+          score: 75-89%
+          description: "Generally effective at identifying major issues and evaluating AI-generated solutions"
+          indicators:
+            - "Catches most security and performance problems in AI outputs"
+            - "Good at evaluating code quality and architectural patterns"
+            - "Makes reasonable improvement suggestions"
+            
+        level_3_proficient:
+          score: 60-74%
+          description: "Identifies obvious issues, basic security and performance awareness"
+          indicators:
+            - "Identifies obvious bugs and functional issues"
+            - "Basic understanding of security and performance implications"
+            - "Can evaluate functionality reasonably well"
+            
+        level_2_developing:
+          score: 40-59%
+          description: "Misses significant issues, limited security and performance awareness"
+          indicators:
+            - "Misses significant issues in AI-generated platform solutions"
+            - "Limited awareness of security and scalability implications"
+            - "Accepts suboptimal solutions without sufficient questioning"
+            
+        level_1_novice:
+          score: 0-39%
+          description: "Cannot effectively evaluate AI-generated platform solutions"
+          indicators:
+            - "Cannot identify major flaws or issues in AI outputs"
+            - "No critical assessment capability for AI-generated solutions"
+            - "Accepts outputs without evaluation"
+    
+    ai_assisted_iteration:
+      weight: 10%
+      scoring_criteria:
+        level_5_expert:
+          score: 90-100%
+          description: "Rapidly iterates toward optimal platform solutions while maintaining architectural coherence"
+          indicators:
+            - "Demonstrates clear quality improvement trajectory through AI collaboration"
+            - "Maintains architectural coherence across multiple iteration cycles"
+            - "Efficiently incorporates learning and feedback from AI interactions"
+            
+        level_3_proficient:
+          score: 60-74%
+          description: "Basic iteration capability, can improve solutions through AI collaboration"
+          indicators:
+            - "Shows some quality improvement through AI collaboration cycles"
+            - "Basic ability to iterate on platform solutions with AI assistance"
+            
+        level_1_novice:
+          score: 0-39%
+          description: "Cannot effectively iterate with AI assistance"
+          indicators:
+            - "No clear improvement pattern through AI collaboration"
+            - "Solutions may degrade through iteration attempts"
+
+  # Category 2: Systems Thinking & Architecture (30% Weight)
+  systems_thinking_architecture:
+    weight: 30%
+    description: "Ability to design, understand, and optimize complex platform systems and their interactions"
+    
+    platform_architecture_design:
+      weight: 12%
+      scoring_criteria:
+        level_5_expert:
+          score: 90-100%
+          description: "Designs scalable, reliable platform systems with comprehensive understanding of trade-offs"
+          indicators:
+            - "Designs for both horizontal and vertical scaling requirements"
+            - "Incorporates fault tolerance and reliability patterns from design phase"
+            - "Plans for comprehensive observability and monitoring"
+            - "Balances system complexity with maintainability effectively"
+            
+        level_4_advanced:
+          score: 75-89%
+          description: "Good platform architecture capabilities with solid understanding of scalability"
+          indicators:
+            - "Generally effective at designing scalable platform systems"
+            - "Good understanding of reliability and fault tolerance patterns"
+            - "Considers operational aspects in architecture design"
+            
+        level_3_proficient:
+          score: 60-74%
+          description: "Basic platform architecture understanding, can design functional systems"
+          indicators:
+            - "Can design basic platform architectures that function"
+            - "Some understanding of scalability and reliability requirements"
+            - "May need guidance for complex architectural decisions"
+            
+        level_2_developing:
+          score: 40-59%
+          description: "Limited architecture design capability, requires significant guidance"
+          indicators:
+            - "Limited understanding of platform architecture principles"
+            - "Designs may not adequately address scalability or reliability"
+            - "Requires extensive guidance for architectural decisions"
+            
+        level_1_novice:
+          score: 0-39%
+          description: "Cannot design effective platform architectures"
+          indicators:
+            - "No demonstrated platform architecture design capability"
+            - "Designs inadequate for platform engineering requirements"
+    
+    production_system_thinking:
+      weight: 10%
+      scoring_criteria:
+        level_5_expert:
+          score: 90-100%
+          description: "Comprehensive understanding of production deployment, operations, and lifecycle management"
+          indicators:
+            - "Considers security, compliance, and governance from design phase"
+            - "Plans comprehensive CI/CD, testing, and quality gate strategies"
+            - "Deep understanding of infrastructure as code and automation"
+            - "Designs for operational excellence and efficient incident response"
+            
+        level_3_proficient:
+          score: 60-74%
+          description: "Basic production thinking, understands deployment and operational requirements"
+          indicators:
+            - "Basic understanding of production deployment requirements"
+            - "Some awareness of security and operational considerations"
+            - "Can plan basic CI/CD and testing strategies"
+            
+        level_1_novice:
+          score: 0-39%
+          description: "Limited production system understanding"
+          indicators:
+            - "Minimal understanding of production deployment and operations"
+            - "Limited awareness of security and compliance requirements"
+    
+    cross_system_integration:
+      weight: 8%
+      scoring_criteria:
+        level_5_expert:
+          score: 90-100%
+          description: "Expert in designing integration patterns across platform components"
+          indicators:
+            - "Designs robust API contracts and effective communication patterns"
+            - "Implements appropriate messaging and event-driven architectures"
+            - "Considers data consistency and transaction management comprehensively"
+            - "Plans for backward compatibility and seamless version management"
+            
+        level_3_proficient:
+          score: 60-74%
+          description: "Basic integration understanding, can design functional cross-system communication"
+          indicators:
+            - "Can design basic API and integration patterns"
+            - "Some understanding of event-driven architecture concepts"
+            - "Basic awareness of data consistency requirements"
+
+  # Category 3: Critical Thinking & Problem Solving (20% Weight)
+  critical_thinking_problem_solving:
+    weight: 20%
+    description: "Ability to analyze complex problems, evaluate solutions, and make informed technical decisions"
+    
+    problem_decomposition:
+      weight: 7%
+      scoring_criteria:
+        level_5_expert:
+          score: 90-100%
+          description: "Systematically breaks down complex platform challenges with clear prioritization"
+          indicators:
+            - "Identifies root causes vs. symptoms consistently"
+            - "Prioritizes problems based on impact and effort effectively"
+            - "Creates actionable, systematic problem-solving strategies"
+            - "Considers multiple solution approaches and trade-offs"
+            
+        level_3_proficient:
+          score: 60-74%
+          description: "Can break down problems systematically, basic prioritization capability"
+          indicators:
+            - "Can identify and break down complex problems into components"
+            - "Basic ability to prioritize based on impact and effort"
+            - "Creates workable problem-solving approaches"
+    
+    technical_decision_making:
+      weight: 8%
+      scoring_criteria:
+        level_5_expert:
+          score: 90-100%
+          description: "Excellent at evaluating technical options and making well-informed architectural decisions"
+          indicators:
+            - "Systematically weighs trade-offs between competing technical solutions"
+            - "Considers long-term implications and technical debt in decisions"
+            - "Uses data and metrics effectively to support technical decisions"
+            - "Adapts decisions appropriately based on new information"
+            
+        level_3_proficient:
+          score: 60-74%
+          description: "Can make reasonable technical decisions with basic trade-off analysis"
+          indicators:
+            - "Makes reasonable technical decisions for platform problems"
+            - "Some consideration of trade-offs and implications"
+            - "Basic use of data to inform decisions"
+    
+    risk_assessment_mitigation:
+      weight: 5%
+      scoring_criteria:
+        level_5_expert:
+          score: 90-100%
+          description: "Proactively identifies and addresses potential system risks and failure modes"
+          indicators:
+            - "Identifies potential failure points and system vulnerabilities"
+            - "Develops comprehensive mitigation strategies for identified risks"
+            - "Plans for disaster recovery and business continuity"
+            - "Balances risk mitigation with system complexity appropriately"
+
+  # Category 4: Continuous Learning & Adaptability (15% Weight)
+  continuous_learning_adaptability:
+    weight: 15%
+    description: "Ability to rapidly acquire new knowledge and adapt to changing technology landscapes"
+    
+    technology_adoption:
+      weight: 6%
+      scoring_criteria:
+        level_5_expert:
+          score: 90-100%
+          description: "Rapidly acquires proficiency in new platforms and evaluates technology fitness expertly"
+          indicators:
+            - "Rapidly acquires proficiency in new platforms and tools"
+            - "Evaluates technology fitness for specific use cases effectively"
+            - "Balances innovation with stability and reliability requirements"
+            - "Stays current with industry trends and platform engineering best practices"
+            
+        level_3_proficient:
+          score: 60-74%
+          description: "Can learn new technologies and evaluate basic fitness for platform use"
+          indicators:
+            - "Can learn and apply new technologies reasonably effectively"
+            - "Basic ability to evaluate technology fitness for platform needs"
+            - "Some awareness of industry trends and best practices"
+
+# Role-Specific Scoring Thresholds
+role_thresholds:
+  
+  junior_platform_engineer:
+    overall_minimum: 60%
+    category_minimums:
+      ai_orchestration_collaboration: 65%
+      systems_thinking_architecture: 55%
+      critical_thinking_problem_solving: 50%
+      continuous_learning_adaptability: 65%
+    no_category_below: 40%
+    expected_performance_multiplier: "2x-4x"
+    hire_recommendation_criteria:
+      strong_hire: "≥75% overall with ≥80% AI orchestration"
+      hire: "≥65% overall with ≥70% AI orchestration"  
+      lean_hire: "≥60% overall with high learning agility (≥75%)"
+      no_hire: "<60% overall or <65% AI orchestration"
+    
+  mid_platform_engineer:
+    overall_minimum: 70%
+    category_minimums:
+      ai_orchestration_collaboration: 75%
+      systems_thinking_architecture: 70%
+      critical_thinking_problem_solving: 65%
+      continuous_learning_adaptability: 70%
+    no_category_below: 50%
+    expected_performance_multiplier: "4x-8x"
+    hire_recommendation_criteria:
+      strong_hire: "≥85% overall with ≥90% AI orchestration"
+      hire: "≥75% overall with ≥80% AI orchestration"
+      lean_hire: "≥70% overall with strong systems thinking (≥80%)"
+      no_hire: "<70% overall or <75% AI orchestration"
+    
+  senior_platform_engineer:
+    overall_minimum: 80%
+    category_minimums:
+      ai_orchestration_collaboration: 85%
+      systems_thinking_architecture: 80%
+      critical_thinking_problem_solving: 80%
+      continuous_learning_adaptability: 75%
+    no_category_below: 65%
+    expected_performance_multiplier: "8x-15x"
+    hire_recommendation_criteria:
+      strong_hire: "≥90% overall with ≥95% AI orchestration"
+      hire: "≥85% overall with ≥90% AI orchestration"
+      lean_hire: "≥80% overall with exceptional systems thinking (≥90%)"
+      no_hire: "<80% overall or <85% AI orchestration"
+
+# Assessment Methodology Integration
+assessment_integration:
+  
+  tier_1_ai_simulation:
+    weight: 35%
+    maps_to: "ai_orchestration_collaboration"
+    evaluation_focus:
+      - "Real-time observation of AI collaboration effectiveness"
+      - "Quality of instructions and prompts provided to AI tools"
+      - "Critical evaluation of AI-generated platform solutions"
+      - "Iterative improvement through AI collaboration cycles"
+    
+  tier_2_architecture_design:
+    weight: 30%
+    maps_to: "systems_thinking_architecture"  
+    evaluation_focus:
+      - "Platform architecture design and scalability thinking"
+      - "Production deployment and operational considerations"
+      - "Cross-system integration and communication patterns"
+      - "Trade-off analysis and architectural decision-making"
+    
+  tier_3_production_scenarios:
+    weight: 20%
+    maps_to: "critical_thinking_problem_solving"
+    evaluation_focus:
+      - "Systematic problem decomposition and analysis"
+      - "Technical decision-making under constraints"
+      - "Risk assessment and mitigation planning"
+      - "Incident response and operational thinking"
+    
+  tier_4_learning_adaptation:
+    weight: 15%
+    maps_to: "continuous_learning_adaptability"
+    evaluation_focus:
+      - "Technology adoption patterns and learning velocity"
+      - "Knowledge synthesis across domains"
+      - "Feedback integration and continuous improvement"
+      - "Adaptation to new tools and methodologies"
+
+# Scoring Calibration Guidelines
+calibration_guidelines:
+  
+  interviewer_training:
+    - "Calibration sessions with sample assessments and scoring exercises"
+    - "Inter-rater reliability validation requiring >85% agreement"
+    - "Regular scoring reviews and team calibration meetings"
+    - "Evidence-based scoring with specific examples documented"
+    
+  scoring_consistency:
+    - "Multiple interviewer input required for all categories"
+    - "Specific behavioral evidence required to support all scores"
+    - "Scoring rubrics must be followed consistently across all candidates"
+    - "Regular audit of scoring patterns and bias identification"
+    
+  quality_assurance:
+    - "Sample of assessments reviewed by senior platform engineering lead"
+    - "Correlation tracking between assessment scores and job performance"
+    - "Regular updates to scoring criteria based on performance data"
+    - "Documentation of scoring rationale for all hiring decisions"
+
+# Performance Prediction Model
+performance_prediction:
+  
+  multiplier_calculation:
+    score_90_100: "15x-25x performance potential"
+    score_80_89: "8x-15x performance potential"  
+    score_70_79: "4x-8x performance potential"
+    score_60_69: "2x-4x performance potential"
+    score_below_60: "Limited performance improvement potential - consider alternative roles"
+    
+  success_indicators:
+    high_performance_predictors:
+      - "AI orchestration score ≥85%"
+      - "Systems thinking score ≥80%"
+      - "Learning agility score ≥75%"
+      - "Demonstrated iteration and improvement capability"
+      
+    risk_indicators:
+      - "AI orchestration score <70%"
+      - "Systems thinking score <65%"
+      - "No evidence of learning agility or adaptation"
+      - "Poor critical thinking or problem-solving capability"
+
+# Implementation Notes
+implementation_notes:
+  transition_from_traditional: "6-month parallel scoring to validate new framework effectiveness"
+  interviewer_certification: "All interviewers must complete platform engineering assessment training"
+  continuous_improvement: "Monthly review and refinement based on hiring outcomes"
+  performance_validation: "Track correlation between scores and 90-day performance reviews"

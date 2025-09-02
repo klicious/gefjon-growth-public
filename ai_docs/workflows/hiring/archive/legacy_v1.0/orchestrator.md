@@ -1,20 +1,19 @@
 ---
-id: hybrid_hiring_workflow_orchestrator
+id: hiring_workflow_orchestrator
 type: orchestrator
 domain: hiring
 created_date: 2025-08-11
-last_updated: 2025-09-02
+last_updated: 2025-08-11
 author: Kiro
-quality_score: 9.7/10
-tags: [workflow, hiring, orchestrator, automation, ai-agent-ready, hybrid-assessment, bei-methodology]
+quality_score: 9.5/10
+tags: [workflow, hiring, orchestrator, automation, ai-agent-ready]
 visibility: public
-version: 2.1
+version: 2.0
 ---
 
-# Hybrid Hiring Workflow Orchestrator
-## BEI Core Values + Enhanced Technical Assessment
+# Hiring Workflow Orchestrator
 
-**Purpose**: AI-agent-ready end-to-end hiring workflow automation implementing **Hybrid BEI + Enhanced Technical Assessment** methodology. Preserves traditional BEI core values assessment (60% weight) while adding enhanced technical evaluation for AI-assisted development and platform engineering (40% weight).
+**Purpose**: AI-agent-ready end-to-end hiring workflow automation with comprehensive error handling, validation, and execution guidance.
 
 ## AI Agent Execution Instructions
 
@@ -363,40 +362,32 @@ mcp_servers:
 - Updated evaluation_sheet.md summaries with final scores
 - evaluation_summary.json with per-criterion breakdown and decision
 
-### Stage 6: Hybrid Interview Kit Generation - BEI + Enhanced Technical Assessment
-**Task**: `ai_docs/workflows/hiring/tasks/06_interview_kit_hybrid.md`  
-**Duration**: 75-90 minutes (extended for comprehensive hybrid analysis)  
-**Hybrid Assessment Features**:
-- **BEI Core Values Assessment (60% Weight, 40 minutes)**: Traditional BEI methodology with STAR format for all 10 core values
-- **Enhanced Technical Assessment (40% Weight, 50 minutes)**: AI-assisted development evaluation + platform engineering scenarios
-- **PROVEN/SUGGESTED/MISSING Framework**: Evidence categorization for systematic value assessment
-- **AI Collaboration Evaluation**: Hands-on assessment of AI instruction, validation, and iteration capabilities
-- **Platform Engineering Scenarios**: Systems thinking and production mindset evaluation
-- **Hybrid Scoring Integration**: 75-point scoring system (50 BEI + 25 technical)
-- **CONDITIONAL GENERATION**: Only for interview-eligible candidates (≥6.5/10 screening)
+### Stage 6: Interview Kit Generation (ENHANCED) - BEI-Focused
+**Task**: `ai_docs/workflows/hiring/tasks/06_interview_kit.md`  
+**Duration**: 60-75 minutes (extended for comprehensive BEI analysis)  
+**Enhanced Features**:
+- **Behavioral Event Interview (BEI) Methodology**: Systematic core values assessment
+- **Value Gap Analysis**: Identify which values need verification vs. double-checking
+- **STAR Format Questions**: Past behavioral pattern analysis using Situation-Task-Action-Results
+- **Core Values Mapping**: Comprehensive evaluation of all 10 company values
+- Technical assessment calibration
+- **CONDITIONAL GENERATION**: Only for interview-eligible candidates
 
-#### AI Agent Instructions - Hybrid Assessment Integration
+#### AI Agent Instructions - BEI Integration
 ```markdown
 1. Filter candidates for interview eligibility:
-   - "Strong Hire" + "Hire" (≥8.0) → Full hybrid interview kit (BEI + technical)
-   - "Lean Hire" (6.5-7.9) → Assessment-focused hybrid interview kit
+   - "Strong Hire" + "Hire" (≥8.0) → Full BEI interview kit
+   - "Lean Hire" (6.5-7.9) → Assessment-focused BEI interview kit
    - "No Hire" (<6.5) → Skip interview materials
 
-2. **HYBRID ASSESSMENT ANALYSIS** - Dual Framework Integration:
-   
-   **BEI Core Values Assessment (60% Weight)**:
-   - Analyze resume, screening report, and take-home materials for core values evidence
-   - Map evidence for each of the 10 core values from provided materials
+2. **CRITICAL BEI ANALYSIS** - Value Mapping for each candidate:
+   - Analyze resume, screening report, and take-home materials
+   - Map evidence of each core value (1-10) from provided materials
    - Categorize values as: PROVEN (strong evidence), SUGGESTED (weak evidence), MISSING (no evidence)
-   - Generate targeted STAR format questions for systematic behavioral assessment
-   
-   **Enhanced Technical Assessment (40% Weight)**:
-   - AI-assisted development capability analysis from take-home and portfolio
-   - Platform engineering potential assessment from systems thinking evidence
-   - Technical collaboration and learning agility indicators
-   - Production mindset and scalability understanding evaluation
+   - Generate targeted BEI questions to verify/double-check PROVEN values
+   - Generate comprehensive BEI questions to discover MISSING values
 
-3. **Core Values Assessment Strategy (Traditional BEI)**:
+3. **Core Values Assessment Strategy**:
    For each of the 10 core values, create STAR format questions:
    - Technical Excellence & Scalable Elegance
    - Customer-Centric Craftsmanship  
@@ -409,35 +400,29 @@ mcp_servers:
    - Continuous Learning & Mentorship
    - Innovative Spirit
 
-4. **Enhanced Technical Assessment Strategy**:
-   - **AI Collaboration Simulation (25 minutes)**: Hands-on evaluation with AI tools available
-   - **Platform Engineering Scenarios (25 minutes)**: Architecture design and production problem-solving
-   - Assessment criteria: AI instruction effectiveness, output validation, systems thinking
-   
-5. **Hybrid Interview Structure Requirements**:
-   - 95 minute total interview time
-   - **Introduction**: 5 minutes
-   - **BEI Core Values Assessment**: 40 minutes (systematic coverage of all 10 values)
-   - **AI-Assisted Technical Assessment**: 25 minutes (hands-on AI collaboration)
-   - **Platform Engineering Scenarios**: 25 minutes (systems thinking evaluation)
-   
-6. Generate three required files per eligible candidate:
-   - candidate_context.md (executive briefing + hybrid assessment analysis)
-   - interview_guide.md (hybrid structure: BEI + enhanced technical)
-   - interview_script.md (BEI STAR questions + technical assessment guidance)
+4. **Interview Structure Requirements**:
+   - 90-120 minute total interview time
+   - 50-60 minutes dedicated to BEI (minimum 2 values per 15-minute segment)
+   - Multiple STAR questions per value to verify behavioral patterns
+   - Technical assessment aligned with demonstrated skills
+   - Clear interviewer guidance on what to probe for each value
+
+5. Generate three required files per eligible candidate:
+   - candidate_context.md (executive briefing + value gap analysis)
+   - interview_guide.md (BEI-focused structure with value mapping)
+   - interview_script.md (verbatim STAR questions and follow-ups)
 ```
 
 **Quality Gates**:
 - ✅ All three files generated per eligible candidate
-- ✅ **Hybrid Assessment Integration** completed for each candidate
-- ✅ **BEI Value Gap Analysis** completed (PROVEN/SUGGESTED/MISSING for all 10 values)
-- ✅ **STAR format questions** generated for comprehensive core values assessment
-- ✅ **Enhanced Technical Assessment** scenarios designed (AI collaboration + platform engineering)
-- ✅ **Hybrid scoring framework** applied (60% BEI + 40% technical = 75 points total)
-- ✅ **Interview time allocation** structured for 95-minute hybrid assessment
-- ✅ **AI-assisted development evaluation** criteria established
-- ✅ **Platform engineering scenarios** appropriate for systems thinking assessment
-- ✅ Clear interviewer guidance for both behavioral and technical evaluation
+- ✅ **BEI Value Gap Analysis** completed for each candidate
+- ✅ **All 10 core values mapped** with evidence categorization (PROVEN/SUGGESTED/MISSING)
+- ✅ **STAR format questions** generated for each value requiring assessment
+- ✅ **Verification questions** created for PROVEN values from resume/materials
+- ✅ **Discovery questions** created for MISSING values needing exploration
+- ✅ Interview time allocation ensures adequate BEI coverage (50-60 minutes minimum)
+- ✅ Technical assessments appropriate for role level
+- ✅ Clear interviewer guidance on behavioral pattern recognition
 - ✅ Conditional generation logic properly applied
 
 ### Stage 7: Consolidation & Final Organization (NEW)
@@ -504,17 +489,17 @@ mcp_server_unavailable:
 
 ## AI Agent Execution Commands
 
-### Complete Hybrid Workflow (Recommended)
+### Complete Workflow (Recommended)
 ```bash
-# Execute complete hybrid workflow with BEI + enhanced technical assessment
+# Execute complete workflow with validation
 gemini run \
   --prompt "ai_docs/workflows/hiring/orchestrator.md" \
   --context "data/public/hiring/resume/{date}/candidates_{date}.json" \
-  --mode "hybrid_assessment" \
+  --mode "production" \
   --evaluator "klicious"
 
-# Alternative: Use integrated hybrid automation script
-python scripts/complete_hybrid_workflow.py
+# Alternative: Use integrated automation script
+python scripts/complete_workflow_final.py
 ```
 
 ### Stage-by-Stage Execution (Debug Mode)
@@ -660,12 +645,10 @@ Solution: Prepare comprehensive materials, schedule review sessions
 - **Rollback capabilities** for error recovery
 
 ---
-**Hybrid Orchestrator Version**: 2.1  
-**Assessment Framework**: BEI Core Values (60%) + Enhanced Technical Assessment (40%)  
-**AI Agent Compatibility**: Optimized for autonomous hybrid assessment execution  
-**Quality Assurance**: Comprehensive validation and error handling for dual methodology  
-**Phoenix_005 Resolution**: Candidates with AI collaboration skills now properly assessed  
-**Last Updated**: 2025-09-02T08:00:00Z
+**Enhanced Orchestrator Version**: 2.0  
+**AI Agent Compatibility**: Optimized for autonomous execution  
+**Quality Assurance**: Comprehensive validation and error handling  
+**Last Updated**: 2025-08-11T13:45:00Z
 
 ### Agent Prompt Reference & Code-First Policy (Stage 5.5)
 - Prompt to use: ai_docs/prompts/hiring/takehome_evaluation_prompt.md

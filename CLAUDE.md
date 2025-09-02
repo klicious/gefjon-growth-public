@@ -11,7 +11,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Primary AI Workflow
 The system operates using a **ReAct methodology** (Reason → Act → Observe → Repeat) as defined in `.gemini/GEMINI.md`. The current workflow encompasses the complete hiring pipeline: candidate screening, take-home assignment allocation and Top-Tier Industry Standards evaluation, interview kit generation, and candidate assessment. Future expansion will automate performance reviews, OKR tracking, talent development, and comprehensive team evaluation processes.
 
-**Key Command:**
+**Primary Command (Enhanced v2.0):**
+```bash
+gemini run \
+  --prompt "ai_docs/prompts/hiring/generate_interview_kit_prompt_v2.md" \
+  --context "data/public/hiring/resume/[candidate_file].json"
+```
+
+**Legacy Command (Deprecated):**
 ```bash
 gemini run \
   --prompt "ai_docs/prompts/hiring/generate_interview_kit_prompt.md" \
@@ -28,16 +35,37 @@ gemini run \
 │   └── teams/                      # Team-specific context
 ├── data/public/hiring/resume/      # INPUT: Candidate JSON profiles
 ├── artifacts/public/hiring/        # OUTPUT: Generated interview materials
-│   ├── interview_materials/upcoming/ # Generated candidate kits
+│   ├── candidates/                 # Enhanced candidate interview kits (v2.0)
+│   ├── interview_materials/upcoming/ # Legacy candidate kits (v1.0)
 │   └── pair_programming/           # Technical problem bank (easy/intermediate/expert)
 └── artifacts/private/              # Sensitive evaluations and feedback
 ```
 
-### Generated Output Structure
-For each candidate, the system creates a dedicated directory under `artifacts/public/hiring/interview_materials/upcoming/{candidate_id}/` containing:
-- `candidate_context.md` - Executive briefing with core value alignment
-- `interview_guide.md` - Detailed interview plan with personalized questions  
-- `interview_script.md` - Complete verbatim script for interviewers
+### Generated Output Structure (Enhanced v2.0)
+For each candidate, the system creates a comprehensive directory under `artifacts/public/hiring/candidates/{date}_{candidate_id}/` containing:
+
+#### Core v2.0 Enhancements:
+- **Core Value Gap Analysis**: PROVEN/SUGGESTED/MISSING framework for systematic value assessment
+- **Behavioral/Technical Separation**: Clear distinction between BEI and technical evaluation
+- **General Behavioral Questions**: Experience-based STAR method questions (not task-specific)
+- **Custom Pair Programming**: Gap-targeted technical challenges with production focus
+- **Complete Skeleton Projects**: Working codebases with production-ready structure
+
+#### Interview Materials (`interview/` subfolder)
+- `candidate_context.md` - Executive briefing with PROVEN/SUGGESTED/MISSING core value analysis
+- `interview_guide.md` - Strategic plan separating BEI (40min) and pair programming (45min)
+- `interview_script.md` - BEI script focusing on MISSING values with general behavioral questions
+
+#### Technical Assessment  
+- `pair_programming_task.md` - Custom technical challenge with 3-phase structure (Architecture → Implementation → Production)
+- `pair_programming/` - Complete working skeleton project with:
+  - Production-ready codebase with strategic TODO markers
+  - Comprehensive test structure and configuration
+  - Modern tooling setup (linting, formatting, CI/CD)
+  - Detailed README with clear setup and execution instructions
+
+#### Legacy Structure (v1.0 - Deprecated)
+- `artifacts/public/hiring/interview_materials/upcoming/{candidate_id}/` - Original format maintained for backward compatibility
 
 ## Company Context Integration
 
@@ -56,11 +84,14 @@ Located in `context/company_info/mission_vision_values.yaml`:
 9. Continuous Learning & Mentorship
 10. Innovative Spirit
 
-### Interview Process Framework
-- **BEI (Behavioral Event Interviewing):** Validates core values through STAR method
-- **Technical Deep-Dive:** Assesses claimed skills and addresses red flags
-- **Pair Programming:** Uses problems from `artifacts/public/hiring/pair_programming/` (easy/intermediate/expert levels)
-- **System Design:** Custom problems tailored to candidate background
+### Enhanced Interview Process Framework (v2.0)
+- **BEI (Behavioral Event Interviewing) - 40 minutes:** Validates MISSING core values through general behavioral STAR method questions across candidate's career experience
+- **Pair Programming - 45 minutes:** Custom gap-targeted challenges with 3-phase structure:
+  - **Phase 1 - Architecture (15min):** Design and planning assessment
+  - **Phase 2 - Implementation (20min):** Core development work
+  - **Phase 3 - Production Readiness (10min):** Testing, security, monitoring considerations
+- **Integrated Assessment:** Technical deep-dive and system design integrated into pair programming phases
+- **Gap-Targeted Approach:** All assessments specifically target identified PROVEN/SUGGESTED/MISSING gaps
 
 ## Development Environment
 
@@ -93,8 +124,15 @@ pip install -e .
 
 ## Key Prompts & Templates
 
-### Primary Interview Generation Prompt
-Located at `ai_docs/prompts/hiring/generate_interview_kit_prompt.md` - This is the core prompt that processes candidate JSON data and generates comprehensive interview kits.
+### Enhanced Interview Generation Prompt (v2.0)
+**Primary:** `ai_docs/prompts/hiring/generate_interview_kit_prompt_v2.md` - Enhanced prompt featuring:
+- PROVEN/SUGGESTED/MISSING core value gap analysis
+- Behavioral/technical assessment separation
+- General behavioral questions targeting career experience
+- Custom pair programming task generation
+- Complete skeleton project creation
+
+**Legacy (Deprecated):** `ai_docs/prompts/hiring/generate_interview_kit_prompt.md` - Original prompt maintained for backward compatibility
 
 ### Context Engineering Methodology
 This project implements **context engineering** principles where all agents must:

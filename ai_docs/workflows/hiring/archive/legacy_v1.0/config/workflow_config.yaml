@@ -1,0 +1,88 @@
+# Enhanced Hiring Workflow Configuration
+# Single Version Per Candidate Approach
+
+workflow_version: "2.0"
+approach: "single_candidate_directory"
+
+# Directory Structure Configuration
+directory_structure:
+  base_path: "artifacts/public/hiring/candidates"
+  candidate_directory_pattern: "{candidate_id}_{candidate_name_normalized}"
+  
+  # Single directory per candidate containing all materials
+  candidate_subdirectories:
+    - "screening"           # Screening reports and evaluations
+    - "takehome"           # Take-home assignments and evaluations
+    - "interview"          # Interview materials and guides
+    - "evaluation"         # Final evaluations and decisions
+    - "communication"      # Email templates and correspondence
+
+# File Naming Conventions
+file_naming:
+  screening_report: "screening_report.md"
+  takehome_assignment: "takehome_assignment.md"
+  takehome_evaluation: "takehome_evaluation.md"
+  interview_guide: "interview_guide.md"
+  interview_script: "interview_script.md"
+  candidate_context: "candidate_context.md"
+  evaluation_framework: "evaluation_framework.md"
+  communication_templates: "communication_templates.md"
+
+# Workflow Stages
+stages:
+  1_screening:
+    output_directory: "screening"
+    required_files:
+      - "screening_report.md"
+    
+  2_takehome:
+    output_directory: "takehome"
+    required_files:
+      - "takehome_assignment.md"
+    optional_files:
+      - "assignment.md"          # Legacy from original consolidation
+      - "evaluation_sheet.md"    # Assignment evaluation template
+    condition: "next_step in ['take_home_assignment', 'senior_level_assessment']"
+    
+  3_interview:
+    output_directory: "interview"
+    required_files:
+      - "candidate_context.md"     # Must include BEI Value Gap Analysis
+      - "interview_guide.md"       # Must include value-by-value BEI questions
+      - "interview_script.md"      # Must include verbatim STAR format questions
+    bei_requirements:
+      - "all_10_core_values_mapped"
+      - "evidence_categorization_complete"  # PROVEN/SUGGESTED/MISSING
+      - "star_format_questions_generated"
+      - "minimum_60_minutes_bei_allocation"
+      - "behavioral_pattern_guidance_included"
+    condition: "next_step in ['take_home_assignment', 'senior_level_assessment', 'additional_assessment']"
+    
+  4_evaluation:
+    output_directory: "evaluation"
+    required_files:
+      - "evaluation_framework.md"
+      
+  5_communication:
+    output_directory: "communication"
+    required_files:
+      - "communication_templates.md"
+
+# Summary Generation
+summary_generation:
+  overall_summary_file: "hiring_summary_complete.md"
+  candidate_summary_template: "candidate_summary_template.md"
+  include_sections:
+    - candidate_overview
+    - screening_results
+    - takehome_results
+    - interview_results
+    - final_decision
+    - next_steps
+
+# Data Consolidation Rules
+consolidation_rules:
+  merge_duplicate_files: true
+  preserve_latest_version: true
+  archive_old_versions: false
+  maintain_audit_trail: true

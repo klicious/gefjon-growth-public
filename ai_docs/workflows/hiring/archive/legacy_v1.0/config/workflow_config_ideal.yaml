@@ -1,0 +1,113 @@
+# Ideal Hiring Workflow Configuration
+# Version 2.1 - Gap-Fixed Edition
+
+workflow_version: "2.1"
+approach: "single_candidate_directory"
+
+# Input Configuration
+input:
+  source_format: "single_json_file"  # candidates_YYYYMMDD.json
+  source_path_pattern: "data/public/hiring/resume/{date}/candidates_{date}.json"
+  expected_fields:
+    - "candidate_id"
+    - "name_en" 
+    - "skills"
+    - "experience_years"
+    - "summary"
+    - "contacts"
+
+# Output Configuration  
+output:
+  base_path: "artifacts/public/hiring/candidates"
+  directory_pattern: "{date}_consolidated"
+  candidate_directory_pattern: "{candidate_id}_{candidate_name_normalized}"
+
+# Directory Structure Configuration
+directory_structure:
+  candidate_subdirectories:
+    - "screening"           # Screening reports and evaluations
+    - "takehome"           # Take-home assignments and evaluations
+    - "interview"          # Interview materials and guides
+    - "evaluation"         # Final evaluations and decisions
+    - "communication"      # Email templates and correspondence
+
+# File Naming Conventions
+file_naming:
+  screening_report: "screening_report.md"
+  takehome_assignment: "takehome_assignment.md"
+  takehome_evaluation: "takehome_evaluation.md"
+  interview_guide: "interview_guide.md"
+  interview_script: "interview_script.md"
+  candidate_context: "candidate_context.md"
+  evaluation_framework: "evaluation_framework.md"
+  communication_templates: "communication_templates.md"
+  candidate_summary: "candidate_summary.md"
+
+# Workflow Stages (All candidates get all applicable stages)
+stages:
+  1_screening:
+    output_directory: "screening"
+    required_files:
+      - "screening_report.md"
+    applies_to: "all_candidates"
+    
+  2_takehome:
+    output_directory: "takehome"
+    required_files:
+      - "takehome_assignment.md"
+      - "takehome_evaluation.md"
+    optional_files:
+      - "assignment.md"          # Legacy from consolidation
+      - "evaluation_sheet.md"    # Assignment evaluation template
+      - "agent_evaluation.json"  # AI agent-provided machine-readable evaluation (aggregated by script)
+    notes:
+      - "Agent evaluation template (Markdown) is scaffolded under artifacts/public/hiring/evaluation_sheets/upcoming/{candidate_id}/agent_evaluation_template.md"
+    applies_to: "qualified_candidates"  # take_home_assignment, senior_level_assessment
+    
+  3_interview:
+    output_directory: "interview"
+    required_files:
+      - "candidate_context.md"
+      - "interview_guide.md"
+      - "interview_script.md"
+    applies_to: "interview_candidates"  # take_home_assignment, senior_level_assessment, additional_assessment
+    
+  4_evaluation:
+    output_directory: "evaluation"
+    required_files:
+      - "evaluation_framework.md"
+    applies_to: "all_candidates"
+      
+  5_communication:
+    output_directory: "communication"
+    required_files:
+      - "communication_templates.md"
+    applies_to: "all_candidates"
+
+# Quality Assurance
+quality_assurance:
+  verify_all_files_generated: true
+  verify_directory_structure: true
+  verify_file_content_completeness: true
+  generate_completion_report: true
+
+# Summary Generation
+summary_generation:
+  overall_summary_file: "HIRING_SUMMARY_COMPLETE.md"
+  quick_reference_file: "QUICK_REFERENCE_GUIDE.md"
+  completion_report_file: "WORKFLOW_COMPLETION_REPORT.md"
+  include_sections:
+    - candidate_overview
+    - screening_results
+    - takehome_results
+    - interview_results
+    - final_decision
+    - next_steps
+
+# Data Consolidation Rules
+consolidation_rules:
+  merge_duplicate_files: true
+  preserve_latest_version: true
+  archive_old_versions: false
+  maintain_audit_trail: true
+  ensure_complete_materials: true

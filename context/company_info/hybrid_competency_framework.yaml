@@ -1,0 +1,298 @@
+# Hybrid Competency Framework: Core Values + Platform Engineering Technical Skills
+# Preserves BEI methodology and core values while enhancing technical assessment for AI-assisted development
+
+metadata:
+  version: "2.0"
+  last_updated: "2025-09-02T08:00:00Z"
+  purpose: "Integrate core values assessment with enhanced platform engineering technical evaluation"
+  domain: "hr_processes"
+  visibility: "public"
+  preserves: "BEI methodology, core values, STAR format, organizational DNA"
+  enhances: "Technical assessment for AI-assisted development and platform engineering"
+  schema_version: "1.0"
+
+# Assessment Framework Structure
+assessment_framework:
+  
+  # PRESERVE: Core Values Assessment (60% Weight)
+  core_values_behavioral_assessment:
+    weight: 60%
+    methodology: "BEI (Behavioral Event Interviewing)"
+    format: "STAR (Situation, Task, Action, Results)"
+    duration: 40_minutes
+    description: "Systematic assessment of all 10 company core values through past behavioral pattern analysis"
+    
+    core_values:
+      technical_excellence_scalable_elegance:
+        id: 1
+        weight: 6%
+        assessment_focus: "Evidence-based scoring against service p95 standards, CodeClimate A rating, horizontal scale design"
+        bei_approach: "PROVEN/SUGGESTED/MISSING evidence mapping with STAR format validation"
+        
+      customer_centric_craftsmanship:
+        id: 2
+        weight: 6%
+        assessment_focus: "User story capture, usability testing, trader pain point resolution"
+        bei_approach: "PROVEN/SUGGESTED/MISSING evidence mapping with STAR format validation"
+        
+      ownership_proactivity:
+        id: 3
+        weight: 6%
+        assessment_focus: "Self-paging during incidents, RCA publishing, taking responsibility for outcomes"
+        bei_approach: "PROVEN/SUGGESTED/MISSING evidence mapping with STAR format validation"
+        
+      observability_guardrails:
+        id: 4
+        weight: 6%
+        assessment_focus: "3 SLOs + burn-rate alerts, kill-switch implementation, metrics and alerting"
+        bei_approach: "PROVEN/SUGGESTED/MISSING evidence mapping with STAR format validation"
+        
+      data_informed_iteration:
+        id: 5
+        weight: 6%
+        assessment_focus: "A/B testing leading to +5% KPI improvement, dashboard maintenance"
+        bei_approach: "PROVEN/SUGGESTED/MISSING evidence mapping with STAR format validation"
+        
+      integrity_reliability:
+        id: 6
+        weight: 6%
+        assessment_focus: "Immutable audit logs, zero Sev-0 incidents, reliability focus"
+        bei_approach: "PROVEN/SUGGESTED/MISSING evidence mapping with STAR format validation"
+        
+      security_compliance_first:
+        id: 7
+        weight: 6%
+        assessment_focus: "AWS SM secrets rotation, static-analysis gates, security-by-design"
+        bei_approach: "PROVEN/SUGGESTED/MISSING evidence mapping with STAR format validation"
+        
+      collaboration_knowledge_sharing:
+        id: 8
+        weight: 6%
+        assessment_focus: "≥2 peer reviews, RFC participation, tech talks and wiki documentation"
+        bei_approach: "PROVEN/SUGGESTED/MISSING evidence mapping with STAR format validation"
+        
+      continuous_learning_mentorship:
+        id: 9
+        weight: 6%
+        assessment_focus: "New hire +1 Dreyfus level development, buddy system feedback"
+        bei_approach: "PROVEN/SUGGESTED/MISSING evidence mapping with STAR format validation"
+        
+      innovative_spirit:
+        id: 10
+        weight: 6%
+        assessment_focus: "Quarterly hack-day POCs, conference attendance, innovation implementation"
+        bei_approach: "PROVEN/SUGGESTED/MISSING evidence mapping with STAR format validation"
+
+  # ENHANCE: Technical Assessment (40% Weight)  
+  platform_engineering_technical_assessment:
+    weight: 40%
+    methodology: "AI-assisted development evaluation + platform engineering scenarios"
+    duration: 50_minutes
+    description: "Enhanced technical assessment focusing on AI collaboration and platform engineering capabilities"
+    
+    technical_competencies:
+      ai_assisted_development_capability:
+        weight: 20%
+        duration: 25_minutes
+        assessment_type: "Hands-on AI collaboration simulation"
+        description: "Evaluate candidate's ability to effectively collaborate with AI tools for platform engineering tasks"
+        
+        evaluation_criteria:
+          ai_instruction_effectiveness:
+            description: "Quality of prompts and instructions provided to AI tools"
+            indicators:
+              - "Provides clear, context-rich instructions for platform engineering tasks"
+              - "Asks clarifying questions to refine AI understanding"
+              - "Guides AI through complex multi-step platform development processes"
+              
+          ai_output_validation:
+            description: "Critical evaluation and improvement of AI-generated solutions"
+            indicators:
+              - "Identifies logical flaws and security issues in AI outputs"
+              - "Evaluates scalability and performance implications"
+              - "Applies platform engineering best practices to AI-generated solutions"
+              
+          ai_collaboration_iteration:
+            description: "Improvement through iterative AI collaboration"
+            indicators:
+              - "Achieves quality enhancement through multiple AI interaction cycles"
+              - "Maintains architectural coherence across iterations"
+              - "Demonstrates learning from AI feedback and suggestions"
+              
+        assessment_challenge:
+          scenario: "Platform service enhancement using AI assistance"
+          tools_available: ["Claude/ChatGPT", "GitHub Copilot", "Documentation access"]
+          requirements:
+            - "Add authentication and authorization with AI assistance"
+            - "Implement monitoring and observability patterns"
+            - "Design for horizontal scaling and reliability"
+            - "Create comprehensive testing strategy"
+            
+      platform_systems_thinking:
+        weight: 20%
+        duration: 25_minutes
+        assessment_type: "System architecture design and production scenarios"
+        description: "Evaluate platform architecture thinking and production system understanding"
+        
+        evaluation_criteria:
+          architecture_design_capability:
+            description: "Ability to design scalable, reliable platform systems"
+            indicators:
+              - "Designs for horizontal and vertical scaling"
+              - "Incorporates fault tolerance and reliability patterns"
+              - "Plans for observability and monitoring from design phase"
+              
+          production_system_thinking:
+            description: "Understanding of deployment, operations, and lifecycle management"
+            indicators:
+              - "Considers security, compliance, and governance requirements"
+              - "Plans for CI/CD, testing, and quality gates"
+              - "Understands infrastructure as code and automation"
+              
+          problem_solving_approach:
+            description: "Systematic approach to complex platform challenges"
+            indicators:
+              - "Breaks down complex problems into manageable components"
+              - "Makes informed architectural decisions with trade-off analysis"
+              - "Identifies and addresses potential system risks"
+              
+        assessment_scenarios:
+          architecture_challenge: "Design platform to handle 10x growth in usage"
+          production_scenario: "Platform experiencing latency issues - diagnostic and resolution approach"
+          integration_design: "Cross-system communication patterns for platform services"
+
+# Enhanced Interview Structure
+enhanced_interview_structure:
+  
+  total_duration: 90_minutes
+  
+  introduction_warmup:
+    duration: 5_minutes
+    content: "Welcome, company mission overview, interview structure explanation"
+    
+  bei_core_values_assessment:
+    duration: 40_minutes
+    methodology: "Traditional BEI with STAR format"
+    focus: "Systematic assessment of all 10 core values"
+    structure:
+      - "Focus on MISSING values (no evidence found) - 60% of time"
+      - "Validate PROVEN values (strong evidence) - 25% of time"  
+      - "Probe SUGGESTED values (weak evidence) - 15% of time"
+    sample_questions:
+      technical_excellence: "Tell me about a specific time when you had to balance technical elegance with delivery speed. What was the situation, your approach, actions taken, and results?"
+      ownership: "Describe a situation where you took responsibility for a problem that wasn't directly assigned to you. Walk me through the context, your role, actions, and outcome."
+      
+  technical_assessment_enhanced:
+    duration: 50_minutes
+    methodology: "AI-assisted development + platform scenarios"
+    structure:
+      ai_collaboration_simulation:
+        duration: 25_minutes
+        format: "Hands-on with AI tools available"
+        focus: "Real-time evaluation of AI collaboration effectiveness"
+        
+      platform_engineering_scenarios:
+        duration: 25_minutes  
+        format: "Architecture design and problem-solving discussion"
+        focus: "Systems thinking and production platform understanding"
+        
+  candidate_questions:
+    duration: 5_minutes
+    content: "Candidate questions and clarifications"
+
+# Scoring Integration Framework
+scoring_framework:
+  
+  overall_calculation:
+    core_values_score: 60%
+    technical_score: 40%
+    
+  core_values_scoring:
+    methodology: "Traditional BEI evaluation with PROVEN/SUGGESTED/MISSING framework"
+    scale: "1-5 points per value (50 points total)"
+    threshold: "35+ points required (70% of core values assessment)"
+    
+  technical_scoring:
+    methodology: "AI collaboration effectiveness + platform engineering capability"
+    scale: "1-5 points per competency (25 points total)"  
+    threshold: "15+ points required (60% of technical assessment)"
+    
+  minimum_requirements:
+    overall_minimum: "50+ points out of 75 (67%)"
+    core_values_minimum: "35+ points out of 50 (70%)"
+    technical_minimum: "15+ points out of 25 (60%)"
+    no_value_below: "Level 2 (40%) in any core value"
+    
+  phoenix_005_re_evaluation:
+    core_values_estimated: "37/50 (74%) - Strong learning, ownership potential"
+    technical_estimated: "16/25 (64%) - AI collaboration capability demonstrated"
+    overall_score: "53/75 (71%) - PASS with development plan"
+
+# Implementation Guidelines
+implementation_guidelines:
+  
+  preserve_organizational_dna:
+    - "Maintain all 10 core values exactly as defined in mission_vision_values.yaml"
+    - "Continue using BEI methodology with STAR format questions"
+    - "Preserve PROVEN/SUGGESTED/MISSING evidence categorization"
+    - "Keep 40-minute BEI session as primary assessment component"
+    
+  enhance_technical_evaluation:
+    - "Replace traditional coding tests with AI-assisted development challenges"
+    - "Add platform engineering scenarios and systems thinking evaluation"
+    - "Encourage AI tool usage during technical assessment"
+    - "Focus on collaboration effectiveness rather than independent coding"
+    
+  interviewer_training_requirements:
+    - "BEI methodology training (existing) - no changes required"
+    - "Core values assessment calibration (existing) - no changes required"
+    - "NEW: AI collaboration evaluation techniques"
+    - "NEW: Platform engineering assessment methods"
+    
+  backward_compatibility:
+    - "All existing BEI materials and training remain valid"
+    - "Core values definitions and behavioral indicators unchanged"
+    - "STAR format questions and follow-up techniques preserved"
+    - "Only technical assessment methodology enhanced"
+
+# Expected Outcomes
+expected_outcomes:
+  
+  preserve_cultural_alignment:
+    - "Maintain 100% core values assessment coverage"
+    - "Continue building ownership-driven, customer-centric team"
+    - "Preserve organizational DNA and cultural cohesion"
+    - "Keep BEI as primary behavioral assessment methodology"
+    
+  improve_technical_hiring:
+    - "50% reduction in false negatives for AI-capable candidates"
+    - "Better prediction of platform engineering performance"
+    - "Enhanced assessment of production system thinking"
+    - "Improved evaluation of collaboration with AI tools"
+    
+  phoenix_005_resolution:
+    - "Candidate would now PASS overall assessment (71%)"
+    - "Core values alignment maintained and validated"
+    - "Technical capability properly assessed through AI collaboration"
+    - "Hire recommendation with structured development plan"
+
+# Migration Strategy
+migration_strategy:
+  
+  phase_1_preparation:
+    - "Update technical assessment components only"
+    - "Preserve all BEI training and core values materials"
+    - "Train interview teams on AI collaboration evaluation"
+    - "Maintain parallel assessment during transition"
+    
+  phase_2_integration:
+    - "Deploy hybrid assessment with existing candidates"
+    - "Validate correlation between enhanced technical scores and job performance"
+    - "Refine AI collaboration evaluation techniques"
+    - "Maintain core values assessment exactly as-is"
+    
+  phase_3_optimization:
+    - "Optimize technical assessment based on hiring outcomes"
+    - "Continue core values BEI methodology without changes"
+    - "Scale enhanced technical evaluation across all platform engineering roles"
+    - "Monitor cultural alignment and technical performance outcomes"

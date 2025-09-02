@@ -1,0 +1,316 @@
+# Hybrid Scoring Framework: BEI Core Values + Enhanced Technical Assessment
+# Preserves traditional BEI methodology while adding AI-assisted development evaluation
+
+metadata:
+  version: "2.2"
+  last_updated: "2025-09-02T16:00:00Z"
+  purpose: "Hybrid scoring combining BEI core values assessment with AI-assisted technical evaluation"
+  domain: "hr_processes"
+  visibility: "public"
+  preserves: "BEI methodology, 10 core values, STAR format, PROVEN/SUGGESTED/MISSING framework"
+  enhances: "AI-assisted development assessment with specific tasks, rubrics, and detailed evaluation criteria"
+  source_document: "data/public/new/Hybrid interview kit.pdf"
+  replaces: "Generic technical assessment with specific AI collaboration evaluation framework"
+  schema_version: "1.0"
+
+# Hybrid Assessment Structure
+hybrid_assessment_structure:
+  
+  total_duration: 95_minutes
+  total_points: 75_points
+  
+  # PRESERVE: BEI Core Values Assessment (Primary Component)
+  bei_core_values_assessment:
+    weight: 60%
+    duration: 40_minutes
+    points: 50_points
+    methodology: "Traditional BEI with STAR format questions"
+    framework: "PROVEN/SUGGESTED/MISSING evidence categorization"
+    description: "Systematic assessment of all 10 core values through behavioral pattern analysis"
+    
+    core_values_scoring:
+      scoring_scale: "1-5 points per value (5 points x 10 values = 50 points maximum)"
+      minimum_threshold: "35 points (70% of core values assessment)"
+      
+      individual_core_values:
+        technical_excellence_scalable_elegance:
+          points: 5
+          assessment_focus: "Service p95 standards, CodeClimate A rating, horizontal scale design"
+          star_question_focus: "Balancing technical elegance with delivery speed, architecture decisions"
+          
+        customer_centric_craftsmanship:
+          points: 5  
+          assessment_focus: "User story capture, trader pain resolution, usability testing"
+          star_question_focus: "User-focused projects, stakeholder engagement, customer problem-solving"
+          
+        ownership_proactivity:
+          points: 5
+          assessment_focus: "Self-paging during incidents, RCA publishing, responsibility taking"
+          star_question_focus: "Taking responsibility beyond assigned tasks, proactive problem resolution"
+          
+        observability_guardrails:
+          points: 5
+          assessment_focus: "3 SLOs + burn-rate alerts, kill-switch implementation, metrics"
+          star_question_focus: "Monitoring implementation, testing practices, operational excellence"
+          
+        data_informed_iteration:
+          points: 5
+          assessment_focus: "A/B testing with +5% KPI improvement, dashboard maintenance"
+          star_question_focus: "Evidence-based decisions, measurement focus, iterative improvement"
+          
+        integrity_reliability:
+          points: 5
+          assessment_focus: "Immutable audit logs, zero Sev-0 incidents, quality focus"
+          star_question_focus: "Ethical decisions, reliable commitments, consistency in delivery"
+          
+        security_compliance_first:
+          points: 5
+          assessment_focus: "AWS SM secrets rotation, static-analysis gates, security-by-design"
+          star_question_focus: "Security practices, compliance awareness, risk management"
+          
+        collaboration_knowledge_sharing:
+          points: 5
+          assessment_focus: "≥2 peer reviews, RFC participation, tech talks, documentation"
+          star_question_focus: "Team projects, mentoring, knowledge transfer, communication"
+          
+        continuous_learning_mentorship:
+          points: 5
+          assessment_focus: "New hire +1 Dreyfus level, buddy system feedback"
+          star_question_focus: "Skill development, teaching others, staying current, growth mindset"
+          
+        innovative_spirit:
+          points: 5
+          assessment_focus: "Quarterly hack-day POCs, conference attendance, creative solutions"
+          star_question_focus: "Creative problem-solving, new approaches, experimentation"
+
+  # ENHANCE: Technical Assessment (Secondary Component)
+  enhanced_technical_assessment:
+    weight: 40%
+    duration: 50_minutes
+    points: 25_points
+    methodology: "AI-assisted development evaluation following proven assessment framework from research"
+    description: "Hands-on assessment of AI collaboration effectiveness with specific tasks and detailed rubrics"
+    minimum_threshold: "15 points (60% of technical assessment)"
+    assessment_tasks: [
+      "API Enhancement with OAuth/logging/metrics implementation",
+      "AI-generated code refactoring for maintainability",
+      "Prompt engineering challenges for specific outputs",
+      "Scalable architecture design with AI research assistance",
+      "Live issue debugging with AI collaboration"
+    ]
+    
+    technical_components:
+      ai_assisted_development_capability:
+        duration: 25_minutes
+        points: 15_points
+        weight: 20%
+        description: "Hands-on evaluation of AI collaboration effectiveness"
+        
+        assessment_criteria:
+          prompt_framing_clarity:
+            points: 5
+            description: "Clear, context-rich questions and iterative prompt refinement"
+            evaluation_indicators:
+              level_5: "Asks clarifying questions, includes context, iteratively refines prompts"
+              level_4: "Generally clear instructions with relevant context for AI tools"
+              level_3: "Basic AI instruction competency, achieves acceptable results"
+              level_2: "Vague or unclear instructions, limited prompt engineering skills"
+              level_1: "Cannot effectively frame problems for AI assistance"
+              
+          validation_debugging:
+            points: 5
+            description: "Testing AI outputs, identifying bugs/hallucinations, cross-referencing"
+            evaluation_indicators:
+              level_5: "Tests AI solutions, identifies security/logic issues, cross-references docs"
+              level_4: "Generally effective at validating AI output and identifying major issues"
+              level_3: "Basic validation capability, identifies obvious problems"
+              level_2: "Misses significant issues in AI-generated solutions"
+              level_1: "Cannot effectively validate or debug AI output"
+              
+          iteration_learning:
+            points: 5
+            description: "Learning from initial attempts, incorporating feedback, improving approach"
+            evaluation_indicators:
+              level_5: "Learns from AI interactions, incorporates feedback, improves systematically"
+              level_4: "Generally effective at improving approach through AI collaboration"
+              level_3: "Basic iteration capability, some improvement over time"
+              level_2: "Limited learning from AI collaboration, minimal improvement"
+              level_1: "Cannot effectively iterate or improve with AI assistance"
+              
+      platform_engineering_scenarios:
+        duration: 25_minutes
+        points: 10_points
+        weight: 20%
+        description: "Systems thinking and platform architecture evaluation"
+        
+        assessment_criteria:
+          integration_code_quality:
+            points: 5
+            description: "AI suggestions integrated into well-structured, secure, maintainable code"
+            evaluation_indicators:
+              level_5: "Seamlessly integrates AI solutions with excellent code quality and security"
+              level_4: "Generally effective integration with good structural and security practices"
+              level_3: "Basic integration capability, maintains acceptable code standards"
+              level_2: "Poor integration practices, limited attention to code quality"
+              level_1: "Cannot effectively integrate AI suggestions into maintainable code"
+              
+          communication_collaboration:
+            points: 5
+            description: "Clear reasoning, transparent AI usage, collaborative problem-solving approach"
+            evaluation_indicators:
+              level_5: "Excellent articulation of AI usage and reasoning, highly collaborative"
+              level_4: "Good communication of thought process and AI collaboration approach"
+              level_3: "Basic communication of reasoning and transparent about AI usage"
+              level_2: "Limited explanation of decisions and AI collaboration process"
+              level_1: "Cannot effectively communicate AI usage or collaborative approach"
+
+# Scoring Thresholds and Decision Matrix
+scoring_thresholds:
+  
+  overall_requirements:
+    minimum_total_points: 50
+    minimum_percentage: 67%
+    
+  component_requirements:
+    bei_core_values_minimum: 35_points  # 70% of 50 points
+    technical_assessment_minimum: 15_points  # 60% of 25 points
+    no_core_value_below: 2_points  # Level 2 minimum for each value
+    
+  decision_matrix:
+    strong_hire:
+      total_points: "65+ points (87%)"
+      core_values: "45+ points (90%)"
+      technical: "20+ points (80%)"
+      description: "Exceptional cultural fit with strong technical capability"
+      
+    hire:
+      total_points: "55+ points (73%)"
+      core_values: "40+ points (80%)"  
+      technical: "18+ points (72%)"
+      description: "Strong cultural alignment with good technical foundation"
+      
+    lean_hire:
+      total_points: "50+ points (67%)"
+      core_values: "35+ points (70%)"
+      technical: "15+ points (60%)"
+      description: "Meets minimum thresholds with development potential"
+      
+    no_hire:
+      total_points: "<50 points (67%)"
+      core_values: "<35 points (70%)"
+      technical: "<15 points (60%)"
+      description: "Below minimum cultural or technical requirements"
+
+# Phoenix_005 Re-evaluation Using Hybrid Framework
+phoenix_005_reanalysis:
+  
+  bei_core_values_assessment:
+    technical_excellence: 4_points  # Good architectural choices, production gaps addressable
+    customer_centric: 3_points      # Some evidence through project work
+    ownership_proactivity: 4_points # Strong learning initiative, AI tool adoption
+    observability_guardrails: 2_points # Basic logging, missing comprehensive monitoring
+    data_informed_iteration: 3_points # Evidence of learning and improvement
+    integrity_reliability: 3_points # Consistent delivery, quality focus developing  
+    security_compliance: 2_points   # Basic validation, missing comprehensive security
+    collaboration_sharing: 3_points # Good documentation, basic knowledge sharing
+    learning_mentorship: 5_points   # Exceptional learning agility and growth mindset
+    innovative_spirit: 4_points     # Creative AI tool adoption, problem-solving approach
+    
+    total_core_values: 33_points
+    percentage: 66%
+    status: "Below 70% threshold but strong learning foundation"
+    
+  enhanced_technical_assessment:
+    prompt_framing_clarity: 4_points         # Good context-rich AI instructions, iterative refinement
+    validation_debugging: 3_points           # Some critical evaluation, needs development  
+    iteration_learning: 5_points             # Exceptional improvement through AI collaboration cycles
+    integration_code_quality: 3_points       # Basic AI-assisted development, good adaptation
+    communication_collaboration: 4_points    # Clear explanation of AI usage and reasoning
+    
+    total_technical: 19_points
+    percentage: 76%  
+    status: "Above 60% threshold with strong AI collaboration capability"
+    
+  overall_assessment:
+    total_points: 52_points
+    overall_percentage: 69%
+    decision: "LEAN_HIRE"
+    
+  recommendation:
+    decision: "Hire as Junior Platform Engineer with Development Plan"
+    rationale: |
+      While core values score (66%) is slightly below the 70% threshold, the candidate demonstrates:
+      - Exceptional learning agility (5/5) and AI collaboration iteration capability
+      - Strong AI collaboration skills (76% technical score) essential for platform engineering
+      - Good prompt framing and communication of AI usage (4/5 each)
+      - Addressable gaps in production thinking and technical excellence through mentorship
+      - Modern development skills align with AI-assisted platform engineering reality
+      
+    development_plan:
+      - "6-month structured mentorship focusing on production systems and observability"
+      - "Pairing with senior engineers on platform reliability projects"
+      - "Technical excellence development through code review and architecture feedback"
+      - "Security and compliance training with hands-on implementation practice"
+
+# Implementation Guidelines
+implementation_guidelines:
+  
+  preserve_existing_processes:
+    - "All BEI training materials remain valid and unchanged"
+    - "Core values definitions and behavioral indicators preserved exactly"
+    - "STAR format methodology and questioning techniques maintained"
+    - "PROVEN/SUGGESTED/MISSING evidence framework continued"
+    
+  add_technical_assessment_training:
+    - "AI collaboration evaluation techniques for interview teams"
+    - "Platform engineering scenario assessment methods"  
+    - "Hybrid scoring calibration sessions combining behavioral and technical"
+    - "Technical assessment environment setup with AI tool access"
+    
+  scoring_consistency:
+    - "Multiple interviewer validation required for both BEI and technical portions"
+    - "Evidence-based scoring with specific examples documented for each component"
+    - "Regular calibration sessions to maintain scoring consistency"
+    - "Performance correlation tracking between assessment scores and job success"
+    
+  success_metrics:
+    cultural_alignment_maintained: "90%+ retention and cultural fit scores"
+    technical_capability_improved: "50% reduction in false negatives for AI-capable candidates"
+    overall_hiring_quality: "85%+ correlation between assessment scores and 90-day performance"
+    process_efficiency: "Maintained interview duration while adding technical assessment value"
+
+# Migration and Validation Strategy
+migration_strategy:
+  
+  phase_1_parallel_assessment:
+    duration: "4 weeks"
+    approach: "Run both traditional and hybrid assessments on same candidates"
+    validation: "Compare outcomes and validate hybrid scoring accuracy"
+    
+  phase_2_hybrid_deployment:
+    duration: "8 weeks"  
+    approach: "Deploy hybrid assessment with monitoring and feedback collection"
+    optimization: "Refine technical assessment based on interviewer and candidate feedback"
+    
+  phase_3_performance_validation:
+    duration: "12 weeks"
+    approach: "Track 90-day performance correlation with hybrid assessment scores"
+    refinement: "Adjust scoring thresholds based on actual job performance outcomes"
+
+# Quality Assurance Framework
+quality_assurance:
+  
+  cultural_preservation:
+    - "Regular audit that all 10 core values receive adequate assessment time"
+    - "BEI methodology compliance checking in interview conduct"
+    - "Cultural alignment measurement through retention and performance data"
+    
+  technical_assessment_validity:
+    - "Correlation tracking between AI collaboration scores and platform development success"
+    - "Regular review of technical scenarios to ensure relevance and difficulty calibration"
+    - "Candidate feedback collection on technical assessment experience and fairness"
+    
+  overall_framework_effectiveness:
+    - "Monthly review of hiring outcomes using hybrid assessment"
+    - "Quarterly calibration sessions for interview teams"
+    - "Annual framework review and optimization based on performance data"

@@ -1,0 +1,331 @@
+# AI-Assisted Technical Assessment Framework
+# Enhanced technical evaluation for hybrid BEI + AI collaboration methodology
+
+metadata:
+  version: "1.0"
+  last_updated: "2025-09-02T16:00:00Z"
+  purpose: "Define AI-assisted technical assessment methodology for hybrid hiring framework"
+  domain: "hr_processes"
+  visibility: "public"
+  source_document: "data/public/new/Hybrid interview kit.pdf"
+  replaces: "Legacy pair programming templates"
+  schema_version: "1.0"
+
+# Core Assessment Philosophy
+assessment_philosophy:
+  
+  principle: "Evaluate AI collaboration effectiveness while maintaining core values alignment"
+  focus: "Real-world engineering problems requiring human judgment and AI partnership"
+  duration: 50_minutes  # 25min AI collaboration + 25min platform scenarios
+  weight: 40%  # of total hybrid assessment (complementing 60% BEI core values)
+
+# Guiding Principles for Task Design
+task_design_principles:
+  
+  realistic_and_open_ended:
+    description: "Mirror actual engineering problems with multiple valid solutions"
+    avoid: "Classic LeetCode puzzles that generative models can easily solve"
+    approach: "Extend/improve existing codebase, integrate features, design infrastructure"
+    
+  requires_human_judgment:
+    description: "AI assistance alone cannot produce complete, correct solution"
+    includes: "Security hardening, error handling, observability, compliance, design trade-offs"
+    requirement: "Understanding beyond code generation"
+    
+  prompts_and_iteration:
+    description: "Build tasks necessitating iterative prompts and refinement"
+    expectation: "Follow-up questions to AI, test responses, adjust prompts when unsatisfactory"
+    
+  opportunity_for_reflection:
+    description: "Allow time for candidate to explain thought process and decisions"
+    purpose: "Follow-up questions reveal deeper knowledge and prompt choices"
+
+# Assessment Structure
+assessment_structure:
+  
+  total_duration: 50_minutes
+  
+  ai_collaboration_simulation:
+    duration: 25_minutes
+    weight: 20%  # of total hybrid assessment (50% of technical component)
+    points: 15_points_max
+    
+    evaluation_criteria:
+      prompt_framing_clarity: 5_points
+      validation_debugging: 5_points
+      iteration_learning: 5_points
+      
+  platform_engineering_scenarios:
+    duration: 25_minutes
+    weight: 20%  # of total hybrid assessment (50% of technical component)  
+    points: 10_points_max
+    
+    evaluation_criteria:
+      integration_code_quality: 5_points
+      communication_collaboration: 5_points
+
+# Sample AI-Assisted Technical Exercises
+sample_exercises:
+  
+  enhance_api_auth_observability:
+    brief: "Provide small REST API lacking authentication and minimal logging"
+    task: "Implement OAuth 2.0, structured logging, Prometheus metrics, horizontal scaling prep"
+    skills_values: [
+      "Problem framing and prompt design",
+      "Critical evaluation of AI output", 
+      "Integration & code quality",
+      "Observability & guardrails",
+      "Security & compliance",
+      "Communication & collaboration"
+    ]
+    expected_behaviors:
+      - "Ask clarifying questions about architecture and constraints"
+      - "Prompts include context and request security best practices"
+      - "Review AI suggestions, modify for codebase, write tests"
+      - "Update documentation and explain implementation"
+    interview_guidance: "Observe prompt iteration, security verification, OAuth understanding"
+    
+  refactor_ai_generated_code:
+    brief: "Provide AI-generated code snippet lacking structure, error handling, tests"
+    task: "Refactor into maintainable functions, add error handling, write tests, document logic"
+    skills_values: [
+      "Validation & debugging",
+      "Integration & code quality", 
+      "Iteration & improvement",
+      "Observability & guardrails",
+      "Continuous learning & mentorship"
+    ]
+    expected_behaviors:
+      - "Identify issues like variable naming, repeated logic, missing error handling"
+      - "Prompt AI for best practices and compare against knowledge"
+      - "Introduce unit tests for edge cases and invalid inputs"
+      - "Explain trade-offs and document decisions"
+    interview_guidance: "Ask why they kept/discarded AI suggestions, observe issue identification"
+    
+  scalable_architecture_design:
+    brief: "Platform expects 10x traffic increase - design architecture for load, reliability, experimentation"
+    task: "Design with AI assistance using drawing tools or whiteboard"
+    skills_values: [
+      "Systems thinking",
+      "Innovative spirit",
+      "Data-informed iteration", 
+      "Collaboration & knowledge sharing",
+      "Customer-centric craftsmanship",
+      "Observability & guardrails"
+    ]
+    expected_behaviors:
+      - "Use AI to research scalability patterns (microservices, queues, caching)"
+      - "Combine AI insights with personal experience for balanced design"
+      - "Consider observability and deployment strategies"
+      - "Justify decisions and discuss fallback plans"
+    interview_guidance: "Focus on AI question framing, pattern integration, alternative comparison"
+    
+  debug_live_issue:
+    brief: "Small application with latency spike after recent change"
+    task: "Identify root cause and fix with AI assistance"
+    skills_values: [
+      "Observability & guardrails",
+      "Ownership & proactivity",
+      "Data-informed iteration",
+      "Integrity & reliability",
+      "Collaboration"
+    ]
+    expected_behaviors:
+      - "Investigate logs, metrics, traces to narrow performance regression"
+      - "Ask AI for potential causes and follow with specific prompts"
+      - "Validate AI suggestions through profiling and monitoring" 
+      - "Document RCA and propose preventative measures"
+    interview_guidance: "Assess evidence gathering before AI consultation, verification of advice"
+    
+  prompt_engineering_mini_challenge:
+    brief: "Design prompts for specific outputs using simplified language model"
+    task: "Generate Python function with specific requirements and inline comments"
+    skills_values: [
+      "Prompt quality & problem framing",
+      "Critical evaluation",
+      "Iteration & improvement",
+      "Customer-centric craftsmanship"
+    ]
+    expected_behaviors:
+      - "Clarify desired output format and constraints"
+      - "Design, test, iteratively refine prompts until requirements met"
+      - "Examine generated code, identify issues, adjust accordingly"
+    interview_guidance: "Observe systematic approach, response evaluation, specificity balance"
+
+# Scoring Framework (25 Points Total)
+scoring_framework:
+  
+  total_points: 25
+  integration_with_hybrid: "40% of 75-point hybrid assessment (60% BEI + 40% technical)"
+  
+  scoring_criteria:
+    
+    prompt_framing_clarity:
+      max_points: 5
+      description: "Clear, context-rich questions and iterative prompt refinement"
+      indicators:
+        - "Asked clarifying questions about requirements and constraints"
+        - "Included relevant context in AI prompts"
+        - "Iteratively refined prompts based on output quality"
+        - "Demonstrated understanding of effective AI instruction"
+      
+    validation_debugging:
+      max_points: 5  
+      description: "Testing AI outputs, identifying bugs/hallucinations, cross-referencing"
+      indicators:
+        - "Tested AI-generated solutions before integration"
+        - "Identified logical errors and security vulnerabilities"  
+        - "Cross-referenced documentation and best practices"
+        - "Applied critical thinking to AI suggestions"
+        
+    integration_code_quality:
+      max_points: 5
+      description: "AI suggestions integrated into well-structured, secure, maintainable code"
+      indicators:
+        - "Adapted AI code to fit existing codebase patterns"
+        - "Applied appropriate design patterns and security practices"
+        - "Maintained code readability and maintainability"
+        - "Followed established coding standards"
+        
+    iteration_learning:
+      max_points: 5
+      description: "Learning from initial attempts, incorporating feedback, improving approach"
+      indicators:
+        - "Learned from unsuccessful AI interactions"
+        - "Incorporated feedback into subsequent prompts"
+        - "Demonstrated improvement over assessment duration"
+        - "Showed adaptability in AI collaboration approach"
+        
+    communication_collaboration:
+      max_points: 5
+      description: "Articulated reasoning, asked clarifying questions, maintained integrity about AI use"  
+      indicators:
+        - "Clearly explained thought process and decisions"
+        - "Asked relevant clarifying questions throughout"
+        - "Transparently communicated AI tool usage"
+        - "Demonstrated collaborative problem-solving approach"
+
+# Scoring Scale and Examples
+scoring_scale:
+  
+  rating_scale: "1-5 points per criterion (1=poor, 3=competent, 5=outstanding)"
+  
+  performance_levels:
+    outstanding_5:
+      description: "Exceptional AI collaboration with deep understanding"
+      indicators: "Sophisticated prompt engineering, excellent validation, seamless integration"
+      
+    proficient_4:
+      description: "Strong AI collaboration with good technical judgment"  
+      indicators: "Effective prompts, solid validation, good integration practices"
+      
+    competent_3:
+      description: "Basic AI collaboration competency demonstrated"
+      indicators: "Acceptable prompts, basic validation, functional integration"
+      
+    developing_2:
+      description: "Limited AI collaboration effectiveness"
+      indicators: "Unclear prompts, minimal validation, poor integration"
+      
+    inadequate_1:
+      description: "Cannot effectively collaborate with AI tools"
+      indicators: "Ineffective prompts, no validation, failed integration"
+
+# Post-Interview Reflection Questions
+reflection_questions:
+  
+  learning_focused:
+    - "What did you learn about collaborating with AI during this exercise?"
+    - "How did your approach to AI prompting evolve during the assessment?"
+    - "What surprised you about the AI tool's capabilities or limitations?"
+    
+  improvement_focused:
+    - "If you had more time, how would you improve your solution or prompts?"
+    - "What would you do differently in your next AI collaboration project?"
+    - "How would you refine your prompt engineering approach?"
+    
+  balance_focused:
+    - "How do you balance using AI for efficiency with maintaining code quality and security?"
+    - "When do you rely on AI versus your own expertise?"
+    - "How do you verify AI-generated solutions in production environments?"
+
+# Integration with Core Values
+core_values_integration:
+  
+  technical_excellence_scalable_elegance:
+    ai_assessment_focus: "AI-assisted architecture design with scalability considerations"
+    evaluation: "Does candidate use AI to enhance technical excellence while maintaining elegance?"
+    
+  observability_guardrails:
+    ai_assessment_focus: "AI-assisted monitoring, logging, and alerting implementation"
+    evaluation: "Does candidate prompt AI for observability best practices and validate suggestions?"
+    
+  security_compliance_first:
+    ai_assessment_focus: "AI-assisted security implementation with critical validation"
+    evaluation: "Does candidate critically evaluate AI security suggestions and apply hardening?"
+    
+  collaboration_knowledge_sharing:
+    ai_assessment_focus: "Transparent AI usage and explanation of AI-assisted decisions"
+    evaluation: "Does candidate clearly communicate AI collaboration process and reasoning?"
+    
+  continuous_learning_mentorship:
+    ai_assessment_focus: "Learning from AI interactions and improving prompt effectiveness"
+    evaluation: "Does candidate demonstrate growth mindset in AI collaboration improvement?"
+
+# Implementation Guidelines
+implementation_guidelines:
+  
+  interviewer_preparation:
+    - "Ensure AI tools (Claude, ChatGPT, Copilot) are available and functional"
+    - "Prepare realistic codebase scenarios with clear extension points"
+    - "Review scoring criteria and expected behaviors for consistency"
+    - "Practice observing AI collaboration patterns and prompt quality"
+    
+  assessment_environment:
+    - "Provide access to documentation and development tools"
+    - "Allow candidate choice of preferred AI tools"
+    - "Ensure reliable internet connection for AI tool access"
+    - "Set up screen sharing for prompt observation"
+    
+  evaluation_consistency:  
+    - "Use structured scoring sheet with specific behavioral examples"
+    - "Calibrate across interview teams with sample assessments"
+    - "Record specific examples of observed behaviors for each criterion"
+    - "Compare scores across candidates for consistency validation"
+
+# Success Metrics
+success_metrics:
+  
+  assessment_quality:
+    target: "90% interviewer satisfaction with AI-assisted assessment effectiveness"
+    measurement: "Post-interview feedback on assessment quality and candidate differentiation"
+    
+  candidate_experience:
+    target: "85% candidate satisfaction with AI-assisted technical assessment"
+    measurement: "Candidate feedback on assessment realism and fairness"
+    
+  hiring_accuracy:
+    target: "Improved correlation between AI collaboration scores and job performance"
+    measurement: "90-day performance review correlation with assessment scores"
+    
+  phoenix_005_resolution:
+    target: "Candidates with strong AI collaboration skills properly identified"
+    measurement: "Reduced false negatives for AI-capable platform engineers"
+
+# Archive and Migration Notes
+migration_notes:
+  
+  replaces: "Legacy pair programming templates (easy/intermediate/expert levels)"
+  archived_location: "ai_docs/workflows/hiring/archive/legacy_technical_assessments/"
+  
+  key_differences:
+    - "Focuses on AI collaboration rather than independent coding"
+    - "Emphasizes prompt engineering and AI output validation"
+    - "Integrates with hybrid scoring framework (25 of 75 total points)"
+    - "Aligns with real-world AI-assisted development practices"
+    
+  benefits:
+    - "Addresses Phoenix_005 assessment gap"
+    - "Evaluates modern development collaboration patterns"
+    - "Maintains core values integration while enhancing technical assessment"
+    - "Provides structured framework for AI collaboration evaluation"

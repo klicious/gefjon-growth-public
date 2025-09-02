@@ -1,0 +1,279 @@
+# Platform Engineering Competency Mapping
+# Maps traditional core values to new platform engineering competency framework
+
+metadata:
+  version: "1.0"
+  last_updated: "2025-09-02T08:00:00Z"
+  purpose: "Map core company values to platform engineering competencies for AI-assisted development"
+  domain: "hr_processes"
+  visibility: "public"
+  schema_version: "1.0"
+
+# Platform Engineering Competency Framework (4 Categories)
+platform_engineering_competencies:
+  
+  ai_orchestration_collaboration:
+    weight: 35%
+    description: "Ability to effectively instruct, guide, and validate AI agents to produce high-quality platform solutions"
+    sub_competencies:
+      ai_instruction_capability:
+        weight: 12%
+        description: "Skill in providing clear, context-rich prompts and instructions to AI agents"
+        mapped_traditional_values: [1, 3, 9] # Technical Excellence, Ownership, Learning
+        assessment_indicators:
+          - "Can break down complex platform problems into AI-actionable tasks"
+          - "Provides sufficient context for AI to produce relevant solutions"  
+          - "Iterates effectively on AI outputs to improve quality"
+          - "Demonstrates understanding of AI model capabilities and limitations"
+        
+      ai_output_validation:
+        weight: 13%
+        description: "Ability to critically evaluate and improve AI-generated solutions"
+        mapped_traditional_values: [1, 6, 7] # Technical Excellence, Integrity, Security
+        assessment_indicators:
+          - "Identifies logical flaws in AI-generated code/designs"
+          - "Recognizes security vulnerabilities in AI outputs"
+          - "Evaluates scalability and performance implications"
+          - "Applies best practices to AI-generated solutions"
+          
+      ai_assisted_iteration:
+        weight: 10%
+        description: "Capability to rapidly iterate and improve solutions through AI collaboration"
+        mapped_traditional_values: [5, 9, 10] # Data-Informed Iteration, Learning, Innovation
+        assessment_indicators:
+          - "Achieves quality improvement through multiple AI interaction cycles"
+          - "Maintains architectural coherence across iterations"
+          - "Balances speed with quality in iterative development"
+          - "Demonstrates learning from AI feedback and suggestions"
+
+  systems_thinking_architecture:
+    weight: 30%
+    description: "Ability to design, understand, and optimize complex platform systems and their interactions"
+    sub_competencies:
+      platform_architecture_design:
+        weight: 12%
+        description: "Capability to design scalable, reliable platform systems"
+        mapped_traditional_values: [1, 4, 6] # Technical Excellence, Observability, Reliability
+        assessment_indicators:
+          - "Designs for horizontal and vertical scaling"
+          - "Considers fault tolerance and reliability patterns"
+          - "Plans for observability and monitoring from design phase"
+          - "Balances complexity with maintainability"
+          
+      production_system_thinking:
+        weight: 10%
+        description: "Understanding of production deployment, operations, and lifecycle management"
+        mapped_traditional_values: [3, 4, 7] # Ownership, Observability, Security
+        assessment_indicators:
+          - "Considers security, compliance, and governance requirements"
+          - "Plans for CI/CD, testing, and quality gates"
+          - "Understands infrastructure as code and automation"
+          - "Designs for operational excellence and incident response"
+          
+      cross_system_integration:
+        weight: 8%
+        description: "Ability to design and implement integration patterns across platform components"
+        mapped_traditional_values: [1, 8, 6] # Technical Excellence, Collaboration, Reliability
+        assessment_indicators:
+          - "Understands API design and contract management"
+          - "Implements appropriate messaging and event-driven patterns"
+          - "Considers data consistency and transaction management"
+          - "Plans for backward compatibility and versioning"
+
+  critical_thinking_problem_solving:
+    weight: 20%
+    description: "Ability to analyze complex problems, evaluate solutions, and make informed technical decisions"
+    sub_competencies:
+      problem_decomposition:
+        weight: 7%
+        description: "Skill in breaking down complex platform challenges into solvable components"
+        mapped_traditional_values: [1, 3, 5] # Technical Excellence, Ownership, Data-Informed
+        assessment_indicators:
+          - "Identifies root causes vs. symptoms"
+          - "Prioritizes problems based on impact and effort"
+          - "Creates actionable problem-solving strategies"
+          - "Considers multiple solution approaches"
+          
+      technical_decision_making:
+        weight: 8%
+        description: "Capability to evaluate technical options and make informed architectural decisions"
+        mapped_traditional_values: [1, 5, 6] # Technical Excellence, Data-Informed, Reliability
+        assessment_indicators:
+          - "Weighs trade-offs between competing solutions"
+          - "Considers long-term implications of technical choices"
+          - "Uses data and metrics to support decision-making"
+          - "Adapts decisions based on new information"
+          
+      risk_assessment_mitigation:
+        weight: 5%
+        description: "Ability to identify and address potential system risks and failure modes"
+        mapped_traditional_values: [6, 7, 4] # Reliability, Security, Observability
+        assessment_indicators:
+          - "Identifies potential failure points in system design"
+          - "Develops mitigation strategies for identified risks"
+          - "Plans for disaster recovery and business continuity"
+          - "Balances risk mitigation with system complexity"
+
+  continuous_learning_adaptability:
+    weight: 15%
+    description: "Ability to rapidly acquire new knowledge and adapt to changing technology landscapes"
+    sub_competencies:
+      technology_adoption:
+        weight: 6%
+        description: "Capability to evaluate, learn, and implement new technologies and tools"
+        mapped_traditional_values: [9, 10, 5] # Learning, Innovation, Data-Informed
+        assessment_indicators:
+          - "Rapidly acquires proficiency in new platforms and tools"
+          - "Evaluates technology fitness for specific use cases"
+          - "Balances innovation with stability and reliability"
+          - "Stays current with industry trends and best practices"
+          
+      knowledge_synthesis:
+        weight: 5%
+        description: "Ability to combine knowledge from multiple domains to solve complex problems"
+        mapped_traditional_values: [8, 9, 10] # Collaboration, Learning, Innovation
+        assessment_indicators:
+          - "Connects concepts across different technology domains"
+          - "Applies patterns from one context to another"
+          - "Synthesizes learnings from multiple sources"
+          - "Creates mental models for complex systems"
+          
+      feedback_integration:
+        weight: 4%
+        description: "Capability to incorporate feedback and learning into improved performance"
+        mapped_traditional_values: [5, 8, 9] # Data-Informed, Collaboration, Learning
+        assessment_indicators:
+          - "Learns from system failures and incidents"
+          - "Incorporates user and stakeholder feedback effectively"
+          - "Adapts approaches based on performance metrics"
+          - "Continuously improves personal and team processes"
+
+# Traditional Core Values → Platform Engineering Mapping
+traditional_values_mapping:
+  
+  technical_excellence_scalable_elegance:
+    id: 1
+    platform_competencies: ["ai_instruction_capability", "ai_output_validation", "platform_architecture_design", "problem_decomposition", "technical_decision_making"]
+    evolution: "From individual coding excellence to AI-orchestrated platform design excellence"
+    new_focus: "Architecture and system design over implementation, AI collaboration effectiveness"
+    
+  customer_centric_craftsmanship:
+    id: 2
+    platform_competencies: ["platform_architecture_design", "cross_system_integration"]
+    evolution: "From direct user interface to platform enablement of customer experiences"
+    new_focus: "Platform services that enable excellent customer experiences through other teams"
+    
+  ownership_proactivity:
+    id: 3
+    platform_competencies: ["ai_instruction_capability", "production_system_thinking", "problem_decomposition"]
+    evolution: "From individual code ownership to platform system ownership"
+    new_focus: "End-to-end platform reliability and performance ownership"
+    
+  observability_guardrails:
+    id: 4
+    platform_competencies: ["platform_architecture_design", "production_system_thinking", "risk_assessment_mitigation"]
+    evolution: "From application monitoring to platform-wide observability architecture"
+    new_focus: "Built-in observability and guardrails for all platform services"
+    
+  data_informed_iteration:
+    id: 5
+    platform_competencies: ["ai_assisted_iteration", "problem_decomposition", "technical_decision_making", "technology_adoption", "feedback_integration"]
+    evolution: "From feature iteration to platform capability iteration"
+    new_focus: "Data-driven platform evolution and AI-assisted improvement cycles"
+    
+  integrity_reliability:
+    id: 6
+    platform_competencies: ["ai_output_validation", "platform_architecture_design", "technical_decision_making", "risk_assessment_mitigation"]
+    evolution: "From application reliability to platform-wide reliability guarantees"
+    new_focus: "Platform reliability patterns and AI-generated solution validation"
+    
+  security_compliance_first:
+    id: 7
+    platform_competencies: ["ai_output_validation", "production_system_thinking", "risk_assessment_mitigation"]
+    evolution: "From application security to platform security architecture"
+    new_focus: "Security-by-design for platform services and AI-assisted development"
+    
+  collaboration_knowledge_sharing:
+    id: 8
+    platform_competencies: ["cross_system_integration", "knowledge_synthesis", "feedback_integration"]
+    evolution: "From team collaboration to platform-enabled collaboration across organization"
+    new_focus: "Platform services that enable seamless cross-team collaboration"
+    
+  continuous_learning_mentorship:
+    id: 9
+    platform_competencies: ["ai_instruction_capability", "ai_assisted_iteration", "technology_adoption", "knowledge_synthesis", "feedback_integration"]
+    evolution: "From individual learning to AI-assisted continuous capability development"
+    new_focus: "Rapid adaptation to AI tools and platform technology evolution"
+    
+  innovative_spirit:
+    id: 10
+    platform_competencies: ["ai_assisted_iteration", "technology_adoption", "knowledge_synthesis"]
+    evolution: "From individual innovation to platform-enabled innovation across organization"
+    new_focus: "AI-assisted innovation and platform capabilities that enable organizational innovation"
+
+# Assessment Adaptation Guidelines
+assessment_guidelines:
+  
+  traditional_vs_platform_focus:
+    traditional_emphasis: "Individual coding ability, algorithm implementation, data structure manipulation"
+    platform_emphasis: "AI orchestration, systems architecture, production platform thinking"
+    
+  question_evolution:
+    instead_of: "Can you implement a binary search algorithm?"
+    ask: "How would you collaborate with AI to design a search service that scales to millions of queries?"
+    
+    instead_of: "Debug this code snippet"  
+    ask: "How would you use AI to identify and fix potential issues in this platform architecture?"
+    
+    instead_of: "Optimize this database query"
+    ask: "How would you design a platform data layer that enables optimal performance across multiple services?"
+    
+  evaluation_criteria_shift:
+    from: ["Code syntax correctness", "Algorithm efficiency", "Individual problem solving"]
+    to: ["AI collaboration effectiveness", "Systems thinking depth", "Platform architecture quality", "Production readiness mindset"]
+
+# Role Level Competency Requirements
+role_requirements:
+  
+  junior_platform_engineer:
+    overall_minimum: 60%
+    ai_orchestration_minimum: 65%
+    systems_thinking_minimum: 55%
+    critical_thinking_minimum: 50%
+    learning_agility_minimum: 65%
+    no_category_below: 40%
+    expected_performance_multiplier: "2x-4x"
+    
+  mid_platform_engineer:
+    overall_minimum: 70%
+    ai_orchestration_minimum: 75%
+    systems_thinking_minimum: 70%
+    critical_thinking_minimum: 65%
+    learning_agility_minimum: 70%
+    no_category_below: 50%
+    expected_performance_multiplier: "4x-8x"
+    
+  senior_platform_engineer:
+    overall_minimum: 80%
+    ai_orchestration_minimum: 85%
+    systems_thinking_minimum: 80%
+    critical_thinking_minimum: 80%
+    learning_agility_minimum: 75%
+    no_category_below: 65%
+    expected_performance_multiplier: "8x-15x"
+    
+  principal_platform_engineer:
+    overall_minimum: 90%
+    ai_orchestration_minimum: 90%
+    systems_thinking_minimum: 90%
+    critical_thinking_minimum: 85%
+    learning_agility_minimum: 85%
+    no_category_below: 75%
+    expected_performance_multiplier: "15x-25x"
+
+# Implementation Notes
+implementation_notes:
+  backward_compatibility: "Traditional core values still apply but are expressed through platform engineering lens"
+  transition_period: "6-month gradual transition from traditional to platform competency assessment"
+  calibration_required: "Interview teams need recalibration on new competency framework"
+  success_metrics: "Track correlation between competency scores and actual platform engineering performance"

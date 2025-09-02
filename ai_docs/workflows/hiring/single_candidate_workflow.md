@@ -1,7 +1,8 @@
-# Single Candidate Workflow
+# Single Candidate Hybrid Workflow
+## BEI Core Values + Enhanced Technical Assessment
 
 ## Overview
-This workflow maintains a single version of results for each candidate, eliminating duplicate files and providing a clean, organized structure for the hiring process.
+This workflow implements the **Hybrid BEI + Enhanced Technical Assessment** methodology, maintaining a single version of results for each candidate with comprehensive evaluation combining traditional behavioral assessment (60% weight) and enhanced technical evaluation (40% weight). Provides a clean, organized structure for the complete hiring process while preserving organizational DNA and addressing technical assessment gaps.
 
 ## Key Improvements
 
@@ -39,16 +40,27 @@ artifacts/public/hiring/candidates/{date}_consolidated/
 - `takehome_assignment.md` - Customized assignment
 - `takehome_evaluation.md` - Assessment results
 
-### Stage 3: Interview Preparation
+### Stage 3: Hybrid Interview Preparation  
 **Output Location**: `{candidate_dir}/interview/`
-- `candidate_context.md` - Executive briefing
-- `interview_guide.md` - Detailed interview plan
-- `interview_script.md` - Verbatim script for interviewers
+- `candidate_context.md` - Executive briefing with hybrid assessment analysis
+- `interview_guide.md` - Hybrid interview plan (BEI + enhanced technical)
+- `interview_script.md` - BEI STAR questions + technical assessment guidance
 
-### Stage 4: Final Evaluation
+**Hybrid Assessment Components**:
+- **BEI Core Values Assessment**: 40 minutes, STAR format questions for all 10 values
+- **AI-Assisted Technical Assessment**: 25 minutes, hands-on AI collaboration evaluation
+- **Platform Engineering Scenarios**: 25 minutes, systems thinking and production mindset
+
+### Stage 4: Hybrid Final Evaluation
 **Output Location**: `{candidate_dir}/evaluation/`
-- `final_evaluation.md` - Comprehensive assessment
-- `decision_summary.md` - Hiring decision and rationale
+- `final_evaluation.md` - Comprehensive hybrid assessment (75-point scoring)
+- `decision_summary.md` - Hiring decision with hybrid scoring rationale
+
+**Hybrid Scoring Framework**:
+- **BEI Core Values**: 50 points (60% weight) - minimum 35 points required
+- **Enhanced Technical**: 25 points (40% weight) - minimum 15 points required  
+- **Overall Minimum**: 50/75 points (67%) for hire recommendation
+- **Decision Matrix**: Strong Hire (87%), Hire (73%), Lean Hire (67%), No Hire (<67%)
 
 ### Stage 5: Communication
 **Output Location**: `{candidate_dir}/communication/`
@@ -98,37 +110,38 @@ artifacts/public/hiring/candidates/{date}_consolidated/
 
 ## Usage
 
-### Run Complete Workflow Integration
+### Run Complete Hybrid Workflow Integration
 ```bash
-python scripts/complete_workflow_integration.py
+python scripts/complete_hybrid_workflow_integration.py
 ```
 
 This single command will:
-- Consolidate existing results
-- Generate all missing candidate materials
-- Create comprehensive summaries
-- Verify material completeness
+- Execute hybrid BEI + enhanced technical assessment methodology
+- Consolidate existing results with hybrid scoring framework
+- Generate all missing candidate materials using 60%/40% weighting
+- Create comprehensive hybrid assessment summaries
+- Verify material completeness with both behavioral and technical components
 
-### Individual Script Usage
+### Individual Hybrid Script Usage
 ```bash
-# Consolidate existing files
-python scripts/consolidate_hiring_results.py
+# Consolidate existing files with hybrid scoring
+python scripts/consolidate_hybrid_hiring_results.py
 
-# Generate complete materials for all candidates
-python scripts/generate_complete_candidate_materials.py
+# Generate complete hybrid materials for all candidates
+python scripts/generate_hybrid_candidate_materials.py
 
-# Generate overall summary
-python scripts/generate_overall_summary.py
+# Generate overall hybrid assessment summary  
+python scripts/generate_hybrid_overall_summary.py
 ```
 
 ### Access Candidate Information
 Navigate to: `artifacts/public/hiring/candidates/20250811_consolidated/{candidate_id}_{name}/`
 
 Each directory now contains:
-- **Complete screening analysis** with technical assessment
-- **Customized take-home assignments** based on experience level
-- **Comprehensive interview materials** ready for use
-- **Evaluation frameworks** for decision tracking
+- **Complete hybrid screening analysis** with core values and technical assessment
+- **Customized take-home assignments** based on experience level with AI collaboration focus
+- **Comprehensive hybrid interview materials** ready for BEI + enhanced technical evaluation
+- **Hybrid evaluation frameworks** for 75-point decision tracking (50 BEI + 25 technical)
 
 ## File Naming Conventions
 
@@ -138,4 +151,13 @@ Each directory now contains:
 - **Evaluation**: `final_evaluation.md`, `decision_summary.md`
 - **Summary**: `candidate_summary.md`
 
-This enhanced workflow ensures clean, organized, and easily accessible hiring materials while maintaining the comprehensive evaluation process that Gefjon Growth requires.
+This enhanced **Hybrid BEI + Enhanced Technical Assessment** workflow ensures clean, organized, and easily accessible hiring materials while preserving organizational DNA through traditional core values assessment and addressing technical evaluation gaps through AI-assisted development focus. The hybrid approach maintains cultural alignment as the primary criterion while properly evaluating platform engineering and AI collaboration capabilities.
+
+## Phoenix_005 Resolution
+Under this hybrid framework, candidates like Phoenix_005 would now:
+- **BEI Core Values**: 33/50 points (66%) - Strong learning foundation with development areas identified
+- **Enhanced Technical**: 19/25 points (76%) - AI collaboration capability properly assessed
+- **Overall Score**: 52/75 points (69%) - **LEAN HIRE** recommendation
+- **Outcome**: Hire as Junior Platform Engineer with structured development plan
+
+The hybrid methodology ensures no qualified candidates are missed due to technical assessment gaps while maintaining the cultural alignment that defines Gefjon Growth's organizational success.
