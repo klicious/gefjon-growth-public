@@ -1,6 +1,8 @@
 # Gefjon Growth — AI-Powered HR Automation Service
 
-**Gefjon Growth** is a freelance AI automation service specializing in transforming talent acquisition for technology companies. We deliver a production-ready hiring pipeline with proven results: 13 candidates processed in 6 hours, achieving 9.2/10 quality scores and a 92% success rate.
+> **Public mirror notice (2026-08-25).** This is a sanitized public mirror of a production hiring-automation repository. Candidate PII, an employee evaluation, firm-internal data (org context, financials, live assignment content), and the business/pitch layer have been removed from the entire history — paths stripped and person references pseudonymized via `git filter-repo`; the private original is retained unmodified. Commit **dates and messages are preserved**: the config-driven, per-stage agentic workflow engine here (see `ai_docs/workflows/hiring/` — orchestrator, workflow config, stage task templates) was committed on **2025-08-12**, about two months before Anthropic launched Agent Skills (2025-10-16).
+
+**Gefjon Growth** is an AI hiring-automation system: a production, config-driven multi-agent pipeline covering intake → screening → take-home evaluation → interview-kit generation. In its first consolidated production run it processed 13 candidates in ~6 hours (internal, self-assessed quality scoring; no external benchmark claimed).
 
 ---
 
