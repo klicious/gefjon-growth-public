@@ -563,8 +563,8 @@ quality_review:
 ### Process Efficiency
 - **Total Execution Time**: Target < 6 hours for 13 candidates (demonstrated achievement)
 - **Stage Completion Rate**: Target ≥ 95% (achieved 100%)
-- **Quality Score Average**: Target ≥ 8.5/10 (achieved 9.2/10 average)
-- **Error Rate**: Target < 5% (achieved 0% error rate)
+- **Quality Score Average**: Target ≥ 8.5/10 (first-run average 9.2/10, internal scoring)
+- **Error Rate**: Target < 5% (first run: no pipeline errors recorded, internal log)
 - **Material Completeness**: Target 100% for eligible candidates
 
 ### Candidate Experience

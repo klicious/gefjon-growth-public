@@ -2,19 +2,19 @@
 
 ## Project Overview
 
-Gefjon Growth is a production-ready AI-powered HR automation service that transforms talent acquisition for technology companies. The platform delivers complete hiring pipeline automation with proven results: 13 candidates processed in 6 hours, achieving 9.2/10 quality scores and a 92% success rate.
+Gefjon Growth is a production-ready AI-powered HR automation service that transforms talent acquisition for technology companies. The platform delivers complete hiring pipeline automation: 13 candidates processed in ~6 hours in the first consolidated run (internal, self-assessed scoring).
 
 ### Business Model
 - **Service Type**: Freelance AI automation service (transitioned from platform development)
 - **Target Market**: Technology companies and growth-stage startups
-- **Value Proposition**: 92% success rate with massive time reduction and superior quality
+- **Value Proposition**: large time reduction vs the manual process (internal assessment; no external benchmark)
 - **Delivery**: 30-day pilot programs with production-ready infrastructure
 
 ### Proven Results (August 11, 2025 Execution)
 - **Input**: 13 backend developer candidates
 - **Processing Time**: 6 hours total
 - **Success Rate**: 92.3% qualification rate
-- **Quality Scores**: 9.2/10 average (Strong Hire: titan-cand 9.2/10, atlas-cand 9.1/10)
+- **Quality Scores**: internally scored; top internal marks for titan-cand and atlas-cand
 
 ## Architecture & Technology Stack
 
@@ -102,7 +102,7 @@ Amazon Q Developer must follow this context engineering methodology:
 - **Structured Organization**: By date, candidate, process type
 
 ### Quality Standards
-- Maintain 9.2/10+ quality scores
+- Maintain high internal quality scores
 - Ensure 90%+ success rates
 - Follow context engineering principles
 - Implement comprehensive error handling

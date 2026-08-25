@@ -23,7 +23,7 @@
 
 ### Current Implementation (Production Ready)
 - **Workflow Version**: 2.0 (Single Candidate Directory Approach)
-- **Status**: 100% operational with demonstrated success
+- **Status**: operational; first consolidated production run completed end-to-end (internally assessed)
 - **Last Execution**: August 11, 2025 (13 candidates, ~6 hours; internally scored)
 
 ```
@@ -85,7 +85,7 @@ Gefjon Growth has transitioned from a platform-building initiative to a **freela
 
 **Key Highlights:**
 - **Target Audience**: Technology companies and growth-stage startups.
-- **Value Proposition**: "92% success rate with massive time reduction and superior quality."
+- **Value Proposition**: "Large time reduction vs the manual process (internal assessment; no external benchmark)."
 - **Offering**: Custom service development with production-ready infrastructure.
 - **Timeline**: 30-day delivery for pilot programs.
 

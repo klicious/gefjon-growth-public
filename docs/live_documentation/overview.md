@@ -6,7 +6,7 @@
 
 ## Project Summary
 
-Gefjon Growth is a freelance **AI automation service** that transforms talent acquisition for technology companies. The service delivers a production-ready hiring pipeline with proven results: 13 candidates processed in 6 hours with 9.2/10 quality scores and a 92% success rate.
+Gefjon Growth is a freelance **AI automation service** that transforms talent acquisition for technology companies. The service delivers a production hiring pipeline: 13 candidates processed in ~6 hours in the first consolidated run (internal, self-assessed scoring; no external benchmark claimed).
 
 ## Vision & Goals
 
@@ -45,9 +45,9 @@ Gefjon Growth delivers value across the talent acquisition ecosystem:
 
 | **Feature** | **Description** | **Value Delivered** |
 |-------------|-----------------|-------------------|
-| **Complete Hiring Pipeline Automation** | End-to-end workflow: Context loading → Data normalization → JD mapping → Screening → Assignment generation → Interview kits → Consolidation | 85% time reduction (6 hrs vs 40+ hrs manual) with 9.2/10 quality |
+| **Complete Hiring Pipeline Automation** | End-to-end workflow: Context loading → Data normalization → JD mapping → Screening → Assignment generation → Interview kits → Consolidation | ~6 hrs vs 40+ hrs manual for a 13-candidate batch (internally scored) |
 | **Context-Centric AI Architecture** | Multi-agent system using Claude Code, Gemini CLI, Amazon Q Developer with comprehensive context engineering | Ensures consistent, evidence-based decisions with 90%+ context completeness |
-| **Production-Ready Workflow Execution** | 7-stage automated pipeline with quality gates, validation, and error handling | 100% success rate demonstrated with 13 candidates, 0% error rate |
+| **Production-Ready Workflow Execution** | 7-stage automated pipeline with quality gates, validation, and error handling | 13/13 first-run candidates completed the pipeline (internal assessment) |
 | **BEI Interview Kit Generation** | Behavioral Event Interview materials with STAR questions mapped to company core values | Professional interview experience with personalized candidate assessment |
 | **Take-Home Assignment Automation** | Personalized assignment generation and Top-Tier Industry Standards evaluation | Rigorous technical assessment focusing on production readiness and scalability |
 | **Comprehensive Decision Support** | Detailed screening reports, evaluation frameworks, and consolidation summaries | Data-driven hiring decisions with confidence scoring and risk assessment |
@@ -61,7 +61,7 @@ A comprehensive service pitch presentation is available in `ai_docs/context_cent
 
 **Key Highlights:**
 - **Target Audience**: Technology companies and growth-stage startups.
-- **Value Proposition**: "92% success rate with massive time reduction and superior quality."
+- **Value Proposition**: "Large time reduction vs the manual process (internal assessment; no external benchmark)."
 - **Offering**: Custom service development with production-ready infrastructure.
 - **Timeline**: 30-day delivery for pilot programs.
 
@@ -81,7 +81,7 @@ For the latest features, architecture, and business model details:
 Gefjon Growth's vision is to fully automate HR workflows from talent acquisition through talent development, delivering consistent, high-quality outcomes at scale. Our primary goals include:
 
 *   **Complete Workflow Automation**: End-to-end pipeline from candidate screening through interview kits with 85% time reduction
-*   **Production-Ready Quality**: 9.2/10 average quality scores with 0% error rates and 100% completion success
+*   **Production-Ready Quality**: consistent internal quality scores; all first-run stages completed without pipeline errors (self-assessed)
 *   **Context-Centric Intelligence**: 90%+ context completeness ensuring evidence-based, bias-reduced decision making
 *   **Multi-Agent Orchestration**: Coordinated AI agents (Claude Code, Gemini CLI, Amazon Q Developer) for robust automation
 *   **Scalable Architecture**: Proven with 13 candidates in 6 hours, designed for enterprise-scale batch processing
@@ -104,7 +104,7 @@ Gefjon Growth delivers value across the talent acquisition ecosystem:
 
 ### Current Status: **Production Ready** (August 2025)
 - **Real Execution Results**: 13 candidates processed in 6 hours (August 11, 2025)
-- **Success Rate**: 100% completion with 0% errors and 9.2/10 quality average
+- **Success Rate**: all first-run stages completed without pipeline errors (internal assessment)
 - **Workflow Version**: 2.0 (Single Candidate Directory Approach)
 - **Materials Generated**: 100% screening reports, 69.2% take-home assignments, 92.3% interview kits
 
